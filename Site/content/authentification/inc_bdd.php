@@ -6,7 +6,7 @@
 		// 1 déclaration des constantes
 
 		define('HOST', 'localhost'); // en prod mettre ip serveur
-		define('DB', 'boutique_wf3'); //le nom de la BDD
+		define('DB', 'balance_ton_code'); //le nom de la BDD
 		define('USER', 'root'); // si en prod, penser a le changer 
 		define('PASS', ''); //si en prod penser a le changer 
 

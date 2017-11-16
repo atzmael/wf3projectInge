@@ -8,7 +8,7 @@
 
 	if(verif_form($_GET, $champs))
 	{
-		$query = $db -> prepare("SELECT * FROM token WHERE id = :id AND token = :token");
+		$query = $db -> prepare("SELECT * FROM token WHERE id = :id AND token_key = :token");
 		$query -> bindValue(':id', $_GET['id'],PDO::PARAM_INT);
 		$query -> bindValue(':token', $_GET['token'] ,PDO::PARAM_STR);
 		$query -> execute();

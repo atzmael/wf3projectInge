@@ -11,11 +11,11 @@
 		$email = htmlentities($_POST['email']);
 		$mot_de_passe = htmlentities($_POST['mot_de_passe']);
 
-		$mot_de_passe = md5($mot_de_passe);
+		
 
 		//verifier si email existe en base et preparation du mot de passe
 
-		$query = $db -> prepare("SELECT id, nom, prenom, mot_de_passe FROM utilisateur WHERE email = :email");
+		$query = $db -> prepare("SELECT id_util, firstname, lastname, password FROM user WHERE email = :email");
 		$query -> bindValue(':email', $email, PDO::PARAM_STR);
 		$query -> execute();
 
@@ -23,16 +23,16 @@
 
 		if(!empty($result))
 		{
-			$mdp_base = $result['mot_de_passe'];
+			$mdp_base = $result['password']; //mot_de_passe
 
 			//verifier mot de passe
 
-			if($mot_de_passe == $mdp_base)
+			if(password_verify($mot_de_passe, $mdp_base))
 			{
 				session_start();
-				$_SESSION['id'] = $result['id'];
-				$_SESSION['nom'] = $result['nom'];
-				$_SESSION['prenom'] = $result['prenom'];
+				$_SESSION['id'] = $result['id_util'];
+				$_SESSION['nom'] = $result['firstname'];
+				$_SESSION['prenom'] = $result['lastname'];
 				echo "<p>Vous êtes connecté !</p>";
 				echo "<p><a href='accueil.php'>Retour à l'accueil</a></p>";
 				
