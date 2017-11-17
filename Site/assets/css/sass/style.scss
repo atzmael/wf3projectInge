@@ -52,12 +52,6 @@ h3 {
 
     nav {
         background: $darkgrey;
-        .logo {
-            width: 50%;
-        }
-        ul {
-
-        }
     }
 
     /***********/
@@ -69,7 +63,7 @@ h3 {
             background: #fff;
             border: $lightgrey 1px solid;
             box-shadow: 5px 5px 10px #000;
-            margin: 7vw 0;
+            margin: 7vw 0 0 0;
             .recherche {
                 p {
                     margin: 1vw

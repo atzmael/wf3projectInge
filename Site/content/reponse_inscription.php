@@ -7,12 +7,13 @@
 
 
 
-	$champs = array("nom", "prenom", "function", "ville", "pays", "email", "mdp1", "mdp2");
+	$champs = array("nom", "prenom", "pseudo", "function", "ville", "pays", "email", "mdp1", "mdp2");
 
 	if(verif_form($_POST, $champs))
 	{
 		$nom = htmlentities($_POST['nom']);
 		$prenom = htmlentities($_POST['prenom']);
+		$pseudo = htmlentities($_POST['pseudo']);
 		$function = htmlentities($_POST['function']);
 		$ville = htmlentities($_POST['ville']);
 		$pays = htmlentities($_POST['pays']);
@@ -38,9 +39,10 @@
 
 				if($mot_de_passe != false){
 
-					$query = $db -> prepare("INSERT INTO user (firstname, lastname, function, email, city, country, password, rank) VALUES (:firstname, :lastname, :function, :email, :city, :country, :password, :rank)");
+					$query = $db -> prepare("INSERT INTO user (firstname, lastname, pseudo, function, email, city, country, password, rank) VALUES (:firstname, :lastname, :pseudo, :function, :email, :city, :country, :password, :rank)");
 					$query -> bindValue(':firstname', $nom, PDO::PARAM_STR);
 					$query -> bindValue(':lastname', $prenom, PDO::PARAM_STR);
+					$query -> bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
 					$query -> bindValue(':function', $function, PDO::PARAM_STR);
 					$query -> bindValue(':email', $email, PDO::PARAM_STR);
 					$query -> bindValue(':city', $ville, PDO::PARAM_STR);
