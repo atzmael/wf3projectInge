@@ -1,14 +1,19 @@
 <?php
 
+	require_once('librairie.php');
+	require_once('inc_bdd.php');
 
-$query = $db -> prepare("SELECT * FROM article ORDER BY id_article DESC");
+	$query = $db -> prepare("SELECT article.title, article.content, article.release_date, user.pseudo FROM article inner join user on article._id_util = user.id_util ORDER BY id_article DESC");
 
-// 1 requêtes
-
-$query->execute();
+	// 2 requêtes
 
 
-//3 récupération des résultats
-$result = $query -> fetchAll();
+	$query->execute();
 
+
+	//3 récupération des résultats
+	$result = $query -> fetchAll();
+
+	print_r($result);
+	
 ?>
