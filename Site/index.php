@@ -1,15 +1,16 @@
+<?php
 
-    <?php
+session_start();
 
-    $dir = $_SERVER['SCRIPT_FILENAME'];
-    $folder = preg_replace('/[a-z0-9#&?._=-]*$/i','',$dir);
+include_once('config/librairie.php');
 
-    include_once($folder.'/content/header.php')
 
-    ?>
+include_once('content/header.php');
 
-    <main>
+?>
 
-    </main>
+<main>
 
-    <?php include_once('content/footer.php') ?>
+</main>
+
+<?php include_once('content/footer.php') ?>

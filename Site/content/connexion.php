@@ -1,9 +1,11 @@
 <?php
 
-include_once('../config/function.php');
+session_start();
 
-include_once(__DIR__.'/header.php');
+include_once('../config/librairie.php');
 
+
+include_once('../content/header.php');
 
 ?>
 
@@ -33,4 +35,5 @@ include_once(__DIR__.'/header.php');
     </form>
 </main>
 
-<?php include_once(__DIR__.'/footer.php') ?>
+<?php include_once('../content/footer.php') ?>
+

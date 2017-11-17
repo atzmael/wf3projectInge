@@ -1,9 +1,5 @@
 <?php
 
-session_start();
-
-$dir = $_SERVER['SCRIPT_FILENAME'];
-$folder = preg_replace('/[a-z0-9#&?._=-]*$/i','',$dir);
 
 ?>
 <!DOCTYPE html>
@@ -12,23 +8,28 @@ $folder = preg_replace('/[a-z0-9#&?._=-]*$/i','',$dir);
     <meta charset="UTF-8">
     <title>Balance ton code</title>
 
-    <link rel="stylesheet" href="../assets/css/stylesheets/bootstrap.css">
-    <link rel="stylesheet" href="../assets/css/stylesheets/style.css">
-    <link rel="stylesheet" href="../assets/css/stylesheets/responsive.css">
+    <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/style.css">
+    <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/responsive.css">
+
+    <script type="text/javascript" src="<?php echo directory() ?>assets/js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo directory() ?>assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="<?php echo directory() ?>assets/js/function.js"></script>
+
 </head>
 <body>
-<div class="loader" aria-hidden="true">
-    <img src="../assets/img/loader.gif" alt="Image de chargement de la page" aria-hidden="true">
+<div id="loader" aria-hidden="true">
+    <img src="/wf3projectInge/Site/assets/img/loader.gif" alt="Image de chargement de la page" aria-hidden="true">
 </div>
 
 <div class="page">
     <header>
         <nav>
             <div class="logo">
-                <img src="../assets/" alt="">
+                <img src="<?php echo directory() ?>assets/" alt="">
             </div>
             <ul>
-                <li><a href="../index.php">Accueil</a></li>
+                <li><a href="<?php echo directory() ?>index.php">Accueil</a></li>
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>

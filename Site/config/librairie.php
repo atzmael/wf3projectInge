@@ -80,12 +80,9 @@ function debug($tab){
     echo "</pre>";
 }
 
-
 function directory(){
-    $dir = $_SERVER['SCRIPT_FILENAME'];
-    return preg_replace('/[a-z0-9#&?._=-]*$/i','',$dir);
+    return $dir = '/wf3projectInge/Site/';
 }
-define('__DIR__',directory());
 
 
 
