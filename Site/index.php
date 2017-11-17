@@ -4,7 +4,8 @@
     <?php include_once('content/view/head.php') ?>
 </head>
 <body>
-<div class="loader" aria-hidden="true">
+
+<div id="loader">
     <img src="assets/img/loader.gif" alt="Image de chargement de la page" aria-hidden="true">
 </div>
 

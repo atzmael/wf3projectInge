@@ -1,0 +1,58 @@
+/* Ce fichier regroupe tout le css du site */
+/*********************/
+/* VARIABLES & MIXIN */
+/*********************/
+/*
+ * Variables
+*/
+/* Couleur charte graphique */
+/*
+ * MIXIN
+*/
+/**********/
+/* HEADER */
+/**********/
+/* line 41, ../sass/style.scss */
+header nav {
+  width: 100vw;
+  min-height: 50px;
+  background: #2e3535;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 47, ../sass/style.scss */
+header nav a {
+  left: 0;
+}
+/* line 49, ../sass/style.scss */
+header nav a img {
+  width: 50%;
+}
+/* line 54, ../sass/style.scss */
+header nav ul {
+  list-style-type: none;
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+/* line 58, ../sass/style.scss */
+header nav ul li {
+  display: inline;
+}
+/* line 60, ../sass/style.scss */
+header nav ul li a {
+  text-decoration: none;
+  color: #2e3535;
+  padding: 3.5vw;
+  margin: 0;
+  background: #afdde0;
+}
+
+/********/
+/* MAIN */
+/********/
+/**********/
+/* FOOTER */
+/**********/
+/***********/
+/* DETAILS */
+/***********/

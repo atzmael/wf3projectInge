@@ -1,0 +1,89 @@
+/* Ce fichier regroupe tout le css du site */
+
+/*********************/
+/* VARIABLES & MIXIN */
+/*********************/
+
+/*
+ * Variables
+*/
+
+/* Couleur charte graphique */
+$lightblue: #e8f8f9;
+$lightblue2: #afdde0;
+$lightgrey: #c6d2d3;
+$deepblue: #25858c;
+$darkgrey: #2e3535;
+
+$color_html: #fff;
+$color_css: #fff;
+$color_js: #fff;
+$color_php: #fff;
+$color_sql: #fff;
+
+$color_fonts: #000;
+
+/*
+ * MIXIN
+*/
+
+@mixin center{
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+/**********/
+/* HEADER */
+/**********/
+
+header {
+    nav {
+        width: 100vw;
+        min-height: 50px;
+        background: $darkgrey;
+        display: flex;
+        justify-content: space-between;
+        a {
+            left: 0;
+            img {
+                width: 50%;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0 10px 0 0;
+            padding: 0;
+            li {
+                display: inline;
+                a {
+                    text-decoration: none;
+                    color: $darkgrey;
+                    padding: 3.5vw;
+                    margin: 0;
+                    background: $lightblue2;
+                }
+            }
+        }
+    }
+}
+
+/********/
+/* MAIN */
+/********/
+
+.page{
+
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+
+
+/***********/
+/* DETAILS */
+/***********/
+
