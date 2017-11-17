@@ -11,7 +11,7 @@
 
 		//verifier si email existe en base et preparation du mot de passe
 
-		$query = $db -> prepare("SELECT id FROM utilisateur WHERE email = :email");
+		$query = $db -> prepare("SELECT id_util FROM user WHERE email = :email");
 		$query -> bindValue(':email', $email, PDO::PARAM_STR);
 		$query -> execute();
 
@@ -19,7 +19,7 @@
 
 		if(!empty($result))
 		{
-			$id = $result['id'];
+			$id = $result['id_util'];
 
 			$token = md5(uniqid(rand(),true));
 

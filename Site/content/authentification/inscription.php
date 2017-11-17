@@ -27,11 +27,8 @@
 				<label for="prenom">Votre Prenom</label>
 				<p><input type="text" name="prenom" id="prenom"></p>
 
-				<label for="date_naissance">Votre date de naissance</label>
-				<p><input type="text" name="date_naissance" id="date_naissance"></p>
-
-				<label for="code_postal">Code postal</label>
-				<p><input type="text" name="code_postal" id="code_postal"></p>
+				<label for="function">Profession</label>
+				<p><input type="text" name="function" id="function"></p>
 
 				<label for="ville">Votre ville</label>
 				<p><input type="text" name="ville" id="ville"></p>

@@ -15,11 +15,11 @@
 
 		if($mdp1 == $mdp2)
 		{
-			$mot_de_passe = md5($mdp1);
+			$mot_de_passe = password_hash($mdp1, PASSWORD_DEFAULT);
 
-			$query = $db -> prepare("UPDATE utilisateur SET mot_de_passe = :mot_de_passe WHERE id = :id");
+			$query = $db -> prepare("UPDATE user SET password = :password WHERE id_util = :id");
 
-			$query -> bindValue(':mot_de_passe', $mot_de_passe, PDO::PARAM_STR);
+			$query -> bindValue(':password', $mot_de_passe, PDO::PARAM_STR);
 			$query -> bindValue(':id', $id, PDO::PARAM_INT);
 			$query -> execute();
 
