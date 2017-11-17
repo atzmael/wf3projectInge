@@ -1,89 +1,127 @@
-/* Ce fichier regroupe tout le css du site */
 
-/*********************/
-/* VARIABLES & MIXIN */
-/*********************/
 
-/*
- * Variables
-*/
+/********************/
+/* VARIABLE & MIXIN */
+/********************/
 
-/* Couleur charte graphique */
+/* Variable */
 $lightblue: #e8f8f9;
-$lightblue2: #afdde0;
 $lightgrey: #c6d2d3;
 $deepblue: #25858c;
 $darkgrey: #2e3535;
+$lightblue2: #afdde0;
 
-$color_html: #fff;
-$color_css: #fff;
-$color_js: #fff;
-$color_php: #fff;
-$color_sql: #fff;
+$color_font: #000;
 
-$color_fonts: #000;
-
-/*
- * MIXIN
-*/
-
-@mixin center{
+@mixin centrer{
+    position: relative;
+    transform: translateY(-50%) translateX(-50%);
     top: 50%;
     left: 50%;
-    transform: translateY(-50%) translateX(-50%);
 }
 
-/**********/
-/* HEADER */
-/**********/
+/** GENERAL */
 
-header {
+body {
+    color: $color_font;
+}
+
+h1 {
+    color: $deepblue;
+}
+h2 {
+    color: $deepblue;
+}
+h3 {
+    color: $deepblue;
+}
+
+#loader {
+    @include centrer();
+    position: absolute;
+}
+
+.page {
+    padding-top: 10vw;
+    background: $lightgrey;
+
+    /**********/
+    /* HEADER */
+    /**********/
+
+
     nav {
-        width: 100vw;
-        min-height: 50px;
         background: $darkgrey;
-        display: flex;
-        justify-content: space-between;
-        a {
-            left: 0;
-            img {
-                width: 50%;
-            }
+        .logo {
+            width: 50%;
         }
-
         ul {
-            list-style-type: none;
-            margin: 0 10px 0 0;
-            padding: 0;
-            li {
-                display: inline;
-                a {
-                    text-decoration: none;
-                    color: $darkgrey;
-                    padding: 3.5vw;
-                    margin: 0;
-                    background: $lightblue2;
+
+        }
+    }
+
+    /***********/
+    /* CONTENT */
+    /***********/
+
+    main {
+        .section1, .section2 {
+            background: #fff;
+            border: $lightgrey 1px solid;
+            box-shadow: 5px 5px 10px #000;
+            margin: 7vw 0;
+            .recherche {
+                p {
+                    margin: 1vw
+                }
+            }
+            .moreOptions {
+                cursor: pointer;
+                padding: 1vw;
+                display: inline-block;
+                margin-top: 1vw;
+            }
+            h2 {
+                padding-top: 2vw;
+            }
+            .row {
+                .langages, .code {
+                    padding: 1vw;
+                    div {
+                        padding: 2vw;
+                        border: $lightgrey 1px solid;
+                        h3 {
+                            a {
+                                color: $deepblue;
+                                &:hover {
+                                    color: $deepblue;
+                                }
+                            }
+                        }
+                        p {
+                            a {
+                                color: $color_font;
+                                &:hover {
+                                    color: $color_font;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
+
+    /**********/
+    /* FOOTER */
+    /**********/
+
+    footer {
+
+    }
 }
 
-/********/
-/* MAIN */
-/********/
-
-.page{
-
-}
-
-/**********/
-/* FOOTER */
-/**********/
 
 
 
-/***********/
-/* DETAILS */
-/***********/
 

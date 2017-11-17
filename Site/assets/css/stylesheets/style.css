@@ -1,58 +1,103 @@
-/* Ce fichier regroupe tout le css du site */
-/*********************/
-/* VARIABLES & MIXIN */
-/*********************/
-/*
- * Variables
-*/
-/* Couleur charte graphique */
-/*
- * MIXIN
-*/
-/**********/
-/* HEADER */
-/**********/
-/* line 41, ../sass/style.scss */
-header nav {
-  width: 100vw;
-  min-height: 50px;
-  background: #2e3535;
-  display: flex;
-  justify-content: space-between;
-}
-/* line 47, ../sass/style.scss */
-header nav a {
-  left: 0;
-}
-/* line 49, ../sass/style.scss */
-header nav a img {
-  width: 50%;
-}
-/* line 54, ../sass/style.scss */
-header nav ul {
-  list-style-type: none;
-  margin: 0 10px 0 0;
-  padding: 0;
-}
-/* line 58, ../sass/style.scss */
-header nav ul li {
-  display: inline;
-}
-/* line 60, ../sass/style.scss */
-header nav ul li a {
-  text-decoration: none;
-  color: #2e3535;
-  padding: 3.5vw;
-  margin: 0;
-  background: #afdde0;
+/********************/
+/* VARIABLE & MIXIN */
+/********************/
+/* Variable */
+/** GENERAL */
+/* line 25, ../sass/style.scss */
+body {
+  color: #000;
 }
 
-/********/
-/* MAIN */
-/********/
-/**********/
-/* FOOTER */
-/**********/
-/***********/
-/* DETAILS */
-/***********/
+/* line 29, ../sass/style.scss */
+h1 {
+  color: #25858c;
+}
+
+/* line 32, ../sass/style.scss */
+h2 {
+  color: #25858c;
+}
+
+/* line 35, ../sass/style.scss */
+h3 {
+  color: #25858c;
+}
+
+/* line 39, ../sass/style.scss */
+#loader {
+  position: relative;
+  transform: translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+
+/* line 44, ../sass/style.scss */
+.page {
+  padding-top: 10vw;
+  background: #c6d2d3;
+  /**********/
+  /* HEADER */
+  /**********/
+  /***********/
+  /* CONTENT */
+  /***********/
+  /**********/
+  /* FOOTER */
+  /**********/
+}
+/* line 53, ../sass/style.scss */
+.page nav {
+  background: #2e3535;
+}
+/* line 55, ../sass/style.scss */
+.page nav .logo {
+  width: 50%;
+}
+/* line 68, ../sass/style.scss */
+.page main .section1, .page main .section2 {
+  background: #fff;
+  border: #c6d2d3 1px solid;
+  box-shadow: 5px 5px 10px #000;
+  margin: 7vw 0;
+}
+/* line 74, ../sass/style.scss */
+.page main .section1 .recherche p, .page main .section2 .recherche p {
+  margin: 1vw;
+}
+/* line 78, ../sass/style.scss */
+.page main .section1 .moreOptions, .page main .section2 .moreOptions {
+  cursor: pointer;
+  padding: 1vw;
+  display: inline-block;
+  margin-top: 1vw;
+}
+/* line 84, ../sass/style.scss */
+.page main .section1 h2, .page main .section2 h2 {
+  padding-top: 2vw;
+}
+/* line 88, ../sass/style.scss */
+.page main .section1 .row .langages, .page main .section1 .row .code, .page main .section2 .row .langages, .page main .section2 .row .code {
+  padding: 1vw;
+}
+/* line 90, ../sass/style.scss */
+.page main .section1 .row .langages div, .page main .section1 .row .code div, .page main .section2 .row .langages div, .page main .section2 .row .code div {
+  padding: 2vw;
+  border: #c6d2d3 1px solid;
+}
+/* line 94, ../sass/style.scss */
+.page main .section1 .row .langages div h3 a, .page main .section1 .row .code div h3 a, .page main .section2 .row .langages div h3 a, .page main .section2 .row .code div h3 a {
+  color: #25858c;
+}
+/* line 96, ../sass/style.scss */
+.page main .section1 .row .langages div h3 a:hover, .page main .section1 .row .code div h3 a:hover, .page main .section2 .row .langages div h3 a:hover, .page main .section2 .row .code div h3 a:hover {
+  color: #25858c;
+}
+/* line 102, ../sass/style.scss */
+.page main .section1 .row .langages div p a, .page main .section1 .row .code div p a, .page main .section2 .row .langages div p a, .page main .section2 .row .code div p a {
+  color: #000;
+}
+/* line 104, ../sass/style.scss */
+.page main .section1 .row .langages div p a:hover, .page main .section1 .row .code div p a:hover, .page main .section2 .row .langages div p a:hover, .page main .section2 .row .code div p a:hover {
+  color: #000;
+}
