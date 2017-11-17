@@ -81,7 +81,7 @@ function debug($tab){
 }
 
 function directory(){
-    return $dir = '/projectgroup/Site/';
+    return $dir = '/wf3projectInge/Site/';
 }
 
 
