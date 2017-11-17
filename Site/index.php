@@ -18,7 +18,11 @@ include_once('content/header.php');
             <p class="moreOptions">Options avancées</p>
             <div class="options">
                 <label for="optVote">Les mieux notés</label>
-                <input type="checkbox" id="DESC">
+                <input type="checkbox" id="optVote" value="DESC">
+                <select name="optDate" id="optDate">
+                    <option value="DESC">Du plus récent</option>
+                    <option value="ASC">Du moins récent</option>
+                </select>
             </div>
             <div class="row">
                 <div class="langages col-12 col-md-4">
@@ -71,7 +75,7 @@ include_once('content/header.php');
                     echo '<div class="code col-12 col-md-4">
                             <div>
                                 <h3><a href="article/'.$value['id_article'].'">'.$value['title'].'</a></h3>
-                                <p>Posté il y a '.$value['release_date'].' par user</p>
+                                <p>Posté il y a '.$value['release_date'].' par '.$value['pseudo'].'</p>
                             </div>
                           </div>';
                 }
