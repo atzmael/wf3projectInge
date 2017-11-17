@@ -17,7 +17,7 @@ session_start();
 		if(isset($_SESSION['id']))
 		{
 	?>
-
+		<p><a href="insert_code.php">Insert_code</a></p>
 		<p><a href="deconnexion.php">DECONNEXION</a></p>
 
 	<?php

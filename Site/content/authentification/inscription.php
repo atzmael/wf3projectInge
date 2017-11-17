@@ -27,7 +27,10 @@
 				<label for="prenom">Votre Prenom</label>
 				<p><input type="text" name="prenom" id="prenom"></p>
 
-				<label for="function">Profession</label>
+				<label for="pseudo">Votre Nom de 'Code'</label>
+				<p><input type="text" name="pseudo" id="pseudo"></p>
+
+				<label for="function">Niveau de Code</label>
 				<p><input type="text" name="function" id="function"></p>
 
 				<label for="ville">Votre ville</label>

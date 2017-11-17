@@ -17,13 +17,30 @@
 
 		$result = $query -> fetch();
 
-		if(!empty($result))
+		if(!empty($result)) //si les mots de passe sont identiques alors
 		{
 			$id = $result['id_util'];
 
+			$query = $db -> prepare('SELECT * FROM token WHERE id = :id');
+			$query -> bindValue(':id', $id, PDO::PARAM_INT);
+			$query -> execute();
+			$result = $query -> fetch();
+
 			$token = md5(uniqid(rand(),true));
 
-			$query = $db -> prepare("INSERT INTO token VALUES (:id, :token)");
+			if(empty($result))
+			{				
+
+				$query = $db -> prepare("INSERT INTO token VALUES (:id, :token)");
+				
+			}
+			else
+			{
+
+				$query = $db -> prepare("UPDATE token SET token_key = :token WHERE id = :id");
+			
+			}
+
 			$query -> bindValue(':id', $id, PDO::PARAM_INT);
 			$query -> bindValue(':token', $token, PDO::PARAM_STR);
 			$query -> execute();
