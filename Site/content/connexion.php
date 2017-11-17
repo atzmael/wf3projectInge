@@ -1,18 +1,17 @@
 <?php
 
-	//connexion.php
+session_start();
 
+include_once('config/librairie.php');
+require_once('config/inc_bdd.php');
+
+include_once('content/header.php');
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>CONNEXION</title>
-</head>
-<body>
+<main class="container">
 
-	<form method="POST" action="reponse_connexion.php">
+<form method="POST" action="reponse_connexion.php">
 		
 		<fieldset>
 			
@@ -36,5 +35,10 @@
 
 	</form>
 
-</body>
-</html>
+</main>
+
+<?php
+
+include_once('content/footer.php')
+
+?>
