@@ -12,9 +12,9 @@ $folder = preg_replace('/[a-z0-9#&?._=-]*$/i','',$dir);
     <meta charset="UTF-8">
     <title>Balance ton code</title>
 
-    <link rel="stylesheet" href="../assets/css/bootstrap.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/stylesheets/style.css">
+    <link rel="stylesheet" href="../assets/css/stylesheets/responsive.css">
 </head>
 <body>
 <div class="loader" aria-hidden="true">
