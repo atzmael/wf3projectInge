@@ -35,7 +35,6 @@ h3 {
 /* line 44, ../sass/style.scss */
 .page {
   padding-top: 10vw;
-  background: #c6d2d3;
   /**********/
   /* HEADER */
   /**********/
@@ -46,58 +45,58 @@ h3 {
   /* FOOTER */
   /**********/
 }
-/* line 53, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 .page nav {
   background: #2e3535;
 }
-/* line 55, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 .page nav .logo {
   width: 50%;
 }
-/* line 68, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 .page main .section1, .page main .section2 {
   background: #fff;
   border: #c6d2d3 1px solid;
   box-shadow: 5px 5px 10px #000;
   margin: 7vw 0;
 }
-/* line 74, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 .page main .section1 .recherche p, .page main .section2 .recherche p {
   margin: 1vw;
 }
-/* line 78, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 .page main .section1 .moreOptions, .page main .section2 .moreOptions {
   cursor: pointer;
   padding: 1vw;
   display: inline-block;
   margin-top: 1vw;
 }
-/* line 84, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 .page main .section1 h2, .page main .section2 h2 {
   padding-top: 2vw;
 }
-/* line 88, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .page main .section1 .row .langages, .page main .section1 .row .code, .page main .section2 .row .langages, .page main .section2 .row .code {
   padding: 1vw;
 }
-/* line 90, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 .page main .section1 .row .langages div, .page main .section1 .row .code div, .page main .section2 .row .langages div, .page main .section2 .row .code div {
   padding: 2vw;
   border: #c6d2d3 1px solid;
 }
-/* line 94, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 .page main .section1 .row .langages div h3 a, .page main .section1 .row .code div h3 a, .page main .section2 .row .langages div h3 a, .page main .section2 .row .code div h3 a {
   color: #25858c;
 }
-/* line 96, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .page main .section1 .row .langages div h3 a:hover, .page main .section1 .row .code div h3 a:hover, .page main .section2 .row .langages div h3 a:hover, .page main .section2 .row .code div h3 a:hover {
   color: #25858c;
 }
-/* line 102, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 .page main .section1 .row .langages div p a, .page main .section1 .row .code div p a, .page main .section2 .row .langages div p a, .page main .section2 .row .code div p a {
   color: #000;
 }
-/* line 104, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 .page main .section1 .row .langages div p a:hover, .page main .section1 .row .code div p a:hover, .page main .section2 .row .langages div p a:hover, .page main .section2 .row .code div p a:hover {
   color: #000;
 }
