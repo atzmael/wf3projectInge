@@ -1,20 +1,32 @@
 <?php
 
-	session_start();
+session_start();
 
-	if(isset($_SESSION['id']))
-	{
-		session_unset();
-		echo "<p> Vous êtes maintenant déconnecté</p>";
-	}
-	else
-	{
-		echo "<p> Vous cherchez à vous déconnecter sans vous connecter, c'est étonnant !</p>";
-	}
+include_once('../config/librairie.php');
+require_once('../config/inc_bdd.php');
 
-	session_destroy();
+include_once('../content/header.php');
 
-	//ATTENTION ! changer le nom du fichier de la page d'accueil selon le vôtre !
-	echo "<p><a href='accueil.php'>Retour vers l'accueil</a></p>";
+if(isset($_SESSION['id']))
+{
+    session_unset();
+    echo "<p> Vous êtes maintenant déconnecté</p>";
+}
+else
+{
+    echo "<p> Vous cherchez à vous déconnecter sans vous connecter, c'est étonnant !</p>";
+}
+
+session_destroy();
+
+?>
+
+    <main class="container">
+        <p><a href="<?php echo directory() ?>index.php">Retour à l'accueil</a></p>
+    </main>
+
+<?php
+
+include_once('../content/footer.php')
 
 ?>

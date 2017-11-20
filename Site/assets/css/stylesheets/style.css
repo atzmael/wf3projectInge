@@ -26,17 +26,16 @@ h3 {
 
 /* line 21, ../sass/style.scss */
 #loader {
-  position: relative;
+  position: absolute;
   transform: translateY(-50%) translateX(-50%);
   top: 50%;
   left: 50%;
-  position: absolute;
 }
 
 /***********/
 /* CONTENT */
 /***********/
-/* line 30, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 .page {
   padding-top: 20vw;
   /**********/
@@ -55,7 +54,16 @@ h3 {
 .page nav .logo {
   width: 50%;
 }
-/* line 13, ../sass/header.scss */
+/* line 14, ../sass/header.scss */
+.page nav ul .dropdown .dropdown-menu .dropdown-item {
+  color: #25858c !important;
+}
+/* line 16, ../sass/header.scss */
+.page nav ul .dropdown .dropdown-menu .dropdown-item:hover {
+  background: #25858c;
+  color: #e8f8f9 !important;
+}
+/* line 24, ../sass/header.scss */
 .page nav ul li a {
   color: #afdde0 !important;
 }

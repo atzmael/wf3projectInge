@@ -70,7 +70,7 @@ main {
             .langages, .code {
                 padding: 1vw;
                 div {
-                    @include centrer();
+                    @include centrer(relative);
                     padding: 2vw;
                     border: $lightgrey 1px solid;
                     h3 {

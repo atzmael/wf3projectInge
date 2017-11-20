@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
     $query -> bindValue(1, $_GET['id'], PDO::PARAM_INT);
     $query -> execute();
 
-    $result = $query -> fetchAll();
+    $result = $query -> fetch();
 
 }
 else
@@ -29,11 +29,7 @@ include_once('../content/header.php');
             <div class="col-12">
                 <?php
 
-                foreach ($result as $value) {
-                    echo '<h2>'.$value['title'].'</h2>
-                    
-                    ';
-                }
+                echo '<h2>'.$result['title'].'</h2>';
 
                 ?>
             </div>

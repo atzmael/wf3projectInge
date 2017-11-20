@@ -1,5 +1,11 @@
 <?php
 
+if(isset($_SESSION['id'])){
+    $user = $db -> query('SELECT pseudo, firstname, lastname, email, city, country, registration, function, nb_article, nb_comment FROM user WHERE id_util ='.$_SESSION['id']);
+
+    $result_user = $user -> fetch();
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -44,26 +50,24 @@
                     <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_css.php">CSS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_javascript.php">JAVASCRIPT</a>
+                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_js.php">JAVASCRIPT</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_php.php">PHP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_sql.php">SQL</a>
+                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_mysql.php">SQL</a>
                 </li>
                 <?php
                 if(isset($_SESSION['id'])){
                     ?>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"> Profil</i></a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="<?php echo directory() ?>content/">Profil</a>
+                            <a class="dropdown-item" href="<?php echo directory() ?>content/user.php">Mon profil</a>
+                            <a class="dropdown-item" href="<?php echo directory() ?>content/mycode.php">Mes codes</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="<?php echo directory() ?>content/">Mes codes</a>
-                            <a class="dropdown-item" href="<?php echo directory() ?>content/">Propre</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Deconnexion</a>
+                            <a class="dropdown-item" href="<?php echo directory() ?>content/deconnexion.php">Deconnexion</a>
                         </div>
                     </li>
                 <?php

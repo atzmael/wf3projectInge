@@ -19,8 +19,7 @@ h3 {
 }
 
 #loader {
-    @include centrer();
-    position: absolute;
+    @include centrer(absolute);
 }
 
 /***********/
