@@ -5,9 +5,24 @@ main {
         box-shadow: 5px 5px 10px #000;
         margin: 7vw 0;
         .recherche {
-            p {
-                margin: 1vw
+            span {
+                input {
+
+                }
+                &::after {
+                    height: 2px;
+                    width: 0;
+                    background: $deepblue;
+                    opacity: 1;
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    transform-origin: center;
+                    transition: width 0.5s;
+                }
             }
+
         }
         #moreOptions {
             cursor: pointer;

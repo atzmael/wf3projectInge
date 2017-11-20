@@ -9,6 +9,10 @@ nav {
         width: 50%;
     }
     ul {
-
+        li {
+            a {
+                @include link();
+            }
+        }
     }
 }

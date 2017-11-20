@@ -55,6 +55,14 @@ h3 {
 .page nav .logo {
   width: 50%;
 }
+/* line 13, ../sass/header.scss */
+.page nav ul li a {
+  color: #afdde0 !important;
+}
+/* line 25, ../sass/variable.scss */
+.page nav ul li a:hover {
+  color: #e8f8f9 !important;
+}
 /* line 2, ../sass/index.scss */
 .page main .section1, .page main .section2 {
   background: #fff;
@@ -62,26 +70,35 @@ h3 {
   box-shadow: 5px 5px 10px #000;
   margin: 7vw 0;
 }
-/* line 8, ../sass/index.scss */
-.page main .section1 .recherche p, .page main .section2 .recherche p {
-  margin: 1vw;
-}
 /* line 12, ../sass/index.scss */
+.page main .section1 .recherche span::after, .page main .section2 .recherche span::after {
+  height: 2px;
+  width: 0;
+  background: #25858c;
+  opacity: 1;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform-origin: center;
+  transition: width 0.5s;
+}
+/* line 27, ../sass/index.scss */
 .page main .section1 #moreOptions, .page main .section2 #moreOptions {
   cursor: pointer;
   padding: 1vw;
   display: inline-block;
   margin-top: 1vw;
 }
-/* line 18, ../sass/index.scss */
+/* line 33, ../sass/index.scss */
 .page main .section1 #options, .page main .section2 #options {
   display: none;
 }
-/* line 21, ../sass/index.scss */
+/* line 36, ../sass/index.scss */
 .page main .section1 h2, .page main .section2 h2 {
   padding-top: 2vw;
 }
-/* line 28, ../sass/index.scss */
+/* line 43, ../sass/index.scss */
 .page main .section1 .row .langages div h3 a, .page main .section2 .row .langages div h3 a {
   text-decoration: none;
   position: relative;
@@ -108,28 +125,28 @@ h3 {
   transform-origin: center;
   transition: width 0.5s;
 }
-/* line 34, ../sass/index.scss */
+/* line 49, ../sass/index.scss */
 .page main .section1 .row .langages, .page main .section1 .row .code, .page main .section2 .row .langages, .page main .section2 .row .code {
   padding: 1vw;
 }
-/* line 36, ../sass/index.scss */
+/* line 51, ../sass/index.scss */
 .page main .section1 .row .langages div, .page main .section1 .row .code div, .page main .section2 .row .langages div, .page main .section2 .row .code div {
   padding: 2vw;
   border: #c6d2d3 1px solid;
 }
-/* line 40, ../sass/index.scss */
+/* line 55, ../sass/index.scss */
 .page main .section1 .row .langages div h3 a, .page main .section1 .row .code div h3 a, .page main .section2 .row .langages div h3 a, .page main .section2 .row .code div h3 a {
   color: #25858c;
 }
-/* line 42, ../sass/index.scss */
+/* line 57, ../sass/index.scss */
 .page main .section1 .row .langages div h3 a:hover, .page main .section1 .row .code div h3 a:hover, .page main .section2 .row .langages div h3 a:hover, .page main .section2 .row .code div h3 a:hover {
   color: #25858c;
 }
-/* line 48, ../sass/index.scss */
+/* line 63, ../sass/index.scss */
 .page main .section1 .row .langages div p a, .page main .section1 .row .code div p a, .page main .section2 .row .langages div p a, .page main .section2 .row .code div p a {
   color: #000;
 }
-/* line 50, ../sass/index.scss */
+/* line 65, ../sass/index.scss */
 .page main .section1 .row .langages div p a:hover, .page main .section1 .row .code div p a:hover, .page main .section2 .row .langages div p a:hover, .page main .section2 .row .code div p a:hover {
   color: #000;
 }
@@ -143,11 +160,11 @@ h3 {
 }
 /* line 10, ../sass/footer.scss */
 .page footer .row div a {
-  color: #afdde0;
+  color: #afdde0 !important;
 }
 /* line 25, ../sass/variable.scss */
 .page footer .row div a:hover {
-  color: #e8f8f9;
+  color: #e8f8f9 !important;
 }
 
 /** SMALL CHANGE **/

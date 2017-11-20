@@ -21,9 +21,9 @@ $color_linkH: $lightblue;
 }
 
 @mixin link{
-    color: $color_link;
+    color: $color_link!important;
     &:hover {
-        color: $color_linkH;
+        color: $color_linkH!important;
     }
 }
 

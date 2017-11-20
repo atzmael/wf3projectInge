@@ -13,7 +13,7 @@ include_once('content/header.php');
         <div class="section1 col-12 text-center">
             <h2>Trouves le code de tes rêves !</h2>
             <div class="recherche">
-                <input type="text" id="search" placeholder="Rechercher"><button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <span><input type="text" id="search" placeholder="Rechercher"><button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></span>
                 <div id="response"></div>
             </div>
             <p id="moreOptions">Options avancées</p>
@@ -30,6 +30,9 @@ include_once('content/header.php');
                     <div>
                         <h3><a href="<?php echo directory() ?>content/index_html.php">HTML</a></h3>
                         <p class="nbCode">x codes parus</p>
+                        <?php
+                        if()
+                        ?>
                         <p>derniers code ajouté : <a href="#">html tags</a></p>
                     </div>
                 </div>

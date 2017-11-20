@@ -9,8 +9,8 @@ Error: Undefined variable: "$lightgrey".
 5:         box-shadow: 5px 5px 10px #000;
 6:         margin: 7vw 0;
 7:         .recherche {
-8:             p {
-9:                 margin: 1vw
+8:             span {
+9:                 input {
 
 Backtrace:
 C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss:4
@@ -80,4 +80,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$lightgrey\".\A         on line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss\A \A 1: main {\A 2:     .section1, .section2 {\A 3:         background: #fff;\A 4:         border: $lightgrey 1px solid;\A 5:         box-shadow: 5px 5px 10px #000;\A 6:         margin: 7vw 0;\A 7:         .recherche {\A 8:             p {\A 9:                 margin: 1vw"; }
+  content: "Error: Undefined variable: \"$lightgrey\".\A         on line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss\A \A 1: main {\A 2:     .section1, .section2 {\A 3:         background: #fff;\A 4:         border: $lightgrey 1px solid;\A 5:         box-shadow: 5px 5px 10px #000;\A 6:         margin: 7vw 0;\A 7:         .recherche {\A 8:             span {\A 9:                 input {"; }
