@@ -13,8 +13,12 @@ include_once('content/header.php');
         <div class="section1 col-12 text-center">
             <h2>Trouves le code de tes rêves !</h2>
             <div class="recherche">
+
                 <input type="text" id="search" placeholder="Rechercher"><button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 <div id="response"></div>
+
+                <input type="text" placeholder="Rechercher"><button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+
             </div>
             <p class="moreOptions">Options avancées</p>
             <div class="options">
