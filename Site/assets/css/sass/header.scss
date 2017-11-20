@@ -1,0 +1,18 @@
+/**********/
+/* HEADER */
+/**********/
+
+
+nav {
+    background: $darkgrey;
+    .logo {
+        width: 50%;
+    }
+    ul {
+        li {
+            a {
+                @include link();
+            }
+        }
+    }
+}

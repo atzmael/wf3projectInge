@@ -1,0 +1,74 @@
+main {
+    .section1, .section2 {
+        background: #fff;
+        border: $lightgrey 1px solid;
+        box-shadow: 5px 5px 10px #000;
+        margin: 7vw 0;
+        .recherche {
+            span {
+                input {
+
+                }
+                &::after {
+                    height: 2px;
+                    width: 0;
+                    background: $deepblue;
+                    opacity: 1;
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    transform-origin: center;
+                    transition: width 0.5s;
+                }
+            }
+
+        }
+        #moreOptions {
+            cursor: pointer;
+            padding: 1vw;
+            display: inline-block;
+            margin-top: 1vw;
+        }
+        #options {
+            display: none;
+        }
+        h2 {
+            padding-top: 2vw;
+        }
+        .row {
+            .langages {
+                div {
+                    h3 {
+                        a {
+                            @include animLink1($deepblue, $deepblue);
+                        }
+                    }
+                }
+            }
+            .langages, .code {
+                padding: 1vw;
+                div {
+                    padding: 2vw;
+                    border: $lightgrey 1px solid;
+                    h3 {
+                        a {
+                            color: $deepblue;
+                            &:hover {
+                                color: $deepblue;
+                            }
+                        }
+                    }
+                    p {
+                        a {
+                            color: $color_font;
+                            &:hover {
+                                color: $color_font;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

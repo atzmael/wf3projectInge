@@ -13,15 +13,11 @@ include_once('content/header.php');
         <div class="section1 col-12 text-center">
             <h2>Trouves le code de tes rêves !</h2>
             <div class="recherche">
-
-                <input type="text" id="search" placeholder="Rechercher"><button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <span><input type="text" id="search" placeholder="Rechercher"><button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></span>
                 <div id="response"></div>
-
-                <input type="text" placeholder="Rechercher"><button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-
             </div>
-            <p class="moreOptions">Options avancées</p>
-            <div class="options">
+            <p id="moreOptions">Options avancées</p>
+            <div id="options">
                 <label for="optVote">Les mieux notés</label>
                 <input type="checkbox" id="optVote" value="DESC">
                 <select name="optDate" id="optDate">
@@ -34,6 +30,9 @@ include_once('content/header.php');
                     <div>
                         <h3><a href="<?php echo directory() ?>content/index_html.php">HTML</a></h3>
                         <p class="nbCode">x codes parus</p>
+                        <?php
+                        if()
+                        ?>
                         <p>derniers code ajouté : <a href="#">html tags</a></p>
                     </div>
                 </div>
@@ -79,7 +78,7 @@ include_once('content/header.php');
                 foreach($result as $value) {
                     echo '<div class="code col-12 col-md-4">
                             <div>
-                                <h3><a href="article/'.$value['id_article'].'">'.$value['title'].'</a></h3>
+                                <h3><a href="'.directory() .'content/article.php?id='.$value['id_article'].'">'.$value['title'].'</a></h3>
                                 <p>Posté il y a '.$value['release_date'].' par '.$value['pseudo'].'</p>
                             </div>
                           </div>';
