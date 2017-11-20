@@ -1,19 +1,21 @@
 /*
 Error: Undefined variable: "$lightgrey".
-        on line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss
+        on line 54 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss
 
-1: main {
-2:     .section1, .section2 {
-3:         background: #fff;
-4:         border: $lightgrey 1px solid;
-5:         box-shadow: 5px 5px 10px #000;
-6:         margin: 7vw 0;
-7:         .recherche {
-8:             span {
-9:                 input {
+49:     }
+50: }
+51: main {
+52:     .section1, .section2 {
+53:         background: #fff;
+54:         border: $lightgrey 1px solid;
+55:         box-shadow: 5px 5px 10px #000;
+56:         margin: 0;
+57:         h2 {
+58:             padding-top: 2vw;
+59:         }
 
 Backtrace:
-C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss:4
+C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss:54
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
@@ -80,4 +82,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$lightgrey\".\A         on line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss\A \A 1: main {\A 2:     .section1, .section2 {\A 3:         background: #fff;\A 4:         border: $lightgrey 1px solid;\A 5:         box-shadow: 5px 5px 10px #000;\A 6:         margin: 7vw 0;\A 7:         .recherche {\A 8:             span {\A 9:                 input {"; }
+  content: "Error: Undefined variable: \"$lightgrey\".\A         on line 54 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss\A \A 49:     }\A 50: }\A 51: main {\A 52:     .section1, .section2 {\A 53:         background: #fff;\A 54:         border: $lightgrey 1px solid;\A 55:         box-shadow: 5px 5px 10px #000;\A 56:         margin: 0;\A 57:         h2 {\A 58:             padding-top: 2vw;\A 59:         }"; }

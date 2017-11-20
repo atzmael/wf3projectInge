@@ -5,49 +5,76 @@ session_start();
 include_once('config/librairie.php');
 require_once('config/inc_bdd.php');
 
+$html = $db ->query("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=1 order by article.id_article desc limit 1");
+
+$css = $db -> prepare("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=2 order by article.id_article desc limit 1");
+
+$js = $db -> prepare("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=3 order by article.id_article desc limit 1");
+
+$php = $db -> prepare("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=4 order by article.id_article desc limit 1");
+
+$mysql = $db -> prepare("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=5 order by article.id_article desc limit 1");
+
+$html = $html->fetch();
+$css = $css->fetch();
+$js = $js->fetch();
+$php = $php->fetch();
+$mysql = $mysql->fetch();
+
 include_once('content/header.php');
 
 ?>
+<div class="recherche text-center">
+    <div class="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
+    <div class="searchField">
+        <input type="text" id="search" placeholder="Rechercher">
+    </div>
+    <div id="options">
+        <label for="optVote">Les mieux notés<input type="checkbox" id="optVote" value="DESC"></label>
+        <select name="optDate" id="optDate">
+            <option value="DESC">Du plus récent</option>
+            <option value="ASC">Du moins récent</option>
+        </select>
+    </div>
+    <div id="response"></div>
+</div>
 <main class="container">
     <div class="row">
         <div class="section1 col-12 text-center">
             <h2>Trouves le code de tes rêves !</h2>
-            <div class="recherche">
-                <span><input type="text" id="search" placeholder="Rechercher"><button type="submit"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></span>
-                <div id="response"></div>
-            </div>
-            <p id="moreOptions">Options avancées</p>
-            <div id="options">
-                <label for="optVote">Les mieux notés</label>
-                <input type="checkbox" id="optVote" value="DESC">
-                <select name="optDate" id="optDate">
-                    <option value="DESC">Du plus récent</option>
-                    <option value="ASC">Du moins récent</option>
-                </select>
-            </div>
+            <button id="btnSearch">Rechercher</button>
             <div class="row">
                 <div class="langages col-12 col-md-4">
                     <div>
                         <h3><a href="<?php echo directory() ?>content/index_html.php">HTML</a></h3>
-                        <p class="nbCode">x codes parus</p>
+                        <p class="nbCode"><?php echo $html['codes_parus'] ?> codes parus</p>
                         <?php
-                        if()
+
+                        echo '<p>derniers code ajouté : <a href="'.directory().'content/article.php?id='.$html['id_article'].'">'. $html['title'] .'</a></p>';
+
                         ?>
-                        <p>derniers code ajouté : <a href="#">html tags</a></p>
                     </div>
                 </div>
                 <div class="langages col-12 col-md-4">
                     <div>
                         <h3><a href="<?php echo directory() ?>content/index_css.php">CSS</a></h3>
-                        <p class="nbCode">x codes parus</p>
-                        <p>derniers code ajouté : <a href="#">css tags</a></p>
+                        <p class="nbCode"><?php echo $css['codes_parus'] ?> codes parus</p>
+                        <?php
+
+                        echo '<p>derniers code ajouté : <a href="'.$css['id_article'].'">'. $css['title'] .'</a></p>';
+
+                        ?>
                     </div>
                 </div>
                 <div class="langages col-12 col-md-4">
                     <div>
-                        <h3><a href="<?php echo directory() ?>content/index_js_jquery.php">JAVASCRIPT</a></h3>
-                        <p class="nbCode">x codes parus</p>
-                        <p>derniers code ajouté : <a href="#">js tags</a></p>
+                        <h3><a href="<?php echo directory() ?>content/index_js.php">JAVASCRIPT</a></h3>
+                        <p class="nbCode"><?php echo $js['codes_parus'] ?> codes parus</p>
+                        <?php
+
+                        echo '<p>derniers code ajouté : <a href="'.$js['id_article'].'">'. $js['title'] .'</a></p>';
+
+                        ?>
                     </div>
                 </div>
             </div>
@@ -55,15 +82,23 @@ include_once('content/header.php');
                 <div class="langages col-12 col-md-5">
                     <div>
                         <h3><a href="<?php echo directory() ?>content/index_php.php">PHP</a></h3>
-                        <p class="nbCode">x codes parus</p>
-                        <p>derniers code ajouté : <a href="#">php tags</a></p>
+                        <p class="nbCode"><?php echo $php['codes_parus'] ?> codes parus</p>
+                        <?php
+
+                        echo '<p>derniers code ajouté : <a href="'.$php['id_article'].'">'. $php['title'] .'</a></p>';
+
+                        ?>
                     </div>
                 </div>
                 <div class="langages col-12 col-md-5">
                     <div>
                         <h3><a href="<?php echo directory() ?>content/index_mysql.php">MySQL</a></h3>
-                        <p class="nbCode">x codes parus</p>
-                        <p>derniers code ajouté : <a href="#">MySql tags</a></p>
+                        <p class="nbCode"><?php echo $mysql['codes_parus'] ?> codes parus</p>
+                        <?php
+
+                        echo '<p>derniers code ajouté : <a href="'.$mysql['id_article'].'">'. $mysql['title'] .'</a></p>';
+
+                        ?>
                     </div>
                 </div>
             </div>

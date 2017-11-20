@@ -1,20 +1,36 @@
 <?php
 require_once('../config/inc_bdd.php');
 
-		if(!empty($_POST['saisi']) ){
+if(!empty($_POST['saisi'])){
 
-		$recherche_util = strip_tags($_POST['saisi']);
+    $recherche_util = strip_tags($_POST['saisi']);
+    $vote = strip_tags($_POST['optVote']);
+    $date = strip_tags($_POST['optDate']);
 
-		$query = $db -> prepare("SELECT title FROM article WHERE title LIKE :toto ORDER BY title ASC");
-				$query -> bindValue(':toto', '%'.$recherche_util.'%', PDO::PARAM_STR);
-				$query -> execute();
+    $sql = "SELECT id_article, title FROM article WHERE title LIKE :toto ORDER BY";
 
-				$result = $query -> fetchAll();
-				
-				echo json_encode($result);
+    if(!empty($vote)){
+        $sql.= " vote ".$vote;
+    }else {
+        if(!empty($date)){
+            $sql.= " id_article ".$date;
+        }else {
+            $sql.= " title ASC";
+        }
+    }
 
-	}else {
-		echo json_encode('');
-	}
-	
+    $sql.= " LIMIT 10";
+
+    $query = $db -> prepare($sql);
+    $query -> bindValue(':toto', '%'.$recherche_util.'%', PDO::PARAM_STR);
+    $query -> execute();
+
+    $result = $query -> fetchAll();
+
+    echo json_encode($result);
+
+}else {
+    echo json_encode('');
+}
+
 ?>
