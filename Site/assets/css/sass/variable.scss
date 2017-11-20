@@ -1,0 +1,52 @@
+/********************/
+/* VARIABLE & MIXIN */
+/********************/
+
+/* Variable */
+$lightblue: #e8f8f9;
+$lightgrey: #c6d2d3;
+$deepblue: #25858c;
+$darkgrey: #2e3535;
+$lightblue2: #afdde0;
+
+$color_font: #000;
+$color_link: $lightblue2;
+$color_linkH: $lightblue;
+
+@mixin centrer{
+    position: relative;
+    transform: translateY(-50%) translateX(-50%);
+    top: 50%;
+    left: 50%;
+}
+
+@mixin link{
+    color: $color_link;
+    &:hover {
+        color: $color_linkH;
+    }
+}
+
+@mixin animLink1($color1, $color2) {
+    text-decoration: none;
+    position: relative;
+    color: $color1;
+    &:hover, &:focus {
+        color: $color2;
+        &::after {
+            width: 100%;
+        }
+    }
+    &::after {
+        height: 2px;
+        width: 0;
+        background: $color2;
+        opacity: 1;
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform-origin: center;
+        transition: width 0.5s;
+    }
+}

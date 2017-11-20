@@ -1,6 +1,7 @@
 $(function(){
     $('#loader').hide();
-	  $('#search').on('keyup', recherche);  //ecouteur evenement sur le click lance la fonction validform
+    $('#moreOptions').on('click',function(){$('#options').fadeToggle();});
+	$('#search').on('keyup', recherche);  //ecouteur evenement sur le click lance la fonction validform
 });
 
 function recherche(){

@@ -1,0 +1,15 @@
+/**********/
+/* FOOTER */
+/**********/
+
+footer {
+    background: $darkgrey;
+    .row {
+        div {
+            margin: 1vw 0;
+            a{
+                @include link();
+            }
+        }
+    }
+}
