@@ -9,6 +9,17 @@ nav {
         width: 50%;
     }
     ul {
+        .dropdown {
+            .dropdown-menu {
+                .dropdown-item {
+                    color: $deepblue!important;
+                    &:hover {
+                        background: $deepblue;
+                        color: $lightblue!important;
+                    }
+                }
+            }
+        }
         li {
             a {
                 @include link();

@@ -19,8 +19,7 @@ h3 {
 }
 
 #loader {
-    @include centrer();
-    position: absolute;
+    @include centrer(absolute);
 }
 
 /***********/
@@ -28,7 +27,7 @@ h3 {
 /***********/
 
 .page {
-    padding-top: 10vw;
+    padding-top: 20vw;
 
     @import 'header';
 

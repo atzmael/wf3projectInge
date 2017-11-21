@@ -1,5 +1,11 @@
 <?php
 
+if(isset($_SESSION['id'])){
+    $user = $db -> query('SELECT pseudo, firstname, lastname, email, city, country, registration, function, nb_article, nb_comment FROM user WHERE id_util ='.$_SESSION['id']);
+
+    $result_user = $user -> fetch();
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -14,6 +20,7 @@
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/responsive.css">
 
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/function.js"></script>
 
@@ -43,17 +50,36 @@
                     <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_css.php">CSS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_javascript.php">JAVASCRIPT</a>
+                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_js.php">JAVASCRIPT</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_php.php">PHP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_sql.php">SQL</a>
+                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_mysql.php">SQL</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/connexion.php">CONNEXION</a>
-                </li>
+                <?php
+                if(isset($_SESSION['id'])){
+                    ?>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"> Profil</i></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="<?php echo directory() ?>content/user.php">Mon profil</a>
+                            <a class="dropdown-item" href="<?php echo directory() ?>content/mycode.php">Mes codes</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?php echo directory() ?>content/deconnexion.php">Deconnexion</a>
+                        </div>
+                    </li>
+                <?php
+                }else {
+                    ?>
+                    <li class="nav-item">
+                        <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/connexion.php">CONNEXION</a>
+                    </li>
+                <?php
+                }
+                ?>
+
             </ul>
         </div>
     </nav>

@@ -15,6 +15,6 @@
 
 <?php
 
-include_once('../content/footer.php')
+include_once('../content/footer.php');
 
 ?>
