@@ -6,6 +6,20 @@ $(function(){
     $('#optDate').on('change', recherche);
     $('#btnSearch').on('click',function(){$('.recherche').show();});
     $('.close').on('click',function(){$('.recherche').hide();});
+    $('.asideBtn').on('click',function(){
+        if($(this).hasClass('active')){
+            $('.menuUser').animate({left: "-50vw",opacity: "0"});
+            $('.asideBtn i').toggleClass('fa-times');
+            $('.asideBtn i').toggleClass('fa-plus');
+            $(this).toggleClass('active');
+        }else {
+            $('.menuUser').animate({left: "5vw",opacity: "1"});
+            $('.asideBtn i').toggleClass('fa-times');
+            $('.asideBtn i').toggleClass('fa-plus');
+            $(this).toggleClass('active');
+        }
+
+    });
 });
 
 function directory(){
@@ -13,7 +27,7 @@ function directory(){
 }
 
 function recherche(){
-	
+
 	var recherche_util = encodeURIComponent($('#search').val()); // on securise les données et on les stock en memoire
     var optVote = "";
     var optDate = $('#optDate').val();
@@ -27,7 +41,7 @@ function recherche(){
 
 		$.ajax({
 			url: "content/search.php" ,  // on donne l url du fichier de traitement
-			type: 'POST', //requete de type post 
+			type: 'POST', //requete de type post
 			data: 'saisi='+recherche_util+'&optVote='+optVote+'&optDate='+optDate // on envoi les données
 
 		}).done(function(reponse){
@@ -43,7 +57,7 @@ function recherche(){
 
 		$('#response').html(message);
 			}
-			
+
 		}).fail(function(error){
 			$('#response').html(error.statusText);
 		});

@@ -32,12 +32,19 @@ h3 {
   left: 50%;
 }
 
+/* line 25, ../sass/style.scss */
+.page {
+  min-height: 100vh;
+  position: relative;
+  padding: 25vw 0 40vw 0;
+}
+
+/* TEST */
 /***********/
 /* CONTENT */
 /***********/
-/* line 29, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 .page {
-  padding-top: 20vw;
   /**********/
   /* HEADER */
   /**********/
@@ -189,15 +196,46 @@ h3 {
 .page main .section1 .row .langages div p a:hover, .page main .section1 .row .code div p a:hover, .page main .section2 .row .langages div p a:hover, .page main .section2 .row .code div p a:hover {
   color: #000;
 }
+/* line 2, ../sass/user.scss */
+.page .asideBtn i {
+  color: #25858c;
+  cursor: pointer;
+  font-size: 1.6em;
+}
+/* line 9, ../sass/user.scss */
+.page .menuUser {
+  position: absolute;
+  left: -500px;
+  box-shadow: 1px 1px 5px #000;
+  z-index: 999;
+  background: #2e3535;
+  padding: 4vw;
+}
+/* line 16, ../sass/user.scss */
+.page .menuUser ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 21, ../sass/user.scss */
+.page .menuUser ul li a {
+  color: #afdde0 !important;
+}
+/* line 25, ../sass/variable.scss */
+.page .menuUser ul li a:hover {
+  color: #e8f8f9 !important;
+}
 /* line 5, ../sass/footer.scss */
 .page footer {
   background: #2e3535;
+  position: absolute;
+  bottom: 0;
 }
-/* line 8, ../sass/footer.scss */
+/* line 10, ../sass/footer.scss */
 .page footer .row div {
   margin: 1vw 0;
 }
-/* line 10, ../sass/footer.scss */
+/* line 12, ../sass/footer.scss */
 .page footer .row div a {
   color: #afdde0 !important;
 }

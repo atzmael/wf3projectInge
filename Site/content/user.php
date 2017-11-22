@@ -7,7 +7,7 @@ require_once('../config/inc_bdd.php');
 
 if(isset($_SESSION['id'])){
 
-    $user = $db -> query('SELECT pseudo, firstname, lastname, email, city, country, registration, function, nb_article, nb_comment FROM user WHERE id_util ='.$_SESSION['id']);
+    $user = $db -> query('SELECT * FROM user WHERE id_util ='.$_SESSION['id']);
 
     $user -> execute();
 
@@ -22,8 +22,21 @@ include_once('../content/header.php');
 ?>
 
 <main class="container">
+    <span class="asideBtn"><i class="fa fa-plus" aria-hidden="true"></i></span>
+    <aside class="menuUser">
+        <ul>
+            <li><a href="<?php echo directory() ?>content/user.php">Mon profil</a></li>
+            <li><a href="<?php echo directory() ?>content/mycode.php">Mon Code</a></li>
+            <li><a href="<?php echo directory() ?>content/modif_profil.php">Modifier mon profil</a></li>
+            <li><a href="<?php echo directory() ?>content/modif_email.php">Changer mon email</a></li>
+        </ul>
+    </aside>
     <div>
-        <p>Bienvenu <?php echo $result['pseudo']; ?> !</p>
+        <p>Bienvenue <?php echo $result['pseudo'].' ('.$result['firstname'].' '.$result['lastname'].')'; ?></p>
+        <p>Date d'inscription : <?php echo $result['registration']; ?></p>
+        <p>Mail : <?php echo $result['email']; ?></p>
+        <p>Pays : <?php echo $result['country']; ?></p>
+        <p>Ville : <?php echo $result['city']; ?></p>
     </div>
 </main>
 

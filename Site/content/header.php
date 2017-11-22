@@ -14,10 +14,11 @@ if(isset($_SESSION['id'])){
     <meta charset="UTF-8">
     <title>Balance ton code</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/bootstrap.css">
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/font-awesome.css">
-    <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/style.css">
-    <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/responsive.css">
+    <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/style.css" media="screen">
+    <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/responsive.css" media="screen">
 
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
@@ -30,7 +31,7 @@ if(isset($_SESSION['id'])){
     <img src="<?php echo directory(); ?>assets/img/loader.gif" alt="Image de chargement de la page" aria-hidden="true">
 </div>
 
-<div class="page">
+<div class="page pb-md-2">
     <nav class="navbar navbar-expand-md fixed-top navbar-dark text-center">
         <a href="<?php echo directory() ?>" class="align-self-center linkLogo smoothScroll"><img src="<?php echo directory() ?>assets/img/logo.png" alt="Logo"></a>
         <div>

@@ -22,17 +22,26 @@ h3 {
     @include centrer(absolute);
 }
 
+.page {
+    min-height: 100vh;
+    position:relative;
+    padding: 25vw 0 40vw 0;
+}
+
+/* TEST */
+
 /***********/
 /* CONTENT */
 /***********/
 
 .page {
-    padding-top: 20vw;
+
 
     @import 'header';
 
     /* import des fichiers pour le contenu */
     @import 'index';
+    @import 'user';
 
     @import 'footer';
 
