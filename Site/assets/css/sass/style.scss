@@ -20,6 +20,9 @@ h2 {
 h3 {
     color: $deepblue;
 }
+a {
+    @include link($lightblue2, $lightblue);
+}
 
 #loader {
     @include centrer(absolute);
@@ -59,3 +62,5 @@ main {
     @include link($deepblue, #2fb0b8);
     text-decoration: underline;
 }
+
+@import 'responsive';

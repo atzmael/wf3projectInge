@@ -21,9 +21,9 @@ if(isset($_SESSION['id'])){
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/bootstrap.css">
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/font-awesome.css">
-    <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/style.css" media="screen">
     <link rel="stylesheet" type="text/css" href="CSS/style_connexion.css">
-    <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/responsive.css" media="screen">
+    <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/style.css" media="screen">
+
 
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/jquery.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>

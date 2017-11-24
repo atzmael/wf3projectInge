@@ -37,7 +37,16 @@ h3 {
   color: #25858c;
 }
 
-/* line 24, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
+a {
+  color: #afdde0;
+}
+/* line 25, ../sass/variable.scss */
+a:hover {
+  color: #e8f8f9;
+}
+
+/* line 27, ../sass/style.scss */
 #loader {
   position: absolute;
   transform: translateY(-50%) translateX(-50%);
@@ -45,7 +54,7 @@ h3 {
   left: 50%;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 main {
   margin-top: 25vw;
   padding-bottom: 35vw;
@@ -56,7 +65,7 @@ main {
 /***********/
 /* CONTENT */
 /***********/
-/* line 41, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 .page {
   min-height: 100vh;
   position: relative;
@@ -87,11 +96,11 @@ main {
 }
 /* line 24, ../sass/header.scss */
 .page nav ul li a {
-  color: #afdde0 !important;
+  color: #afdde0;
 }
 /* line 25, ../sass/variable.scss */
 .page nav ul li a:hover {
-  color: #e8f8f9 !important;
+  color: #e8f8f9;
 }
 /* line 1, ../sass/index.scss */
 .page .recherche {
@@ -235,11 +244,11 @@ main {
 }
 /* line 21, ../sass/user.scss */
 .page .menuUser ul li a {
-  color: #afdde0 !important;
+  color: #afdde0;
 }
 /* line 25, ../sass/variable.scss */
 .page .menuUser ul li a:hover {
-  color: #e8f8f9 !important;
+  color: #e8f8f9;
 }
 /* line 28, ../sass/user.scss */
 .page main > .userContent {
@@ -247,11 +256,11 @@ main {
 }
 /* line 29, ../sass/user.scss */
 .page main > .userContent a {
-  color: #000 !important;
+  color: #000;
 }
 /* line 25, ../sass/variable.scss */
 .page main > .userContent a:hover {
-  color: #000 !important;
+  color: #000;
 }
 /* line 33, ../sass/user.scss */
 .page main > .userContent button {
@@ -307,20 +316,20 @@ main {
 }
 /* line 12, ../sass/footer.scss */
 .page footer .row div a {
-  color: #afdde0 !important;
+  color: #afdde0;
 }
 /* line 25, ../sass/variable.scss */
 .page footer .row div a:hover {
-  color: #e8f8f9 !important;
+  color: #e8f8f9;
 }
 
 /** SMALL CHANGE **/
-/* line 58, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 .link {
-  color: #25858c !important;
+  color: #25858c;
   text-decoration: underline;
 }
 /* line 25, ../sass/variable.scss */
 .link:hover {
-  color: #2fb0b8 !important;
+  color: #2fb0b8;
 }
