@@ -33,10 +33,10 @@ h3 {
 }
 
 /* line 25, ../sass/style.scss */
-.page {
-  min-height: 100vh;
-  position: relative;
-  padding: 25vw 0 40vw 0;
+main {
+  margin-top: 25vw;
+  padding-bottom: 35vw;
+  box-sizing: border-box;
 }
 
 /* TEST */
@@ -45,6 +45,8 @@ h3 {
 /***********/
 /* line 37, ../sass/style.scss */
 .page {
+  min-height: 100vh;
+  position: relative;
   /**********/
   /* HEADER */
   /**********/
@@ -224,6 +226,31 @@ h3 {
 /* line 25, ../sass/variable.scss */
 .page .menuUser ul li a:hover {
   color: #e8f8f9 !important;
+}
+/* line 28, ../sass/user.scss */
+.page main > .userContent {
+  margin: 2vw 0;
+}
+/* line 29, ../sass/user.scss */
+.page main > .userContent a {
+  color: #000 !important;
+}
+/* line 25, ../sass/variable.scss */
+.page main > .userContent a:hover {
+  color: #000 !important;
+}
+/* line 33, ../sass/user.scss */
+.page main > .userContent button {
+  background: #25858c;
+  border: none;
+  color: #e8f8f9;
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+}
+/* line 61, ../sass/variable.scss */
+.page main > .userContent button:hover {
+  background: #299ea5;
 }
 /* line 5, ../sass/footer.scss */
 .page footer {
