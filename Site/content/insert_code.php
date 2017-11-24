@@ -45,7 +45,7 @@
 			</div>
 		
 
-			<button type="submit">Soumez ton code!!!</button>
+			<button type="submit">Soumets ton code!!!</button>
 
 
 		</form>
