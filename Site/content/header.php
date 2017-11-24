@@ -79,7 +79,7 @@ if(isset($_SESSION['id'])){
                                 {
                                    
                                     ?>
-                                    <a class="dropdown-item" href="<?php echo directory() ?>content/admin.php">Administration</a>
+                                    <a class="dropdown-item" href="<?php echo directory() ?>content/admin.php" >Administration</a>
                                     <?php
                                 }
                             ?>

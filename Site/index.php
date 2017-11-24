@@ -7,13 +7,13 @@ require_once('config/inc_bdd.php');
 
 $html = $db ->query("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=1 order by article.id_article desc limit 1");
 
-$css = $db -> prepare("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=2 order by article.id_article desc limit 1");
+$css = $db -> query("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=2 order by article.id_article desc limit 1");
 
-$js = $db -> prepare("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=3 order by article.id_article desc limit 1");
+$js = $db -> query("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=3 order by article.id_article desc limit 1");
 
-$php = $db -> prepare("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=4 order by article.id_article desc limit 1");
+$php = $db -> query("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=4 order by article.id_article desc limit 1");
 
-$mysql = $db -> prepare("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=5 order by article.id_article desc limit 1");
+$mysql = $db -> query("SELECT count(article.id_article) as codes_parus, id_article, article.title, language_name from language join article on article._id_lang = language.id_lang where id_lang=5 order by article.id_article desc limit 1");
 
 $html = $html->fetch();
 $css = $css->fetch();
