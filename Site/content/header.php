@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_SESSION['id'])){
-    $user = $db -> query('SELECT pseudo, firstname, lastname, email, city, country, registration, function, nb_article, nb_comment FROM user WHERE id_util ='.$_SESSION['id']);
+    $user = $db -> query('SELECT pseudo, firstname, lastname, email, city, country, registration, function, rank, nb_article, nb_comment FROM user WHERE id_util ='.$_SESSION['id']);
 
     $result_user = $user -> fetch();
 }
@@ -73,6 +73,15 @@ if(isset($_SESSION['id'])){
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="<?php echo directory() ?>content/user.php">Mon profil</a>
                             <a class="dropdown-item" href="<?php echo directory() ?>content/mycode.php">Mes codes</a>
+                            <?php
+                                if($result_user['rank'] == 1)
+                                {
+                                   
+                                    ?>
+                                    <a class="dropdown-item" href="<?php echo directory() ?>content/admin.php">Administration</a>
+                                    <?php
+                                }
+                            ?>
                             
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="<?php echo directory() ?>content/deconnexion.php">Deconnexion</a>
