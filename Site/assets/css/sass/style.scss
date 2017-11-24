@@ -6,6 +6,9 @@
 
 body {
     color: $color_font;
+    button {
+        @include button();
+    }
 }
 
 h1 {
@@ -17,16 +20,20 @@ h2 {
 h3 {
     color: $deepblue;
 }
+a {
+    @include link($lightblue2, $lightblue);
+}
 
 #loader {
     @include centrer(absolute);
 }
 
-.page {
-    min-height: 100vh;
-    position:relative;
-    padding: 25vw 0 40vw 0;
+main {
+    margin-top: 25vw;
+    padding-bottom: 35vw;
+    box-sizing: border-box;
 }
+
 
 /* TEST */
 
@@ -35,16 +42,25 @@ h3 {
 /***********/
 
 .page {
-
+    min-height: 100vh;
+    position:relative;
 
     @import 'header';
 
     /* import des fichiers pour le contenu */
     @import 'index';
     @import 'user';
+    @import 'index_lang';
 
     @import 'footer';
 
 }
 
 /** SMALL CHANGE **/
+
+.link {
+    @include link($deepblue, #2fb0b8);
+    text-decoration: underline;
+}
+
+@import 'responsive';

@@ -20,10 +20,10 @@ $color_linkH: $lightblue;
     left: 50%;
 }
 
-@mixin link{
-    color: $color_link!important;
+@mixin link($color1,$color2){
+    color: $color1;
     &:hover {
-        color: $color_linkH!important;
+        color: $color2;
     }
 }
 
@@ -48,5 +48,17 @@ $color_linkH: $lightblue;
         left: 0;
         transform-origin: center;
         transition: width 0.5s;
+    }
+}
+
+@mixin button(){
+    background: $deepblue;
+    border: none;
+    color: $lightblue;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+    &:hover {
+        background: #299ea5;
     }
 }

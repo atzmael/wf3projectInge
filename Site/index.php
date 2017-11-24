@@ -61,7 +61,7 @@ include_once('content/header.php');
                         <p class="nbCode"><?php echo $css['codes_parus'] ?> codes parus</p>
                         <?php
 
-                        echo '<p>derniers code ajouté : <a href="'.$css['id_article'].'">'. $css['title'] .'</a></p>';
+                        echo '<p>derniers code ajouté : <a href="'.directory().'content/article.php?id='.$css['id_article'].'">'. $css['title'] .'</a></p>';
 
                         ?>
                     </div>
@@ -72,7 +72,7 @@ include_once('content/header.php');
                         <p class="nbCode"><?php echo $js['codes_parus'] ?> codes parus</p>
                         <?php
 
-                        echo '<p>derniers code ajouté : <a href="'.$js['id_article'].'">'. $js['title'] .'</a></p>';
+                        echo '<p>derniers code ajouté : <a href="'.directory().'content/article.php?id='.$js['id_article'].'">'. $js['title'] .'</a></p>';
 
                         ?>
                     </div>
@@ -85,7 +85,7 @@ include_once('content/header.php');
                         <p class="nbCode"><?php echo $php['codes_parus'] ?> codes parus</p>
                         <?php
 
-                        echo '<p>derniers code ajouté : <a href="'.$php['id_article'].'">'. $php['title'] .'</a></p>';
+                        echo '<p>derniers code ajouté : <a href="'.directory().'content/article.php?id='.$php['id_article'].'">'. $php['title'] .'</a></p>';
 
                         ?>
                     </div>
@@ -96,7 +96,7 @@ include_once('content/header.php');
                         <p class="nbCode"><?php echo $mysql['codes_parus'] ?> codes parus</p>
                         <?php
 
-                        echo '<p>derniers code ajouté : <a href="'.$mysql['id_article'].'">'. $mysql['title'] .'</a></p>';
+                        echo '<p>derniers code ajouté : <a href="'.directory().'content/article.php?id='.$mysql['id_article'].'">'. $mysql['title'] .'</a></p>';
 
                         ?>
                     </div>
@@ -111,7 +111,7 @@ include_once('content/header.php');
                 include_once('content/affiche_code.php');
 
                 foreach($result as $value) {
-                    echo '<div class="code col-12 col-md-4">
+                    echo '<div class="code col-md-4">
                             <div>
                                 <h3><a href="'.directory() .'content/article.php?id='.$value['id_article'].'">'.$value['title'].'</a></h3>
                                 <p>Posté il y a '.$value['release_date'].' par '.$value['pseudo'].'</p>

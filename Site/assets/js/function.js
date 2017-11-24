@@ -4,6 +4,7 @@ $(function(){
 	$('#search').on('keyup', recherche);  //ecouteur evenement sur le click lance la fonction validform
     $('#optVote').on('change', recherche);
     $('#optDate').on('change', recherche);
+    $('#copyCode').on('click', copyToClipboard);
     $('#btnSearch').on('click',function(){$('.recherche').show();});
     $('.close').on('click',function(){$('.recherche').hide();});
     $('.asideBtn').on('click',function(){
@@ -21,6 +22,15 @@ $(function(){
 
     });
 });
+
+function copyToClipboard() {
+  var $temp = $("<textarea></textarea>");
+  $("body").append($temp);
+  $temp.val($("#contentcopy").html()).text().select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
 
 function directory(){
     return dir = '/wf3projectInge/Site/';

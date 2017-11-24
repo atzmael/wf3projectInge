@@ -1,0 +1,68 @@
+/* style page connexion */
+
+.carou{
+    margin-bottom: 5vw;
+    font-family: OCR A Std, monospace;
+    font-size:1.6em;
+    color: #25858C;
+}
+
+.connexion {
+    text-align: center;
+}
+
+
+/* case connexion */
+.section1{
+    background-color:#25858C !important;
+    border-radius: 20vw;
+    border: none;
+}
+
+
+.section1 legend{
+    text-align: center;
+    font-family:Andale Mono, monospace;
+    color:black;
+    font-size: 2em;
+
+}
+
+input{
+    border: white;
+    margin-left: 0;
+    padding-left: 15vw;
+}
+/*les labels */
+.label1{
+    color: black;
+    margin-left: -42vw;
+    padding-left: 15vw;
+    font-size: 1em;
+}
+         .label2{
+             color :black;
+             margin-left: -45vw;
+             padding-left: 15vw;
+             margin-top: 17px;
+             font-size: 1em;
+         }
+
+
+/* bouton valider */
+.bouton{
+    color: white;
+    background-color:#2E3535;
+    margin-left: 0;
+    border: unset;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.bouton:hover {
+    background-color: #3c4444;
+}
+
+/* couleur body */
+body{
+    background-color: #C6D2D3;
+}

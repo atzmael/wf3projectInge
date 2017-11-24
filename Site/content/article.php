@@ -31,8 +31,17 @@ include_once('../content/header.php');
 
                 echo '<h2>Titre : '.$result['title'].'</h2>';
                 echo '<p>Description : '.$result['description'].'</p>';
-                echo '<p><pre><code id="copyCode">'.($result['content']).'</code></pre></p>';
-                echo '<p><button>Copie ton code</button>';
+                echo '<p><pre><code id="contentcopy">'.($result['content']).'</code></pre></p>';
+                echo '<p><button id="copyCode">Copie ton code</button>'."  "."<select id='select'>
+                                                                    <option value='0'>Ton vote</option>
+                                                                    <option value='1'>&#9733;</option> 
+                                                                    <option value='2'>&#9733;&#9733;</option>
+                                                                    <option value='3'>&#9733;&#9733;&#9733;</option>
+                                                                    <option value='4'>&#9733;&#9733;&#9733;&#9733;</option>
+                                                                    <option value='5'>&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+                                                                </select>";
+
+
                 echo '<p>Auteur : '.$result['pseudo'].'</p>';
                 echo '<p>Date de parution : '.$result['release_date'].'</p>';
                 echo '<p>Note : '.$result['vote'].'</p>';
