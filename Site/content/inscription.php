@@ -62,6 +62,6 @@ include_once('../content/header.php');
 
 <?php
 
-include_once('content/footer.php')
+include_once "./footer.php";
 
 ?>

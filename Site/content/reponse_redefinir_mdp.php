@@ -2,8 +2,8 @@
 
 	//reponse_redefinir_mdp.php
 
-	require_once('inc_bdd.php');
-	require_once('librairie.php');
+	require_once "../config/inc_bdd.php";
+	require_once "../config/librairie.php";
 
 	$champs = array('mdp1', 'mdp2', "id");
 
@@ -28,20 +28,20 @@
 			$query -> execute();
 
 			echo "<p>Votre mot de passe à bien été modifié</p>";
-			echo "<a href='accueil.php'>Accueil</a>";
+			echo "<a href='../index.php'>Accueil</a>";
 
 
 		}
 		else
 		{
 			echo "<p>les mots de passe ne coincide pas</p>";
-			echo "<a href='accueil.php'>Accueil</a>";
+			echo "<a href='../index.php'>Accueil</a>";
 		}
 	}
 	else
 	{
 		echo "<p>Merci de vérifier les champs</p>";
-		echo "<a href='accueil.php'>Accueil</a>";
+		echo "<a href='../index.php'>Accueil</a>";
 	}
 
 ?>

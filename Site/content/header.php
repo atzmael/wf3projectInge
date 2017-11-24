@@ -14,13 +14,19 @@ if(isset($_SESSION['id'])){
     <meta charset="UTF-8">
     <title>Balance ton code</title>
 
+    
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/bootstrap.css">
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/font-awesome.css">
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/style.css" media="screen">
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/responsive.css" media="screen">
 
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/function.js"></script>
@@ -67,8 +73,10 @@ if(isset($_SESSION['id'])){
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="<?php echo directory() ?>content/user.php">Mon profil</a>
                             <a class="dropdown-item" href="<?php echo directory() ?>content/mycode.php">Mes codes</a>
+                            
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="<?php echo directory() ?>content/deconnexion.php">Deconnexion</a>
+
                         </div>
                     </li>
                 <?php

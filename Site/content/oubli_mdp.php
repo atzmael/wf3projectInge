@@ -2,8 +2,8 @@
 
 	// oubli_mdp.php
 
-	require_once('inc_bdd.php');
-	require_once('librairie.php');
+	require_once "../config/inc_bdd.php";
+	require_once "../config/librairie.php";
 
 ?>
 

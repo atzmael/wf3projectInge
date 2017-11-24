@@ -29,9 +29,20 @@ include_once('../content/header.php');
             <div class="col-12">
                 <?php
 
-                echo '<h2>'.$result['title'].'</h2>';
-
+                echo '<h2>Titre : '.$result['title'].'</h2>';
+                echo '<p>Description : '.$result['description'].'</p>';
+                echo '<p><pre><code id="copyCode">'.($result['content']).'</code></pre></p>';
+                echo '<p><button>Copie ton code</button>';
+                echo '<p>Auteur : '.$result['pseudo'].'</p>';
+                echo '<p>Date de parution : '.$result['release_date'].'</p>';
+                echo '<p>Note : '.$result['vote'].'</p>';
+                
                 ?>
+                <script>
+
+                        
+                    
+                </script>
             </div>
         </div>
 
@@ -39,6 +50,6 @@ include_once('../content/header.php');
 
 <?php
 
-include_once('../content/footer.php')
+include_once('../content/footer.php');
 
 ?>
