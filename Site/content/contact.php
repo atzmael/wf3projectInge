@@ -14,7 +14,8 @@
         $result = $user -> fetch();
          
         }else{
-          echo "";  
+        $result['pseudo'] = "";
+        $result['email'] = "";  
         }
 
 
