@@ -103,7 +103,7 @@
 			$mail->isHTML(true);
 
 			// message
-			$mail->Subject = 'Modification mot de pass';
+			$mail->Subject = 'Modification mot de passe';
 			$mail->Body = "<p>Voici le lien pour redefinir votre mdp :</p>"."<p><a href='localhost/wf3projectInge/Site/content/redefinir_mdp.php?id=".$id."&token=".$token."'>LIEN</a></p>";
 			$mail->AltBody = 'Message alternatif du mail';
 
