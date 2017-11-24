@@ -6,21 +6,21 @@
 	font-size:4em;
 	color: #25858C;
 	
-	margin-top: -10vw;
+	margin-top: -8vw;
 }
 
 
 
 
 /* case connexion */
-.section1{
-	background-color:#25858C !important;
+.connexion .section1{
+	background-color:#25858C ! important ;
     border-radius: 20vw;
 
 }
 
 
-.section1 legend{
+ .section1 legend{
 	      text-align: center;
 	      font-family:Andale Mono, monospace;
 	      color:black;
@@ -28,12 +28,18 @@
 
 }
 
-input{
+ input{
 	background-color: none;
 	border: white;
     margin-left: 0vw;
     padding-left: 15vw;
+    
 }
+/* ecart formulaire- liens */
+fieldset{
+	margin-bottom: 2vw;
+}
+
 /*les labels */
 .label1{
 	color :black;
@@ -54,22 +60,34 @@ input{
 
 /*lien mot de pass oublié */
 
-a{
+ a{
 	color: #0056b3;
 }
 
 /* bouton valider */
-.bouton{
+ .bouton{
 	color: white;
 	background-color:#2E3535;
-	margin-left: 0vw;
+	margin-left: -8vw;
     border: none;
     padding: 20px;
     margin-bottom: 10px;
 }
 
+/*liens mot de passe oublié et inscription utilisateur*/
+.liens a {
+	font-size: 1em;
+	margin-top: 10vw;
+	padding: 5vw;
+
+
+	
+}
+
+
+
 /* couleur body */
-body{
+ body{
 
 text-align:center;
 background-color: #C6D2D3;
@@ -78,14 +96,14 @@ background-color: #C6D2D3;
 
  
 
-main{
- max-width:1280px;
+ main{
+         max-width:1280px;
 
-min-height:100%;
+         min-height:100%;
 
-margin-top: 25vw;
+         margin-top: 25vw;
 
-position:relative;
+         position:relative;
 
 
 

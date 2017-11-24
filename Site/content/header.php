@@ -23,6 +23,8 @@ if(isset($_SESSION['id'])){
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/font-awesome.css">
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/style.css" media="screen">
     <link rel="stylesheet" type="text/css" href="CSS/style_connexion.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style_inscription.css">
+
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/responsive.css" media="screen">
 
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/jquery.js"></script>
