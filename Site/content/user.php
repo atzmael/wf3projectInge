@@ -31,7 +31,7 @@ include_once('../content/header.php');
             <li><a href="<?php echo directory() ?>content/modif_email.php">Changer mon email</a></li>
         </ul>
     </aside>
-    <div>
+    <div class="userContent">
         <p>Bienvenue <?php echo $result['pseudo'].' ('.$result['firstname'].' '.$result['lastname'].')'; ?></p>
         <p>Date d'inscription : <?php echo $result['registration']; ?></p>
         <p>Mail : <?php echo $result['email']; ?></p>
@@ -42,6 +42,6 @@ include_once('../content/header.php');
 
 <?php
 
-include_once('../content/footer.php')
+include_once('../content/footer.php');
 
 ?>

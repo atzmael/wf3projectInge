@@ -10,7 +10,7 @@ footer {
         div {
             margin: 1vw 0;
             a{
-                @include link();
+                @include link($color_link,$color_linkH);
             }
         }
     }

@@ -22,7 +22,7 @@ nav {
         }
         li {
             a {
-                @include link();
+                @include link($color_link, $color_linkH);
             }
         }
     }

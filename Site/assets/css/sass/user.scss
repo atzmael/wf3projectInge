@@ -19,8 +19,18 @@
         padding: 0;
         li {
             a {
-                @include link();
+                @include link($color_link,$color_linkH);
             }
         }
+    }
+}
+
+main > .userContent {
+    a {
+        @include link(#000,#000);
+    }
+    margin: 2vw 0;
+    button {
+        @include button();
     }
 }
