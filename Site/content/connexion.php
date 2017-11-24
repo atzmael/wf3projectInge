@@ -37,15 +37,15 @@ include_once('../content/header.php');
         </div>
     </section>
 
+		
+<!-- formulaire de connexion -->
+
+             
     <section class="row section1">
 
         <div class="col-12 formulaire">
-
-
-            <form method="POST" action="reponse_connexion.php">
-
-
-                <fieldset>
+			<form method="POST" action="reponse_connexion.php " class="mx-auto">
+        	 <fieldset>
 
                     <legend>>connexion_</legend>
 
@@ -55,16 +55,24 @@ include_once('../content/header.php');
 
                     <p><label class="label2" for="mot_de_passe">Mot de passe:</label></p>
                     <input type="password" name="mot_de_passe" id="mot_de_passe">
+			</fieldset>
 
 
-                    <p><a href="oubli_mdp.php">Mot de passe oublié ?</a></p>
+<!-- Liens mot de passe oublié et inscription -->
 
-                    <button class="bouton">Connexion</button>
+        <div class="col-12 Liens">
+			<a href="oubli_mdp.php">Mot de passe oublié ?</a>
 
-                </fieldset>
+		    <a href="inscription.php">Pas encore membre ?</a>
+			
+		</div>	
+<!-- bouton validation formulaire -->
 
-            </form>
+			  <button class="bouton">Connexion</button>
 
+		
+	         </form>
+	     
         </div>
 
     </section>

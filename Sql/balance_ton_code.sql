@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 17 nov. 2017 à 14:30
+-- Généré le :  ven. 24 nov. 2017 à 14:19
 -- Version du serveur :  10.1.26-MariaDB
 -- Version de PHP :  7.1.9
 
@@ -35,8 +35,9 @@ CREATE TABLE `article` (
   `title` text,
   `description` text,
   `content` text,
-  `vote` decimal(10,0) DEFAULT NULL,
+  `vote` decimal(5,0) DEFAULT NULL,
   `release_date` date DEFAULT NULL,
+  `is_publish` tinyint(1) NOT NULL,
   `_id_util` int(11) NOT NULL,
   `_id_lang` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -45,9 +46,11 @@ CREATE TABLE `article` (
 -- Déchargement des données de la table `article`
 --
 
-INSERT INTO `article` (`id_article`, `title`, `description`, `content`, `vote`, `release_date`, `_id_util`, `_id_lang`) VALUES
-(3, 'le plus petit code possible', NULL, '&lt;p&gt;', NULL, '2017-11-17', 3, 1),
-(4, 'blabla', NULL, '&lt;p&gt;&lt;/p&gt;', NULL, '2017-11-17', 3, 1);
+INSERT INTO `article` (`id_article`, `title`, `description`, `content`, `vote`, `release_date`, `is_publish`, `_id_util`, `_id_lang`) VALUES
+(3, 'le plus petit code possible', NULL, '&lt;p&gt;', NULL, '2017-11-17', 0, 3, 1),
+(4, 'blabla', NULL, '&lt;p&gt;&lt;/p&gt;', NULL, '2017-11-17', 0, 3, 1),
+(5, 'Ins&eacute;rer lien bootstrap', NULL, 'CSS\r\n\r\nCopy-paste the stylesheet &lt;link&gt; into your &lt;head&gt; before all other stylesheets to load our CSS.\r\n\r\n&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot; integrity=&quot;sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb&quot; crossorigin=&quot;anonymous&quot;&gt;\r\n\r\nJS\r\n\r\nMany of our components require the use of JavaScript to function. Specifically, they require jQuery, Popper.js, and our own JavaScript plugins. Place the following &lt;script&gt;s near the end of your pages, right before the closing &lt;/body&gt; tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.\r\n\r\nWe use jQuery&rsquo;s slim build, but the full version is also supported.\r\n\r\n&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot; integrity=&quot;sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot; integrity=&quot;sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot; integrity=&quot;sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n\r\nCurious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you&rsquo;re at all unsure about the general page structure, keep reading for an example page template.', NULL, '2017-11-23', 0, 2, 1),
+(6, 'bootstrap', NULL, '&lt;!doctype html&gt;\r\n&lt;html lang=&quot;en&quot;&gt;\r\n  &lt;head&gt;\r\n    &lt;title&gt;Hello, world!&lt;/title&gt;\r\n    &lt;!-- Required meta tags --&gt;\r\n    &lt;meta charset=&quot;utf-8&quot;&gt;\r\n    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;\r\n\r\n    &lt;!-- Bootstrap CSS --&gt;\r\n    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot; integrity=&quot;sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb&quot; crossorigin=&quot;anonymous&quot;&gt;\r\n  &lt;/head&gt;\r\n  &lt;body&gt;\r\n    &lt;h1&gt;Hello, world!&lt;/h1&gt;\r\n\r\n    &lt;!-- Optional JavaScript --&gt;\r\n    &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;\r\n    &lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot; integrity=&quot;sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot; integrity=&quot;sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n    &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot; integrity=&quot;sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n  &lt;/body&gt;\r\n&lt;/html&gt;', NULL, '2017-11-23', 0, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -128,6 +131,13 @@ CREATE TABLE `token` (
   `token_key` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `token`
+--
+
+INSERT INTO `token` (`id`, `token_key`) VALUES
+(3, '24f16c13cae7f2684b8a071362072686');
+
 -- --------------------------------------------------------
 
 --
@@ -155,8 +165,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_util`, `firstname`, `lastname`, `pseudo`, `function`, `email`, `registration`, `city`, `country`, `rank`, `password`, `nb_article`, `nb_comment`) VALUES
-(2, 'Flogny', 'Damien', '', 'etudiant', 'damien.flogny@gmail.com', NULL, 'Paris', 'France', 10, '88303eda04a4100585528d84080689ba', 0, 0),
-(3, 'Mac', 'Minus', 'Abracadabra', 'noob', 'macminus@webforce3.fr', NULL, 'Auxerre', 'France', 10, '$2y$10$fOWHaHmjUMnzpiMMqYiVROMFw66Hz7uBf.gee4RGwv9ve2urelUda', 0, 0),
+(2, 'Flogny', 'Damien', 'Macadams', 'etudiant', 'damien.flogny@gmail.com', NULL, 'Paris', 'France', 1, '$2y$10$7GvmiATxeFpdcW40.veRgecwzpSgX9GBkrT6VkVnbuUNPHgbyr.v.', 0, 0),
+(3, 'blabla', 'blabla', 'bloblo89', 'noob', 'macminus@webforce3.fr', NULL, 'blabla', 'blabla', 10, '$2y$10$fOWHaHmjUMnzpiMMqYiVROMFw66Hz7uBf.gee4RGwv9ve2urelUda', 0, 0),
 (4, 'Mac', 'Maxi', '', 'noob', 'macmaxi@webforce3.fr', NULL, 'auxerre', 'france', 10, '$2y$10$NtynOlcvn8jkREyI0Dz5Fun2x72hczmocGYkoA/EMMivPdiderl42', 0, 0),
 (5, 'Veinstein', 'Herv&eacute;', '', 'noob', 'veinstein@webforce3.fr', NULL, 'auxerre', 'france', 10, '$2y$10$R9WnAaO0DRq0OIpPrwh4LuqJREc.2y6jemlYUounybUVX9MUv3HD.', 0, 0),
 (6, 'jean', 'mi', '', 'noob', 'jeanmi@webforce3.fr', NULL, 'auxerre', 'france', 10, '$2y$10$mAtLG/qO4QuSrVXTrrypl.XRgK4gJAAUaBZYfejgj9eMCNbfga9XC', 0, 0);
@@ -228,7 +238,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `article`
 --
 ALTER TABLE `article`
-  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `comment`
@@ -252,7 +262,7 @@ ALTER TABLE `picture`
 -- AUTO_INCREMENT pour la table `tag`
 --
 ALTER TABLE `tag`
-  MODIFY `id_tag` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_tag` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `user`

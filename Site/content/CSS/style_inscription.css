@@ -1,0 +1,43 @@
+/* style de la page d'inscription */
+.inscription  legend{
+	text-align: center;
+}
+
+.inscription h1{
+	text-align: center;
+	
+    font-family:Andale Mono, monospace;
+	color:black;
+    font-size: 5em;
+
+}
+
+.inscription .section2{
+    background-color:#25858C !important;
+    border-radius: 5vw;
+    padding-top: 0vw;
+
+
+}
+
+form{
+	background-color: none;
+	border-color: lightgrey;
+
+}
+
+.inscription fieldset{
+	border: 3px solid #C6D2D3;
+	margin-top: 5vw;
+	padding: 5vw;
+}
+
+.bouton{
+	color: white;
+	background-color:#2E3535;
+	margin-left: 0vw;
+    border: none;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
