@@ -1,15 +1,13 @@
 /* style page connexion */
 
 .carou{
-	margin-top: 10vw;
+	
 	font-family: OCR A Std, monospace;
-	font-size: 3vw;
+	font-size:4em;
 	color: #25858C;
 	
 	margin-top: -10vw;
 }
-
-
 
 
 
@@ -26,7 +24,7 @@
 	      text-align: center;
 	      font-family:Andale Mono, monospace;
 	      color:black;
-	      font-size: 50px;
+	      font-size: 5em;
 
 }
 
@@ -42,7 +40,7 @@ input{
 	margin-left: -42vw;
     padding-left: 15vw;
     font-family: New Century Schoolbook, TeX Gyre Schola, serif;
-    font-size: 22px;
+    font-size: 2em;
    }
 .label2{
 	color :black;
@@ -50,7 +48,7 @@ input{
     padding-left: 15vw;
     margin-top: 17px;
     font-family: New Century Schoolbook, TeX Gyre Schola, serif;
-    font-size: 22px;
+    font-size: 2em;
 }
 
 
@@ -85,9 +83,11 @@ main{
 
 min-height:100%;
 
-margin:0 auto;
+margin-top: 25vw;
 
 position:relative;
+
+
 
 }
 
