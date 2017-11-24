@@ -1,28 +1,26 @@
 /*
-Error: Undefined variable: "$lightgrey".
-        on line 55 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss
+Error: Undefined mixin 'centrer'.
+        on line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index_lang.scss, in `centrer'
+        from line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index_lang.scss
 
-50:     }
-51: }
-52: main {
-53:     .section1, .section2 {
-54:         background: #fff;
-55:         border: $lightgrey 1px solid;
-56:         box-shadow: 5px 5px 10px #000;
-57:         margin: 0;
-58:         h2 {
-59:             padding-top: 2vw;
-60:         }
+1: .code {
+2:     padding: 1vw;
+3:     div {
+4:         @include centrer(relative);
+5:         padding: 2vw;
+6:         border: $lightgrey 1px solid;
+7:         h3 {
+8:             a {
+9:                 color: $deepblue;
 
 Backtrace:
-C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss:55
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/list_literal.rb:63:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/list_literal.rb:63:in `_perform'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
+C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index_lang.scss:4:in `centrer'
+C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index_lang.scss:4
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
@@ -82,4 +80,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$lightgrey\".\A         on line 55 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss\A \A 50:     }\A 51: }\A 52: main {\A 53:     .section1, .section2 {\A 54:         background: #fff;\A 55:         border: $lightgrey 1px solid;\A 56:         box-shadow: 5px 5px 10px #000;\A 57:         margin: 0;\A 58:         h2 {\A 59:             padding-top: 2vw;\A 60:         }"; }
+  content: "Error: Undefined mixin 'centrer'.\A         on line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index_lang.scss, in `centrer'\A         from line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index_lang.scss\A \A 1: .code {\A 2:     padding: 1vw;\A 3:     div {\A 4:         @include centrer(relative);\A 5:         padding: 2vw;\A 6:         border: $lightgrey 1px solid;\A 7:         h3 {\A 8:             a {\A 9:                 color: $deepblue;"; }
