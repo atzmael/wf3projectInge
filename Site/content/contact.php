@@ -22,34 +22,34 @@ if(isset($_SESSION['id']))
 ?>
 
     <main class="container">
-
-        <div class="col-md-6">
-            <p>Nous sommes idéalement situés à côté de la gare au 4 rue Paul Doumer, 89000 - Auxerre</p>
-            <p>Si vous n'aimez pas notre formulaire de contact ou si vous avez beosin d'envoyer des pièces jointes n'hésitez pas à nous contacter via <a href="mailto: contact@balancetoncode.com" name="mail : contact@balancetoncode.com">ce lien</a></p>
-        </div>
-        <form method="POST" class="col-md-6" action="reponse_contact.php">
-
-            <fieldset>
-
-                <legend>Balance ton message</legend>
+        <div class="row">
+            <div class="col-md-6 mx-auto my-auto">
+                <p>Nous sommes idéalement situés à côté de la gare au 4 rue Paul Doumer, 89000 - Auxerre</p>
+                <p>Si vous n'aimez pas notre formulaire de contact ou si vous avez beosin d'envoyer des pièces jointes n'hésitez pas à nous contacter via <a href="mailto: contact@balancetoncode.com" title="mail : contact@balancetoncode.com">ce lien</a></p>
+            </div>
+            <form method="POST" class="col-md-6" action="reponse_contact.php">
 
                 <fieldset>
 
-                    <label for="pseudo">Pseudo</label>
-                    <p><input type="text" name="pseudo" id="pseudo" value='<?= $result['pseudo']; ?>'></p>
-                    <label for="email">Email</label>
-                    <p><input type="text" name="email" id="email" value='<?= $result['email']; ?>'></p>
-                    <label for="titre">Titre du Message</label>
-                    <p><input type="text" name="titre" id="titre"></p>
-                    <label for="message">Message</label>
-                    <p><textarea name="message" rows= "5" id="message" placeholder="Je veux faire un don"></textarea></p>
+                    <legend>Balance ton message</legend>
 
-                    <button type="submit" id="valid" class="btnTheme">Envoyer<span class="btnUnder"></span></button>
+                    <fieldset>
 
-                </fieldset>
+                        <label for="pseudo">Pseudo</label>
+                        <p><input type="text" name="pseudo" id="pseudo" value='<?= $result['pseudo']; ?>'></p>
+                        <label for="email">Email</label>
+                        <p><input type="text" name="email" id="email" value='<?= $result['email']; ?>'></p>
+                        <label for="titre">Titre du Message</label>
+                        <p><input type="text" name="titre" id="titre"></p>
+                        <label for="message">Message</label>
+                        <p><textarea name="message" rows= "5" id="message" placeholder="Je veux faire un don"></textarea></p>
 
-        </form>
+                        <button type="submit" id="valid" class="btnTheme">Envoyer<span class="btnUnder"></span></button>
 
+                    </fieldset>
+
+            </form>
+        </div>
     </main>
 
 <?php
