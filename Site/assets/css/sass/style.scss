@@ -20,6 +20,9 @@ h2 {
 h3 {
     color: $deepblue;
 }
+a {
+    @include link($lightblue2, $lightblue);
+}
 
 #loader {
     @include centrer(absolute);
@@ -47,9 +50,17 @@ main {
     /* import des fichiers pour le contenu */
     @import 'index';
     @import 'user';
+    @import 'index_lang';
 
     @import 'footer';
 
 }
 
 /** SMALL CHANGE **/
+
+.link {
+    @include link($deepblue, #2fb0b8);
+    text-decoration: underline;
+}
+
+@import 'responsive';

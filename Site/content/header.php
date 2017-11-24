@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_SESSION['id'])){
-    $user = $db -> query('SELECT pseudo, firstname, lastname, email, city, country, registration, function, nb_article, nb_comment FROM user WHERE id_util ='.$_SESSION['id']);
+    $user = $db -> query('SELECT pseudo, firstname, lastname, email, city, country, registration, function, rank, nb_article, nb_comment FROM user WHERE id_util ='.$_SESSION['id']);
 
     $result_user = $user -> fetch();
 }
@@ -24,8 +24,7 @@ if(isset($_SESSION['id'])){
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/style.css" media="screen">
     <link rel="stylesheet" type="text/css" href="CSS/style_connexion.css">
     <link rel="stylesheet" type="text/css" href="CSS/style_inscription.css">
-
-    <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/responsive.css" media="screen">
+    
 
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/jquery.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
@@ -73,9 +72,18 @@ if(isset($_SESSION['id'])){
                     ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"> Profil</i></a>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="<?php echo directory() ?>content/user.php">Mon profil</a>
                             <a class="dropdown-item" href="<?php echo directory() ?>content/mycode.php">Mes codes</a>
+                            <?php
+                                if($result_user['rank'] == 1)
+                                {
+                                   
+                                    ?>
+                                    <a class="dropdown-item" href="<?php echo directory() ?>content/admin.php">Administration</a>
+                                    <?php
+                                }
+                            ?>
                             
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="<?php echo directory() ?>content/deconnexion.php">Deconnexion</a>

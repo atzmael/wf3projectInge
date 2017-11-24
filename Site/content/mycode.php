@@ -7,7 +7,7 @@ require_once('../config/inc_bdd.php');
 
 if(isset($_SESSION['id'])){
 
-    $user = $db -> query('SELECT * FROM article WHERE article._id_util ='.$_SESSION['id']);
+    $user = $db -> query('SELECT id_article, title FROM article WHERE article._id_util ='.$_SESSION['id']);
 
     $result = $user -> fetchAll();
 

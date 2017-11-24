@@ -1,5 +1,7 @@
 /* style de la page d'inscription */
-
+.inscription  legend{
+	text-align: center;
+}
 
 .inscription h1{
 	text-align: center;

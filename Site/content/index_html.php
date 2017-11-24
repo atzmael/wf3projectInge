@@ -22,7 +22,7 @@
 		<?php 
 
 		foreach($result as $value) {
-                    echo '<div class="code col-12 col-md-4">
+                    echo '<div class="code col-md-4">
                             <div>
                                 <h3><a href="'.directory() .'content/article.php?id='.$value['id_article'].'">'.$value['title'].'</a></h3>
                                 <p>Posté il y a '.$value['release_date'].' par '.$value['pseudo'].'</p>

@@ -1,0 +1,24 @@
+.code {
+    padding: 1vw;
+    div {
+        @include centrer(relative);
+        padding: 2vw;
+        border: $lightgrey 1px solid;
+        h3 {
+            a {
+                color: $deepblue;
+                &:hover {
+                    color: $deepblue;
+                }
+            }
+        }
+        p {
+            a {
+                color: $color_font;
+                &:hover {
+                    color: $color_font;
+                }
+            }
+        }
+    }
+}
