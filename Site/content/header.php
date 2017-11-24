@@ -71,7 +71,7 @@ if(isset($_SESSION['id'])){
                     ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"> Profil</i></a>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="<?php echo directory() ?>content/user.php">Mon profil</a>
                             <a class="dropdown-item" href="<?php echo directory() ?>content/mycode.php">Mes codes</a>
                             

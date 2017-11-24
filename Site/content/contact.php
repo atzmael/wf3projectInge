@@ -25,7 +25,7 @@ if(isset($_SESSION['id']))
         <div class="row">
             <div class="col-md-6 mx-auto my-auto">
                 <p>Nous sommes idéalement situés à côté de la gare au 4 rue Paul Doumer, 89000 - Auxerre</p>
-                <p>Si vous n'aimez pas notre formulaire de contact ou si vous avez beosin d'envoyer des pièces jointes n'hésitez pas à nous contacter via <a href="mailto: contact@balancetoncode.com" title="mail : contact@balancetoncode.com">ce lien</a></p>
+                <p>Si vous n'aimez pas notre formulaire de contact ou si vous avez beosin d'envoyer des pièces jointes n'hésitez pas à nous contacter via <a href="mailto: contact@balancetoncode.com" title="mail : contact@balancetoncode.com" class="link">ce lien</a></p>
             </div>
             <form method="POST" class="col-md-6" action="reponse_contact.php">
 

@@ -266,6 +266,35 @@ main {
 .page main > .userContent button:hover {
   background: #299ea5;
 }
+/* line 1, ../sass/index_lang.scss */
+.page .code {
+  padding: 1vw;
+}
+/* line 3, ../sass/index_lang.scss */
+.page .code div {
+  position: relative;
+  transform: translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  padding: 2vw;
+  border: #c6d2d3 1px solid;
+}
+/* line 8, ../sass/index_lang.scss */
+.page .code div h3 a {
+  color: #25858c;
+}
+/* line 10, ../sass/index_lang.scss */
+.page .code div h3 a:hover {
+  color: #25858c;
+}
+/* line 16, ../sass/index_lang.scss */
+.page .code div p a {
+  color: #000;
+}
+/* line 18, ../sass/index_lang.scss */
+.page .code div p a:hover {
+  color: #000;
+}
 /* line 5, ../sass/footer.scss */
 .page footer {
   background: #2e3535;
@@ -286,3 +315,12 @@ main {
 }
 
 /** SMALL CHANGE **/
+/* line 58, ../sass/style.scss */
+.link {
+  color: #25858c !important;
+  text-decoration: underline;
+}
+/* line 25, ../sass/variable.scss */
+.link:hover {
+  color: #2fb0b8 !important;
+}
