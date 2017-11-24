@@ -6,6 +6,9 @@
 
 body {
     color: $color_font;
+    button {
+        @include button();
+    }
 }
 
 h1 {
@@ -27,6 +30,7 @@ main {
     padding-bottom: 35vw;
     box-sizing: border-box;
 }
+
 
 /* TEST */
 

@@ -8,23 +8,36 @@
 body {
   color: #000;
 }
+/* line 9, ../sass/style.scss */
+body button {
+  background: #25858c;
+  border: none;
+  color: #e8f8f9;
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+}
+/* line 61, ../sass/variable.scss */
+body button:hover {
+  background: #299ea5;
+}
 
-/* line 11, ../sass/style.scss */
+/* line 14, ../sass/style.scss */
 h1 {
   color: #25858c;
 }
 
-/* line 14, ../sass/style.scss */
+/* line 17, ../sass/style.scss */
 h2 {
   color: #25858c;
 }
 
-/* line 17, ../sass/style.scss */
+/* line 20, ../sass/style.scss */
 h3 {
   color: #25858c;
 }
 
-/* line 21, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 #loader {
   position: absolute;
   transform: translateY(-50%) translateX(-50%);
@@ -32,7 +45,7 @@ h3 {
   left: 50%;
 }
 
-/* line 25, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 main {
   margin-top: 25vw;
   padding-bottom: 35vw;
@@ -43,7 +56,7 @@ main {
 /***********/
 /* CONTENT */
 /***********/
-/* line 37, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 .page {
   min-height: 100vh;
   position: relative;
