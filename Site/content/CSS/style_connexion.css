@@ -1,0 +1,95 @@
+/* style page connexion */
+
+.carou{
+	margin-top: 10vw;
+	font-family: OCR A Std, monospace;
+	font-size: 3vw;
+	color: #25858C;
+	
+	margin-top: -10vw;
+}
+
+
+
+
+
+
+/* case connexion */
+.section1{
+	background-color:#25858C !important;
+    border-radius: 20vw;
+
+}
+
+
+.section1 legend{
+	      text-align: center;
+	      font-family:Andale Mono, monospace;
+	      color:black;
+	      font-size: 50px;
+
+}
+
+input{
+	background-color: none;
+	border: white;
+    margin-left: 0vw;
+    padding-left: 15vw;
+}
+/*les labels */
+.label1{
+	color :black;
+	margin-left: -42vw;
+    padding-left: 15vw;
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    font-size: 22px;
+   }
+.label2{
+	color :black;
+	margin-left: -45vw;
+    padding-left: 15vw;
+    margin-top: 17px;
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    font-size: 22px;
+}
+
+
+/*lien mot de pass oublié */
+
+a{
+	color: #0056b3;
+}
+
+/* bouton valider */
+.bouton{
+	color: white;
+	background-color:#2E3535;
+	margin-left: 0vw;
+    border: none;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* couleur body */
+body{
+
+text-align:center;
+background-color: #C6D2D3;
+
+}
+
+ 
+
+main{
+ max-width:1280px;
+
+min-height:100%;
+
+margin:0 auto;
+
+position:relative;
+
+}
+
+ 
+
