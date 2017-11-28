@@ -20,8 +20,12 @@
   }
 
   /* CONTENT */
-  /* line 31, ../sass/responsive.scss */
-  main {
+  /* line 32, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 12vw;
+  }
+  /* line 35, ../sass/responsive.scss */
+  .page main {
     padding: 13vw 0 7vw 0;
   }
 
@@ -30,9 +34,13 @@
 @media screen and (min-width: 990px) {
   /* HEADER */
   /* CONTENT */
-  /* line 45, ../sass/responsive.scss */
-  main {
-    padding: 2vw 0 2vw 0;
+  /* line 51, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 12vw;
+  }
+  /* line 54, ../sass/responsive.scss */
+  .page main {
+    padding: 13vw 0 25vw 0;
   }
 
   /* FOOTER */

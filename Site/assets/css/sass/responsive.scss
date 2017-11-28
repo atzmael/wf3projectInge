@@ -28,8 +28,13 @@
 
     /* CONTENT */
 
-    main {
-        padding: 13vw 0 7vw 0;
+    .page {
+        .recherche {
+            padding-top: 12vw;
+        }
+        main {
+            padding: 13vw 0 7vw 0;
+        }
     }
 
     /* FOOTER */
@@ -42,8 +47,13 @@
 
     /* CONTENT */
 
-    main {
-        padding: 2vw 0 2vw 0;
+    .page {
+        .recherche {
+            padding-top: 12vw;
+        }
+        main {
+            padding: 13vw 0 25vw 0;
+        }
     }
 
     /* FOOTER */
