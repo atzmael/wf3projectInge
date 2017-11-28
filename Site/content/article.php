@@ -5,18 +5,17 @@ session_start();
 include_once('../config/librairie.php');
 require_once('../config/inc_bdd.php');
 
-if(isset($_GET['id'])){
+$id = strip_tags($_GET['id']);
 
-    $query = $db -> prepare("SELECT article.title, article.description, article.content, article.release_date, article.vote as vote, user.pseudo FROM article JOIN user ON article._id_util = user.id_util WHERE id_article = ?");
+if(isset($id)){
+
+    $query = $db -> prepare("SELECT article.title, article.description, article.content, article.release_date, article.vote, user.pseudo, user.id_util FROM article JOIN user ON article._id_util = user.id_util WHERE id_article = ?");
     $query -> bindValue(1, $_GET['id'], PDO::PARAM_INT);
     $query -> execute();
 
     $result = $query -> fetch();
 
-}
-else
-
-{
+}else{
     header("Location: 404.php");
 }
 
@@ -55,13 +54,15 @@ include_once('../content/header.php');
                     echo '<i class="fa fa-star-o fa-2x"></i>';
                 }
                 echo '</p>';
+
+                if($_SESSION['id'] == $result['id_util'])
+                {
+                    echo '<p><a href="'.directory().'content/modif_code.php?id='.$id.'">Modifier</a></p>';
+                    echo '<p><a href="'.directory().'content/sup_code.php?id='.$id.'">Supprimer</a></p>';
+                }
                 
                 ?>
-                <script>
-
-                        
-                    
-                </script>
+                
             </div>
         </div>
 
