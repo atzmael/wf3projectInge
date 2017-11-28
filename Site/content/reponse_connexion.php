@@ -17,7 +17,7 @@ if(verif_form($_POST, $champs))
 
     //verifier si email existe en base et preparation du mot de passe
 
-    $query = $db -> prepare("SELECT id_util, firstname, lastname, password, rank FROM user WHERE email = :email");
+    $query = $db -> prepare("SELECT id_util, pseudo, firstname, lastname, password, rank FROM user WHERE email = :email");
     $query -> bindValue(':email', $email, PDO::PARAM_STR);
     $query -> execute();
 
@@ -33,6 +33,7 @@ if(verif_form($_POST, $champs))
         {
             session_start();
             $_SESSION['id'] = $result['id_util'];
+            $_SESSION['pseudo'] = $result['pseudo'];
             $_SESSION['nom'] = $result['firstname'];
             $_SESSION['prenom'] = $result['lastname'];
             $_SESSION['rank'] = $result['rank'];

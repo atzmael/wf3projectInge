@@ -1,10 +1,14 @@
+var nb_ajout_content = 1
+
 $(function(){
+
     $('#loader').hide();
     $('#moreOptions').on('click',function(){$('#options').fadeToggle();});
 	$('#search').on('keyup', recherche);  //ecouteur evenement sur le click lance la fonction validform
     $('#optVote').on('change', recherche);
     $('#optDate').on('change', recherche);
     $('#copyCode').on('click', copyToClipboard);
+    $('#insert_code').on('click', insertCode);
     $('#btnSearch').on('click',function(){$('.recherche').show();});
     $('.close').on('click',function(){$('.recherche').hide();});
     $('.asideBtn').on('click',function(){
@@ -21,14 +25,48 @@ $(function(){
         }
 
     });
+
+    $('#ajout_content').on('click', ajout_content);
 });
 
+function insertCode(e){
+    e.preventDefault();
+    var id_lang = encodeURIComponent($("#id_lang").val());
+    var title = encodeURIComponent($("#title").val());
+    var description = encodeURIComponent($("#description").val());
+    var code = encodeURIComponent($("#content").val());
+    var nb_content = encodeURIComponent($("#nb_ajout_content").val());
+
+    var chaine_content = "";
+    $('#all_content').children().each(function(index, element){
+        chaine_content += '&'+$(this).attr('name')+'='+$(this).val();
+    })
+
+    
+
+
+    if(id_lang != "" && title != "" && description != "" && code != ""){
+        $.ajax({
+            url: "retour_code.php",
+            type: "POST",
+            data: 'id_lang='+id_lang+'&title='+title+'&description='+description+'&content='+code+'&nb_ajout_content='+nb_content+chaine_content
+        }).done(function(reponse){
+            var id = JSON.parse(reponse);
+            $(location).attr('href',directory()+"content/article.php?id="+id);
+        })
+    }
+
+    nb_ajout_content = 1;
+
+}
+
+
 function copyToClipboard() {
-  var $temp = $("<textarea></textarea>");
-  $("body").append($temp);
-  $temp.val($("#contentcopy").html()).text().select();
+  var temp = $("<textarea></textarea>");
+  $("body").append(temp);
+  temp.val($("#contentcopy").html()).text().select();
   document.execCommand("copy");
-  $temp.remove();
+  temp.remove();
 }
 
 
@@ -71,4 +109,15 @@ function recherche(){
 		}).fail(function(error){
 			$('#response').html(error.statusText);
 		});
+}
+
+function ajout_content(e){
+    e.preventDefault();
+    nb_ajout_content ++;
+    $('#nb_ajout_content').val(nb_ajout_content);
+
+    var div = '<textarea name="content'+nb_ajout_content+'" id="content'+nb_ajout_content+'"></textarea>';
+
+    $('#all_content').append(div);
+
 }
