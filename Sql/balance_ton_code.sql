@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 24 nov. 2017 à 14:19
+-- Généré le :  mar. 28 nov. 2017 à 15:49
 -- Version du serveur :  10.1.26-MariaDB
 -- Version de PHP :  7.1.9
 
@@ -21,6 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `balance_ton_code`
 --
+DROP DATABASE IF EXISTS `balance_ton_code`;
 CREATE DATABASE IF NOT EXISTS `balance_ton_code` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `balance_ton_code`;
 
@@ -34,7 +35,6 @@ CREATE TABLE `article` (
   `id_article` int(11) NOT NULL,
   `title` text,
   `description` text,
-  `content` text,
   `vote` decimal(5,0) DEFAULT NULL,
   `release_date` date DEFAULT NULL,
   `is_publish` tinyint(1) NOT NULL,
@@ -46,11 +46,39 @@ CREATE TABLE `article` (
 -- Déchargement des données de la table `article`
 --
 
-INSERT INTO `article` (`id_article`, `title`, `description`, `content`, `vote`, `release_date`, `is_publish`, `_id_util`, `_id_lang`) VALUES
-(3, 'le plus petit code possible', NULL, '&lt;p&gt;', NULL, '2017-11-17', 0, 3, 1),
-(4, 'blabla', NULL, '&lt;p&gt;&lt;/p&gt;', NULL, '2017-11-17', 0, 3, 1),
-(5, 'Ins&eacute;rer lien bootstrap', NULL, 'CSS\r\n\r\nCopy-paste the stylesheet &lt;link&gt; into your &lt;head&gt; before all other stylesheets to load our CSS.\r\n\r\n&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot; integrity=&quot;sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb&quot; crossorigin=&quot;anonymous&quot;&gt;\r\n\r\nJS\r\n\r\nMany of our components require the use of JavaScript to function. Specifically, they require jQuery, Popper.js, and our own JavaScript plugins. Place the following &lt;script&gt;s near the end of your pages, right before the closing &lt;/body&gt; tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.\r\n\r\nWe use jQuery&rsquo;s slim build, but the full version is also supported.\r\n\r\n&lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot; integrity=&quot;sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot; integrity=&quot;sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot; integrity=&quot;sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n\r\nCurious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you&rsquo;re at all unsure about the general page structure, keep reading for an example page template.', NULL, '2017-11-23', 0, 2, 1),
-(6, 'bootstrap', NULL, '&lt;!doctype html&gt;\r\n&lt;html lang=&quot;en&quot;&gt;\r\n  &lt;head&gt;\r\n    &lt;title&gt;Hello, world!&lt;/title&gt;\r\n    &lt;!-- Required meta tags --&gt;\r\n    &lt;meta charset=&quot;utf-8&quot;&gt;\r\n    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;\r\n\r\n    &lt;!-- Bootstrap CSS --&gt;\r\n    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css&quot; integrity=&quot;sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb&quot; crossorigin=&quot;anonymous&quot;&gt;\r\n  &lt;/head&gt;\r\n  &lt;body&gt;\r\n    &lt;h1&gt;Hello, world!&lt;/h1&gt;\r\n\r\n    &lt;!-- Optional JavaScript --&gt;\r\n    &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;\r\n    &lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot; integrity=&quot;sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js&quot; integrity=&quot;sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n    &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js&quot; integrity=&quot;sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;\r\n  &lt;/body&gt;\r\n&lt;/html&gt;', NULL, '2017-11-23', 0, 2, 2);
+INSERT INTO `article` (`id_article`, `title`, `description`, `vote`, `release_date`, `is_publish`, `_id_util`, `_id_lang`) VALUES
+(3, 'le plus petit code possible', NULL, NULL, '2017-11-17', 0, 3, 1),
+(4, 'blabla', NULL, NULL, '2017-11-17', 0, 3, 1),
+(5, 'Ins&eacute;rer lien bootstrap', NULL, NULL, '2017-11-23', 0, 2, 1),
+(6, 'bootstrap', NULL, '4', '2017-11-23', 0, 2, 2),
+(16, '.add( selector )', 'Create a new jQuery object with elements added to the set of matched elements.', NULL, '2017-11-27', 0, 2, 3),
+(17, 'ezsztgzgzegzeg', 'zegzegzgzeg', NULL, '2017-11-27', 0, 2, 3),
+(18, 'aezgaze', 'zgegzgzg', NULL, '2017-11-27', 0, 2, 1),
+(19, 'rthrjrr', 'rtuyrturtu', NULL, '2017-11-27', 0, 2, 1),
+(20, 'rthrjrr', 'rtuyrturtu', NULL, '2017-11-27', 0, 2, 1),
+(21, 'erheherherh', 'erheherhe', NULL, '2017-11-27', 0, 2, 3),
+(22, 'erheherherh', 'erheherhe', NULL, '2017-11-27', 0, 2, 3),
+(23, 'zeztzet', 'zetztezt', NULL, '2017-11-27', 0, 2, 2),
+(24, 'zeztzet', 'zetztezt', NULL, '2017-11-27', 0, 2, 2),
+(25, 'zeztzet', 'zetztezt', NULL, '2017-11-27', 0, 2, 2),
+(26, 'ngksdgni', 'sgiodngik', NULL, '2017-11-27', 0, 2, 2),
+(27, 'ngksdgni', 'sgiodngik', NULL, '2017-11-27', 0, 2, 2),
+(28, 'gsq', 'qdfhqdfh', NULL, '2017-11-27', 0, 2, 3),
+(29, 'sdfsd', 'sdgqsd', NULL, '2017-11-27', 0, 2, 2),
+(30, 'sdfsd', 'sdgqsd', NULL, '2017-11-27', 0, 2, 2),
+(31, 'sdfsds', 'sdfqsd', NULL, '2017-11-27', 0, 2, 3),
+(32, 'sdgfsd', 'sdgsd', NULL, '2017-11-27', 0, 2, 2),
+(33, 'qdsbgjsng', 'gsdklghsdjg', NULL, '2017-11-27', 0, 2, 3),
+(34, 'qsdfsdf', 'sdfsd', NULL, '2017-11-27', 0, 2, 2),
+(35, 'sgsdgsq', 'sdgsdg', NULL, '2017-11-27', 0, 2, 3),
+(36, 'sgsdgsq', 'sdgsdg', NULL, '2017-11-27', 0, 2, 3),
+(37, 'zetsdtg', 'sfgsdgs', NULL, '2017-11-27', 0, 2, 1),
+(38, 'fsdfs', 'sdfsdfs', NULL, '2017-11-27', 0, 2, 2),
+(39, 'fsdfs', 'sdfsdfs', NULL, '2017-11-27', 0, 2, 2),
+(40, 'fsdfqsdfsd', 'sqdgqsdg', NULL, '2017-11-27', 0, 2, 4),
+(41, 'sdgfdsxg', 'gsxdgsg', NULL, '2017-11-27', 0, 2, 2),
+(42, 'dfbhdf', 'dfbdfbgd', NULL, '2017-11-27', 0, 2, 3),
+(43, 'Softcode', 'zegzgzgzg', NULL, '2017-11-28', 0, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -79,6 +107,39 @@ CREATE TABLE `comment` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `content_article`
+--
+
+CREATE TABLE `content_article` (
+  `id` int(11) NOT NULL,
+  `content` text NOT NULL,
+  `_id_article` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `content_article`
+--
+
+INSERT INTO `content_article` (`id`, `content`, `_id_article`) VALUES
+(1, '0', 39),
+(2, '0', 39),
+(3, 'content1', 40),
+(4, 'content2', 40),
+(5, 'content3', 40),
+(6, 'sdgsdgsd', 41),
+(7, '&lt;p&gt;&lt;/p&gt;', 41),
+(8, 'sgjhsdgjk454', 41),
+(9, 'dsfbdfbgd', 42),
+(10, 'dfbdfbdf', 42),
+(11, 'dfbdf', 42),
+(12, 'dfbdfbdfbdf', 42),
+(13, 'zegzgzegzegzeg', 43),
+(14, 'zegfezgzgzgzgzeg', 43),
+(15, 'gzezgezgzegzgzegzgzeg', 43);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `language`
 --
 
@@ -94,7 +155,10 @@ CREATE TABLE `language` (
 
 INSERT INTO `language` (`id_lang`, `language_name`, `description`) VALUES
 (1, 'html', NULL),
-(2, 'css', NULL);
+(2, 'css', NULL),
+(3, 'Js & Jquery', NULL),
+(4, 'PHP', NULL),
+(5, 'MySQL', NULL);
 
 -- --------------------------------------------------------
 
@@ -199,6 +263,13 @@ ALTER TABLE `comment`
   ADD KEY `fk_commentaire_article1_idx` (`_id_article`);
 
 --
+-- Index pour la table `content_article`
+--
+ALTER TABLE `content_article`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `_id_article` (`_id_article`);
+
+--
 -- Index pour la table `language`
 --
 ALTER TABLE `language`
@@ -238,7 +309,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `article`
 --
 ALTER TABLE `article`
-  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT pour la table `comment`
@@ -247,10 +318,16 @@ ALTER TABLE `comment`
   MODIFY `id_com` int(10) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT pour la table `content_article`
+--
+ALTER TABLE `content_article`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
 -- AUTO_INCREMENT pour la table `language`
 --
 ALTER TABLE `language`
-  MODIFY `id_lang` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_lang` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `picture`
@@ -293,6 +370,12 @@ ALTER TABLE `article_has_tag`
 --
 ALTER TABLE `comment`
   ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`_id_article`) REFERENCES `article` (`id_article`);
+
+--
+-- Contraintes pour la table `content_article`
+--
+ALTER TABLE `content_article`
+  ADD CONSTRAINT `content_article_ibfk_1` FOREIGN KEY (`_id_article`) REFERENCES `article` (`id_article`);
 
 --
 -- Contraintes pour la table `picture`
