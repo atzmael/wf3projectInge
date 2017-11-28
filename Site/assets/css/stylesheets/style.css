@@ -402,7 +402,7 @@ input, textarea, select {
   }
   /* line 35, ../sass/responsive.scss */
   .page main {
-    padding: 13vw 0 7vw 0;
+    padding: 10vw 0 7vw 0;
   }
 
   /* FOOTER */
@@ -416,7 +416,7 @@ input, textarea, select {
   }
   /* line 54, ../sass/responsive.scss */
   .page main {
-    padding: 13vw 0 25vw 0;
+    padding: 8vw 0 8vw 0;
   }
 
   /* FOOTER */
@@ -424,5 +424,14 @@ input, textarea, select {
 @media screen and (min-width: 1200px) {
   /* HEADER */
   /* CONTENT */
+  /* line 70, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 12vw;
+  }
+  /* line 73, ../sass/responsive.scss */
+  .page main {
+    padding: 4vw 0 1vw 0;
+  }
+
   /* FOOTER */
 }
