@@ -9,14 +9,23 @@ nav {
         width: 50%;
     }
     ul {
+        .nav-item {
+            .nav-link {
+                padding: 0.3rem 1rem;
+            }
+        }
         .dropdown {
             .dropdown-menu {
+                padding: 0;
                 .dropdown-item {
                     color: $deepblue!important;
                     &:hover {
                         background: $deepblue;
                         color: $lightblue!important;
                     }
+                }
+                .dropdown-divider {
+                    margin: 0;
                 }
             }
         }

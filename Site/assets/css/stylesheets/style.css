@@ -61,11 +61,16 @@ main {
   box-sizing: border-box;
 }
 
+/* line 37, ../sass/style.scss */
+.fa-star, .fa-star-o {
+  color: #25858c;
+}
+
 /* TEST */
 /***********/
 /* CONTENT */
 /***********/
-/* line 44, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 .page {
   min-height: 100vh;
   position: relative;
@@ -85,16 +90,28 @@ main {
 .page nav .logo {
   width: 50%;
 }
-/* line 14, ../sass/header.scss */
+/* line 13, ../sass/header.scss */
+.page nav ul .nav-item .nav-link {
+  padding: 0.3rem 1rem;
+}
+/* line 18, ../sass/header.scss */
+.page nav ul .dropdown .dropdown-menu {
+  padding: 0;
+}
+/* line 20, ../sass/header.scss */
 .page nav ul .dropdown .dropdown-menu .dropdown-item {
   color: #25858c !important;
 }
-/* line 16, ../sass/header.scss */
+/* line 22, ../sass/header.scss */
 .page nav ul .dropdown .dropdown-menu .dropdown-item:hover {
   background: #25858c;
   color: #e8f8f9 !important;
 }
-/* line 24, ../sass/header.scss */
+/* line 27, ../sass/header.scss */
+.page nav ul .dropdown .dropdown-menu .dropdown-divider {
+  margin: 0;
+}
+/* line 33, ../sass/header.scss */
 .page nav ul li a {
   color: #afdde0;
 }
@@ -324,7 +341,7 @@ main {
 }
 
 /** SMALL CHANGE **/
-/* line 61, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 .link {
   color: #25858c;
   text-decoration: underline;
@@ -332,4 +349,49 @@ main {
 /* line 25, ../sass/variable.scss */
 .link:hover {
   color: #2fb0b8;
+}
+
+@media (min-width: 576px) {
+    /*
+HEADER
+ */
+  /*
+  CONTENT
+  */
+  /*
+  FOOTER
+   */
+}
+@media (min-width: 768px) {
+    /*
+HEADER
+ */
+  /*
+  CONTENT
+  */
+  /*
+  FOOTER
+   */
+}
+@media (min-width: 992px) {
+    /*
+HEADER
+ */
+  /*
+  CONTENT
+  */
+  /*
+  FOOTER
+   */
+}
+@media (min-width: 1200px) {
+    /*
+HEADER
+ */
+  /*
+  CONTENT
+  */
+  /*
+  FOOTER
+   */
 }

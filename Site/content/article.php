@@ -7,7 +7,7 @@ require_once('../config/inc_bdd.php');
 
 if(isset($_GET['id'])){
 
-    $query = $db -> prepare("SELECT article.title, article.description, article.content, article.release_date, article.vote, user.pseudo FROM article JOIN user ON article._id_util = user.id_util WHERE id_article = ?");
+    $query = $db -> prepare("SELECT article.title, article.description, article.content, article.release_date, article.vote as vote, user.pseudo FROM article JOIN user ON article._id_util = user.id_util WHERE id_article = ?");
     $query -> bindValue(1, $_GET['id'], PDO::PARAM_INT);
     $query -> execute();
 
@@ -44,7 +44,17 @@ include_once('../content/header.php');
 
                 echo '<p>Auteur : '.$result['pseudo'].'</p>';
                 echo '<p>Date de parution : '.$result['release_date'].'</p>';
-                echo '<p>Note : '.$result['vote'].'</p>';
+
+                echo '<p>Note : ';
+                $moy = round($result['vote']);
+                for($i=1;$i <= $moy;$i++){
+                    echo '<i class="fa fa-star fa-2x"></i>';
+                }
+                $reste = 5 - $moy;
+                for($i=0;$i<$reste;$i++){
+                    echo '<i class="fa fa-star-o fa-2x"></i>';
+                }
+                echo '</p>';
                 
                 ?>
                 <script>
