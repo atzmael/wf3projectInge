@@ -53,6 +53,7 @@ function insertCode(e){
         }).done(function(reponse){
             var id = JSON.parse(reponse);
             $(location).attr('href',directory()+"content/article.php?id="+id);
+
         })
     }
 

@@ -43,7 +43,7 @@
 				<input type="text" id="description" name="description">
 			</div>
 
-			<label for="code"></label>
+			<label for="code">Code</label>
 
 			<div id="all_content">
 
@@ -53,6 +53,7 @@
 
 			<button id="ajout_content">Ajouter une zone de contenu</button>
 			<input type="hidden" value="1" id="nb_ajout_content" name="nb_ajout_content">
+
 			<button id="insert_code" type="submit">Soumets ton code!!!</button>
 
 			<div id="succes">

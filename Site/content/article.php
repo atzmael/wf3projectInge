@@ -43,7 +43,17 @@ include_once('../content/header.php');
 
                 echo '<p>Auteur : '.$result['pseudo'].'</p>';
                 echo '<p>Date de parution : '.$result['release_date'].'</p>';
-                echo '<p>Note : '.$result['vote'].'</p>';
+                
+                echo '<p>Note : ';
+                $moy = round($result['vote']);
+                for($i=1;$i <= $moy;$i++){
+                    echo '<i class="fa fa-star fa-2x"></i>';
+                }
+                $reste = 5 - $moy;
+                for($i=0;$i<$reste;$i++){
+                    echo '<i class="fa fa-star-o fa-2x"></i>';
+                }
+                echo '</p>';
 
                 if($_SESSION['id'] == $result['id_util'])
                 {
