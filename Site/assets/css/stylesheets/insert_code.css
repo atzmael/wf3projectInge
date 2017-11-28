@@ -1,0 +1,8 @@
+/* line 2, ../sass/insert_code.scss */
+.insertCode #all_content {
+  margin-bottom: 2vw;
+}
+/* line 5, ../sass/insert_code.scss */
+.insertCode #ajout_content, .insertCode #insert_code {
+  margin-bottom: 1vw;
+}

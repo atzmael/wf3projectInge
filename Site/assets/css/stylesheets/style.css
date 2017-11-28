@@ -7,6 +7,7 @@
 /* line 7, ../sass/style.scss */
 body {
   color: #000;
+  font-size: 16px;
 }
 /* line 9, ../sass/style.scss */
 body button {
@@ -22,31 +23,40 @@ body button:hover {
   background: #299ea5;
 }
 
-/* line 14, ../sass/style.scss */
+/* line 15, ../sass/style.scss */
 h1 {
   color: #25858c;
+  font-size: 2em;
 }
 
-/* line 17, ../sass/style.scss */
+/* line 19, ../sass/style.scss */
 h2 {
   color: #25858c;
-}
-
-/* line 20, ../sass/style.scss */
-h3 {
-  color: #25858c;
+  font-size: 1.8em;
 }
 
 /* line 23, ../sass/style.scss */
+h3 {
+  color: #25858c;
+  font-size: 1.6em;
+}
+
+/* line 27, ../sass/style.scss */
 a {
   color: #afdde0;
+  font-size: 1em;
 }
 /* line 25, ../sass/variable.scss */
 a:hover {
   color: #e8f8f9;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
+p {
+  font-size: 1em;
+}
+
+/* line 36, ../sass/style.scss */
 #loader {
   position: absolute;
   transform: translateY(-50%) translateX(-50%);
@@ -54,23 +64,28 @@ a:hover {
   left: 50%;
 }
 
-/* line 31, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 main {
-  margin-top: 25vw;
-  padding-bottom: 35vw;
+  padding: 25vw 0 25vw 0;
   box-sizing: border-box;
 }
 
-/* line 37, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 .fa-star, .fa-star-o {
   color: #25858c;
+}
+
+/* line 49, ../sass/style.scss */
+input, textarea, select {
+  font-size: .9em;
+  margin: 1vw 0;
 }
 
 /* TEST */
 /***********/
 /* CONTENT */
 /***********/
-/* line 48, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 .page {
   min-height: 100vh;
   position: relative;
@@ -126,7 +141,7 @@ main {
   padding-top: 20vw;
   position: absolute;
   z-index: 990;
-  margin-top: -8vw;
+  overflow-y: scroll;
   background: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100vh;
@@ -321,6 +336,14 @@ main {
 .page .code div p a:hover {
   color: #000;
 }
+/* line 2, ../sass/insert_code.scss */
+.page .insertCode #all_content {
+  margin-bottom: 2vw;
+}
+/* line 5, ../sass/insert_code.scss */
+.page .insertCode #ajout_content, .page .insertCode #insert_code {
+  margin-bottom: 1vw;
+}
 /* line 5, ../sass/footer.scss */
 .page footer {
   background: #2e3535;
@@ -341,7 +364,7 @@ main {
 }
 
 /** SMALL CHANGE **/
-/* line 65, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 .link {
   color: #25858c;
   text-decoration: underline;
@@ -351,47 +374,47 @@ main {
   color: #2fb0b8;
 }
 
-@media (min-width: 576px) {
-    /*
-HEADER
- */
-  /*
-  CONTENT
-  */
-  /*
-  FOOTER
-   */
+@media screen and (min-width: 560px) {
+  /* HEADER */
+  /* CONTENT */
+  /* line 10, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 12vw;
+  }
+  /* line 13, ../sass/responsive.scss */
+  .page main {
+    padding: 13vw 0 25vw 0;
+  }
+
+  /* FOOTER */
 }
-@media (min-width: 768px) {
-    /*
-HEADER
- */
-  /*
-  CONTENT
-  */
-  /*
-  FOOTER
-   */
+@media screen and (min-width: 768px) {
+  /* HEADER */
+  /* line 25, ../sass/responsive.scss */
+  .dropdown-toggle::after {
+    content: none;
+  }
+
+  /* CONTENT */
+  /* line 31, ../sass/responsive.scss */
+  main {
+    padding: 13vw 0 7vw 0;
+  }
+
+  /* FOOTER */
 }
-@media (min-width: 992px) {
-    /*
-HEADER
- */
-  /*
-  CONTENT
-  */
-  /*
-  FOOTER
-   */
+@media screen and (min-width: 990px) {
+  /* HEADER */
+  /* CONTENT */
+  /* line 45, ../sass/responsive.scss */
+  main {
+    padding: 2vw 0 2vw 0;
+  }
+
+  /* FOOTER */
 }
-@media (min-width: 1200px) {
-    /*
-HEADER
- */
-  /*
-  CONTENT
-  */
-  /*
-  FOOTER
-   */
+@media screen and (min-width: 1200px) {
+  /* HEADER */
+  /* CONTENT */
+  /* FOOTER */
 }

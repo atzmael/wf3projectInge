@@ -1,69 +1,61 @@
 
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-    /*
-HEADER
- */
 
+@media screen and (min-width: 560px) {
+    /* HEADER */
 
+    /* CONTENT */
 
-    /*
-    CONTENT
-    */
+    .page {
+        .recherche {
+            padding-top: 12vw;
+        }
+        main {
+            padding: 13vw 0 25vw 0;
+        }
+    }
 
-    /*
-    FOOTER
-     */
+    /* FOOTER */
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-    /*
-HEADER
- */
 
+@media screen and (min-width: 768px) {
+    /* HEADER */
 
+    .dropdown-toggle::after {
+        content: none;
+    }
 
-    /*
-    CONTENT
-    */
+    /* CONTENT */
 
-    /*
-    FOOTER
-     */
+    main {
+        padding: 13vw 0 7vw 0;
+    }
+
+    /* FOOTER */
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    /*
-HEADER
- */
+
+@media screen and (min-width: 990px) {
+    /* HEADER */
 
 
+    /* CONTENT */
 
-    /*
-    CONTENT
-    */
+    main {
+        padding: 2vw 0 2vw 0;
+    }
 
-    /*
-    FOOTER
-     */
+    /* FOOTER */
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-    /*
-HEADER
- */
+
+@media screen and (min-width: 1200px) {
+    /* HEADER */
 
 
+    /* CONTENT */
 
-    /*
-    CONTENT
-    */
 
-    /*
-    FOOTER
-     */
+    /* FOOTER */
 }

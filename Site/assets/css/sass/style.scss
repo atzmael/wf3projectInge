@@ -9,19 +9,28 @@ body {
     button {
         @include button();
     }
+    font-size: 16px;
 }
 
 h1 {
     color: $deepblue;
+    font-size: 2em;
 }
 h2 {
     color: $deepblue;
+    font-size: 1.8em;
 }
 h3 {
     color: $deepblue;
+    font-size: 1.6em;
 }
 a {
     @include link($lightblue2, $lightblue);
+    font-size: 1em;
+}
+
+p {
+    font-size: 1em;
 }
 
 #loader {
@@ -29,13 +38,17 @@ a {
 }
 
 main {
-    margin-top: 25vw;
-    padding-bottom: 35vw;
+    padding: 25vw 0 25vw 0;
     box-sizing: border-box;
 }
 
 .fa-star, .fa-star-o {
     color: $deepblue;
+}
+
+input, textarea, select {
+    font-size: .9em;
+    margin: 1vw 0;
 }
 
 
@@ -55,6 +68,7 @@ main {
     @import 'index';
     @import 'user';
     @import 'index_lang';
+    @import 'insert_code';
 
     @import 'footer';
 
