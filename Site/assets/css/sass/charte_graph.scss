@@ -1,0 +1,52 @@
+/* VAR */
+
+$lightblue: #e8f8f9;
+$lightgrey: #c6d2d3;
+$deepblue: #25858c;
+$darkgrey: #2e3535;
+$lightblue2: #afdde0;
+
+$color_font: #000;
+$color_link: $lightblue2;
+$color_linkH: $lightblue;
+
+/* ELMTS */
+
+* {
+    font-size:1em;
+}
+
+body{
+    font-size:16px;font-family:sans-serif;
+}
+
+nav {
+    width:500px;height:50px;background:$darkgrey;
+}
+
+h1,h2,h3{
+    color:$deepblue;
+}
+h1{
+    font-size:2em;
+}
+h2{
+    font-size:1.8em;
+}
+h3{
+    font-size:1.6em;
+}
+
+.sombre{
+    background:$darkgrey;color:$lightblue2;padding:20px;
+    &:hover{color:$lightblue;}
+}
+.clair{
+    color:$deepblue;padding:20px;
+    &:hover{color:#2da3aa;}
+}
+
+button{
+    background:$deepblue;padding:20px;color:$lightblue;border:none;cursor:pointer;
+    &:hover{background:#2da3aa;}
+}
