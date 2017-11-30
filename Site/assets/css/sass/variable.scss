@@ -3,15 +3,23 @@
 /********************/
 
 /* Variable */
-$lightblue: #e8f8f9;
-$lightgrey: #c6d2d3;
-$deepblue: #25858c;
-$darkgrey: #2e3535;
-$lightblue2: #afdde0;
+$lightcolor: #5f90df;
+$primarycolor: #2263ad; // COULEUR TITRES
+$darkcolor: #003a7d; // COULEUR FOND HEADER / FOOTER
+
+$lightcolor2: #ffa740; // COULEUR LIENS & BOUTON AU SURVOL
+$primarycolor2: #ed7700; // COULEUR FOND BOUTON, LIENS
+$darkcolor2: #b44900;
+
+$lightgrey: #F5F5F6; // COULEUR DE FOND
+$darkgrey: #E1E2E1;
 
 $color_font: #000;
-$color_link: $lightblue2;
-$color_linkH: $lightblue;
+$color_link: $primarycolor2;
+$color_linkH: $lightcolor2;
+
+$genericColor: #fff;
+$color_text: #000;
 
 @mixin centrer($position){
     position: $position;
@@ -21,9 +29,9 @@ $color_linkH: $lightblue;
 }
 
 @mixin link($color1,$color2){
-    color: $color1;
+    color: $color1!important;
     &:hover {
-        color: $color2;
+        color: $color2!important;
     }
 }
 
@@ -52,13 +60,15 @@ $color_linkH: $lightblue;
 }
 
 @mixin button(){
-    background: $deepblue;
-    border: none;
-    color: $lightblue;
+    background: $primarycolor;
+    color: #fff;
     cursor: pointer;
     padding: 5px;
     position: relative;
-    &:hover {
-        background: #299ea5;
+    background:$primarycolor2;
+    border:none;
+    transition: 1s;
+    &:hover,&:focus {
+        box-shadow: inset 250px 0 0 0 $lightcolor2;
     }
 }

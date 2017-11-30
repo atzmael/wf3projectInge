@@ -13,19 +13,19 @@ body {
 }
 
 h1 {
-    color: $deepblue;
+    color: $primarycolor;
     font-size: 2em;
 }
 h2 {
-    color: $deepblue;
+    color: $primarycolor;
     font-size: 1.8em;
 }
 h3 {
-    color: $deepblue;
+    color: $primarycolor;
     font-size: 1.6em;
 }
 a {
-    @include link($lightblue2, $lightblue);
+    @include link($primarycolor2, $lightcolor2);
     font-size: 1em;
 }
 
@@ -43,7 +43,7 @@ main {
 }
 
 .fa-star, .fa-star-o {
-    color: $deepblue;
+    color: $primarycolor;
 }
 
 input, textarea, select {
@@ -59,6 +59,7 @@ input, textarea, select {
 /***********/
 
 .page {
+    background: $lightgrey;
     min-height: 100vh;
     position:relative;
 
@@ -69,6 +70,7 @@ input, textarea, select {
     @import 'user';
     @import 'index_lang';
     @import 'insert_code';
+    @import 'faq';
 
     @import 'footer';
 
@@ -77,7 +79,7 @@ input, textarea, select {
 /** SMALL CHANGE **/
 
 .link {
-    @include link($deepblue, #2fb0b8);
+    @include link($primarycolor2, $lightcolor2);
     text-decoration: underline;
 }
 

@@ -1,25 +1,31 @@
 <?php
 
-    session_start();
+session_start();
 
-    include_once('../config/librairie.php');
-    require_once('../config/inc_bdd.php');
+include_once('../config/librairie.php');
+require_once('../config/inc_bdd.php');
 
-    include_once('../content/header.php');
+include_once('../content/header.php');
 
-    ?>
+?>
 
-    <main class="container">
+    <main class="container faq">
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+        <h2 class="text-center">Notre F.A.Q comporte les principales questions que vous pouvez vous poser sur l'utilisation de notre site...</h2>
 
-</main>
+        <div class="faq-item faq1">
+            <p><span>Qs 1. </span>Je viens de m'inscrire sur le site, comment est-ce que je peux publier un code ?</p>
+            <p>Il suffit de cliquer sur le lien vers ton profil dans le menu en haut, puis de cliquer sur ajouter un code. Tu peux ajouter autant de zone de contenu que tu as besoin. Une fois tout cela fait, tu peux cliquer sur "Soumet ton code" et il sera ajouté à la liste des codes en attente de publication.</p>
+        </div>
+
+        <div class="faq-item faq2">
+            <p><span>Qs 2. </span>Une fois que j'ai ajouté mon code, comment est-ce qu'il est publié ?</p>
+            <p>Il suffit d'attendre qu'un administrateur ou modérateur accepte ton code et il sera automatiquement publié.</p>
+        </div>
+
+
+
+    </main>
 
 <?php
 

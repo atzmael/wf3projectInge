@@ -11,44 +11,46 @@ body {
 }
 /* line 9, ../sass/style.scss */
 body button {
-  background: #25858c;
-  border: none;
-  color: #e8f8f9;
+  background: #2263ad;
+  color: #fff;
   cursor: pointer;
   padding: 5px;
   position: relative;
+  background: #ed7700;
+  border: none;
+  transition: 1s;
 }
-/* line 61, ../sass/variable.scss */
-body button:hover {
-  background: #299ea5;
+/* line 71, ../sass/variable.scss */
+body button:hover, body button:focus {
+  box-shadow: inset 250px 0 0 0 #ffa740;
 }
 
 /* line 15, ../sass/style.scss */
 h1 {
-  color: #25858c;
+  color: #2263ad;
   font-size: 2em;
 }
 
 /* line 19, ../sass/style.scss */
 h2 {
-  color: #25858c;
+  color: #2263ad;
   font-size: 1.8em;
 }
 
 /* line 23, ../sass/style.scss */
 h3 {
-  color: #25858c;
+  color: #2263ad;
   font-size: 1.6em;
 }
 
 /* line 27, ../sass/style.scss */
 a {
-  color: #afdde0;
+  color: #ed7700 !important;
   font-size: 1em;
 }
-/* line 25, ../sass/variable.scss */
+/* line 33, ../sass/variable.scss */
 a:hover {
-  color: #e8f8f9;
+  color: #ffa740 !important;
 }
 
 /* line 32, ../sass/style.scss */
@@ -72,7 +74,7 @@ main {
 
 /* line 45, ../sass/style.scss */
 .fa-star, .fa-star-o {
-  color: #25858c;
+  color: #2263ad;
 }
 
 /* line 49, ../sass/style.scss */
@@ -87,6 +89,7 @@ input, textarea, select {
 /***********/
 /* line 61, ../sass/style.scss */
 .page {
+  background: #F5F5F6;
   min-height: 100vh;
   position: relative;
   /**********/
@@ -99,7 +102,7 @@ input, textarea, select {
 }
 /* line 6, ../sass/header.scss */
 .page nav {
-  background: #2e3535;
+  background: #003a7d;
 }
 /* line 8, ../sass/header.scss */
 .page nav .logo {
@@ -107,32 +110,45 @@ input, textarea, select {
 }
 /* line 13, ../sass/header.scss */
 .page nav ul .nav-item .nav-link {
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  color: #ed7700 !important;
+  background: #003a7d;
+}
+/* line 33, ../sass/variable.scss */
+.page nav ul .nav-item .nav-link:hover {
+  color: #ffa740 !important;
 }
 /* line 18, ../sass/header.scss */
+.page nav ul .nav-item .nav-link:hover {
+  background: #2263ad;
+}
+/* line 24, ../sass/header.scss */
 .page nav ul .dropdown .dropdown-menu {
   padding: 0;
-}
-/* line 20, ../sass/header.scss */
-.page nav ul .dropdown .dropdown-menu .dropdown-item {
-  color: #25858c !important;
-}
-/* line 22, ../sass/header.scss */
-.page nav ul .dropdown .dropdown-menu .dropdown-item:hover {
-  background: #25858c;
-  color: #e8f8f9 !important;
+  background: #003a7d;
 }
 /* line 27, ../sass/header.scss */
+.page nav ul .dropdown .dropdown-menu .dropdown-item {
+  color: #ed7700 !important;
+}
+/* line 29, ../sass/header.scss */
+.page nav ul .dropdown .dropdown-menu .dropdown-item:hover {
+  background: #2263ad;
+  color: #ffa740;
+}
+/* line 34, ../sass/header.scss */
 .page nav ul .dropdown .dropdown-menu .dropdown-divider {
   margin: 0;
+  border: 1px solid #5f90df;
 }
-/* line 33, ../sass/header.scss */
+/* line 41, ../sass/header.scss */
 .page nav ul li a {
-  color: #afdde0;
+  color: #ed7700 !important;
 }
-/* line 25, ../sass/variable.scss */
+/* line 33, ../sass/variable.scss */
 .page nav ul li a:hover {
-  color: #e8f8f9;
+  color: #ffa740 !important;
 }
 /* line 1, ../sass/index.scss */
 .page .recherche {
@@ -189,7 +205,7 @@ input, textarea, select {
 /* line 53, ../sass/index.scss */
 .page main .section1, .page main .section2 {
   background: #fff;
-  border: #c6d2d3 1px solid;
+  border: #F5F5F6 1px solid;
   box-shadow: 5px 5px 10px #000;
   margin: 0;
 }
@@ -201,21 +217,21 @@ input, textarea, select {
 .page main .section1 .row .langages div h3 a, .page main .section2 .row .langages div h3 a {
   text-decoration: none;
   position: relative;
-  color: #25858c;
+  color: #ffa740;
 }
-/* line 34, ../sass/variable.scss */
+/* line 42, ../sass/variable.scss */
 .page main .section1 .row .langages div h3 a:hover, .page main .section1 .row .langages div h3 a:focus, .page main .section2 .row .langages div h3 a:hover, .page main .section2 .row .langages div h3 a:focus {
-  color: #25858c;
+  color: #ffa740;
 }
-/* line 36, ../sass/variable.scss */
+/* line 44, ../sass/variable.scss */
 .page main .section1 .row .langages div h3 a:hover::after, .page main .section1 .row .langages div h3 a:focus::after, .page main .section2 .row .langages div h3 a:hover::after, .page main .section2 .row .langages div h3 a:focus::after {
   width: 100%;
 }
-/* line 40, ../sass/variable.scss */
+/* line 48, ../sass/variable.scss */
 .page main .section1 .row .langages div h3 a::after, .page main .section2 .row .langages div h3 a::after {
   height: 2px;
   width: 0;
-  background: #25858c;
+  background: #ffa740;
   opacity: 1;
   content: '';
   position: absolute;
@@ -235,15 +251,15 @@ input, textarea, select {
   top: 50%;
   left: 50%;
   padding: 2vw;
-  border: #c6d2d3 1px solid;
+  border: #F5F5F6 1px solid;
 }
 /* line 78, ../sass/index.scss */
 .page main .section1 .row .langages div h3 a, .page main .section1 .row .code div h3 a, .page main .section2 .row .langages div h3 a, .page main .section2 .row .code div h3 a {
-  color: #25858c;
+  color: #2263ad;
 }
 /* line 80, ../sass/index.scss */
 .page main .section1 .row .langages div h3 a:hover, .page main .section1 .row .code div h3 a:hover, .page main .section2 .row .langages div h3 a:hover, .page main .section2 .row .code div h3 a:hover {
-  color: #25858c;
+  color: #2263ad;
 }
 /* line 86, ../sass/index.scss */
 .page main .section1 .row .langages div p a, .page main .section1 .row .code div p a, .page main .section2 .row .langages div p a, .page main .section2 .row .code div p a {
@@ -255,7 +271,7 @@ input, textarea, select {
 }
 /* line 2, ../sass/user.scss */
 .page .asideBtn i {
-  color: #25858c;
+  color: #2263ad;
   cursor: pointer;
   font-size: 1.6em;
 }
@@ -265,7 +281,7 @@ input, textarea, select {
   left: -500px;
   box-shadow: 1px 1px 5px #000;
   z-index: 999;
-  background: #2e3535;
+  background: #E1E2E1;
   padding: 4vw;
 }
 /* line 16, ../sass/user.scss */
@@ -276,11 +292,11 @@ input, textarea, select {
 }
 /* line 21, ../sass/user.scss */
 .page .menuUser ul li a {
-  color: #afdde0;
+  color: #ed7700 !important;
 }
-/* line 25, ../sass/variable.scss */
+/* line 33, ../sass/variable.scss */
 .page .menuUser ul li a:hover {
-  color: #e8f8f9;
+  color: #ffa740 !important;
 }
 /* line 28, ../sass/user.scss */
 .page main > .userContent {
@@ -288,24 +304,26 @@ input, textarea, select {
 }
 /* line 29, ../sass/user.scss */
 .page main > .userContent a {
-  color: #000;
+  color: #000 !important;
 }
-/* line 25, ../sass/variable.scss */
+/* line 33, ../sass/variable.scss */
 .page main > .userContent a:hover {
-  color: #000;
+  color: #000 !important;
 }
 /* line 33, ../sass/user.scss */
 .page main > .userContent button {
-  background: #25858c;
-  border: none;
-  color: #e8f8f9;
+  background: #2263ad;
+  color: #fff;
   cursor: pointer;
   padding: 5px;
   position: relative;
+  background: #ed7700;
+  border: none;
+  transition: 1s;
 }
-/* line 61, ../sass/variable.scss */
-.page main > .userContent button:hover {
-  background: #299ea5;
+/* line 71, ../sass/variable.scss */
+.page main > .userContent button:hover, .page main > .userContent button:focus {
+  box-shadow: inset 250px 0 0 0 #ffa740;
 }
 /* line 1, ../sass/index_lang.scss */
 .page .code {
@@ -318,15 +336,15 @@ input, textarea, select {
   top: 50%;
   left: 50%;
   padding: 2vw;
-  border: #c6d2d3 1px solid;
+  border: #F5F5F6 1px solid;
 }
 /* line 8, ../sass/index_lang.scss */
 .page .code div h3 a {
-  color: #25858c;
+  color: #2263ad;
 }
 /* line 10, ../sass/index_lang.scss */
 .page .code div h3 a:hover {
-  color: #25858c;
+  color: #2263ad;
 }
 /* line 16, ../sass/index_lang.scss */
 .page .code div p a {
@@ -344,9 +362,23 @@ input, textarea, select {
 .page .insertCode #ajout_content, .page .insertCode #insert_code {
   margin-bottom: 1vw;
 }
+/* line 3, ../sass/faq.scss */
+.page .faq .faq-item > :first-child {
+  color: #ed7700;
+  font-size: 1.4em;
+}
+/* line 6, ../sass/faq.scss */
+.page .faq .faq-item > :first-child span {
+  color: #2263ad;
+  font-weight: bold;
+}
+/* line 11, ../sass/faq.scss */
+.page .faq .faq-item > :last-child {
+  margin-left: 2vw;
+}
 /* line 5, ../sass/footer.scss */
 .page footer {
-  background: #2e3535;
+  background: #003a7d;
   position: absolute;
   bottom: 0;
 }
@@ -356,22 +388,22 @@ input, textarea, select {
 }
 /* line 12, ../sass/footer.scss */
 .page footer .row div a {
-  color: #afdde0;
+  color: #ed7700 !important;
 }
-/* line 25, ../sass/variable.scss */
+/* line 33, ../sass/variable.scss */
 .page footer .row div a:hover {
-  color: #e8f8f9;
+  color: #ffa740 !important;
 }
 
 /** SMALL CHANGE **/
-/* line 79, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 .link {
-  color: #25858c;
+  color: #ed7700 !important;
   text-decoration: underline;
 }
-/* line 25, ../sass/variable.scss */
+/* line 33, ../sass/variable.scss */
 .link:hover {
-  color: #2fb0b8;
+  color: #ffa740 !important;
 }
 
 @media screen and (min-width: 560px) {
@@ -391,16 +423,27 @@ input, textarea, select {
 @media screen and (min-width: 768px) {
   /* HEADER */
   /* line 25, ../sass/responsive.scss */
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* line 29, ../sass/responsive.scss */
   .dropdown-toggle::after {
     content: none;
   }
 
+  /* line 33, ../sass/responsive.scss */
+  .nav-link {
+    padding: 1rem 1rem !important;
+  }
+
   /* CONTENT */
-  /* line 32, ../sass/responsive.scss */
+  /* line 42, ../sass/responsive.scss */
   .page .recherche {
     padding-top: 12vw;
   }
-  /* line 35, ../sass/responsive.scss */
+  /* line 45, ../sass/responsive.scss */
   .page main {
     padding: 10vw 0 7vw 0;
   }
@@ -410,11 +453,11 @@ input, textarea, select {
 @media screen and (min-width: 990px) {
   /* HEADER */
   /* CONTENT */
-  /* line 51, ../sass/responsive.scss */
+  /* line 61, ../sass/responsive.scss */
   .page .recherche {
     padding-top: 12vw;
   }
-  /* line 54, ../sass/responsive.scss */
+  /* line 64, ../sass/responsive.scss */
   .page main {
     padding: 8vw 0 8vw 0;
   }
@@ -424,11 +467,11 @@ input, textarea, select {
 @media screen and (min-width: 1200px) {
   /* HEADER */
   /* CONTENT */
-  /* line 70, ../sass/responsive.scss */
+  /* line 80, ../sass/responsive.scss */
   .page .recherche {
     padding-top: 12vw;
   }
-  /* line 73, ../sass/responsive.scss */
+  /* line 83, ../sass/responsive.scss */
   .page main {
     padding: 4vw 0 1vw 0;
   }

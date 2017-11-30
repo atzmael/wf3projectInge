@@ -22,13 +22,23 @@
 @media screen and (min-width: 768px) {
     /* HEADER */
 
+    .navbar {
+        padding-top:0;
+        padding-bottom:0;
+    }
     .dropdown-toggle::after {
         content: none;
     }
 
+    .nav-link {
+        padding: 1rem 1rem!important;
+    }
+
+
     /* CONTENT */
 
     .page {
+
         .recherche {
             padding-top: 12vw;
         }

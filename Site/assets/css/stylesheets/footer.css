@@ -1,5 +1,5 @@
 /*
-Error: Undefined variable: "$darkgrey".
+Error: Undefined variable: "$darkcolor".
         on line 6 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/footer.scss
 
 1: /**********\/
@@ -7,7 +7,7 @@ Error: Undefined variable: "$darkgrey".
 3: /**********\/
 4: 
 5: footer {
-6:     background: $darkgrey;
+6:     background: $darkcolor;
 7:     position:absolute;
 8:     bottom: 0;
 9:     .row {
@@ -67,4 +67,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$darkgrey\".\A         on line 6 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/footer.scss\A \A 1: /**********/\A 2: /* FOOTER */\A 3: /**********/\A 4: \A 5: footer {\A 6:     background: $darkgrey;\A 7:     position:absolute;\A 8:     bottom: 0;\A 9:     .row {\A 10:         div {\A 11:             margin: 1vw 0;"; }
+  content: "Error: Undefined variable: \"$darkcolor\".\A         on line 6 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/footer.scss\A \A 1: /**********/\A 2: /* FOOTER */\A 3: /**********/\A 4: \A 5: footer {\A 6:     background: $darkcolor;\A 7:     position:absolute;\A 8:     bottom: 0;\A 9:     .row {\A 10:         div {\A 11:             margin: 1vw 0;"; }
