@@ -60,11 +60,9 @@ $color_text: #000;
 }
 
 @mixin button(){
-    background: $primarycolor;
     color: #fff;
     cursor: pointer;
     padding: 5px;
-    position: relative;
     background:$primarycolor2;
     border:none;
     transition: 1s;

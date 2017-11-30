@@ -121,6 +121,7 @@ include_once('content/header.php');
 
                 ?>
             </div>
+            <a href="<?php echo directory() ?>content/allcode.php" class="linkBtn">voir plus</a>
         </div>
     </div>
 </main>

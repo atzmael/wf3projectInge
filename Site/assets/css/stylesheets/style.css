@@ -11,16 +11,14 @@ body {
 }
 /* line 9, ../sass/style.scss */
 body button {
-  background: #2263ad;
   color: #fff;
   cursor: pointer;
   padding: 5px;
-  position: relative;
   background: #ed7700;
   border: none;
   transition: 1s;
 }
-/* line 71, ../sass/variable.scss */
+/* line 69, ../sass/variable.scss */
 body button:hover, body button:focus {
   box-shadow: inset 250px 0 0 0 #ffa740;
 }
@@ -68,7 +66,7 @@ p {
 
 /* line 40, ../sass/style.scss */
 main {
-  padding: 25vw 0 25vw 0;
+  padding: 25vw 0 35vw 0;
   box-sizing: border-box;
 }
 
@@ -83,11 +81,32 @@ input, textarea, select {
   margin: 1vw 0;
 }
 
+/* line 54, ../sass/style.scss */
+.linkBtn {
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  background: #ed7700;
+  border: none;
+  transition: 1s;
+  color: #fff !important;
+  margin: .5vw;
+  padding: .5vw;
+}
+/* line 69, ../sass/variable.scss */
+.linkBtn:hover, .linkBtn:focus {
+  box-shadow: inset 250px 0 0 0 #ffa740;
+}
+/* line 33, ../sass/variable.scss */
+.linkBtn:hover {
+  color: #fff !important;
+}
+
 /* TEST */
 /***********/
 /* CONTENT */
 /***********/
-/* line 61, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .page {
   background: #F5F5F6;
   min-height: 100vh;
@@ -206,12 +225,12 @@ input, textarea, select {
 .page main .section1, .page main .section2 {
   background: #fff;
   border: #F5F5F6 1px solid;
-  box-shadow: 5px 5px 10px #000;
+  box-shadow: 1px 1px 2px #000;
   margin: 0;
 }
 /* line 58, ../sass/index.scss */
 .page main .section1 h2, .page main .section2 h2 {
-  padding-top: 2vw;
+  margin-top: 1vw;
 }
 /* line 65, ../sass/index.scss */
 .page main .section1 .row .langages div h3 a, .page main .section2 .row .langages div h3 a {
@@ -269,6 +288,11 @@ input, textarea, select {
 .page main .section1 .row .langages div p a:hover, .page main .section1 .row .code div p a:hover, .page main .section2 .row .langages div p a:hover, .page main .section2 .row .code div p a:hover {
   color: #000;
 }
+/* line 97, ../sass/index.scss */
+.page main .section2 {
+  margin: 2vw auto;
+  padding-bottom: 1vw;
+}
 /* line 2, ../sass/user.scss */
 .page .asideBtn i {
   color: #2263ad;
@@ -312,16 +336,14 @@ input, textarea, select {
 }
 /* line 33, ../sass/user.scss */
 .page main > .userContent button {
-  background: #2263ad;
   color: #fff;
   cursor: pointer;
   padding: 5px;
-  position: relative;
   background: #ed7700;
   border: none;
   transition: 1s;
 }
-/* line 71, ../sass/variable.scss */
+/* line 69, ../sass/variable.scss */
 .page main > .userContent button:hover, .page main > .userContent button:focus {
   box-shadow: inset 250px 0 0 0 #ffa740;
 }
@@ -396,7 +418,7 @@ input, textarea, select {
 }
 
 /** SMALL CHANGE **/
-/* line 81, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 .link {
   color: #ed7700 !important;
   text-decoration: underline;
@@ -415,35 +437,36 @@ input, textarea, select {
   }
   /* line 13, ../sass/responsive.scss */
   .page main {
-    padding: 13vw 0 25vw 0;
+    padding-top: 13vw;
+    padding-bottom: 25vw;
   }
 
   /* FOOTER */
 }
 @media screen and (min-width: 768px) {
   /* HEADER */
-  /* line 25, ../sass/responsive.scss */
+  /* line 26, ../sass/responsive.scss */
   .navbar {
     padding-top: 0;
     padding-bottom: 0;
   }
 
-  /* line 29, ../sass/responsive.scss */
+  /* line 30, ../sass/responsive.scss */
   .dropdown-toggle::after {
     content: none;
   }
 
-  /* line 33, ../sass/responsive.scss */
+  /* line 34, ../sass/responsive.scss */
   .nav-link {
     padding: 1rem 1rem !important;
   }
 
   /* CONTENT */
-  /* line 42, ../sass/responsive.scss */
+  /* line 43, ../sass/responsive.scss */
   .page .recherche {
     padding-top: 12vw;
   }
-  /* line 45, ../sass/responsive.scss */
+  /* line 46, ../sass/responsive.scss */
   .page main {
     padding: 10vw 0 7vw 0;
   }
@@ -453,11 +476,11 @@ input, textarea, select {
 @media screen and (min-width: 990px) {
   /* HEADER */
   /* CONTENT */
-  /* line 61, ../sass/responsive.scss */
+  /* line 62, ../sass/responsive.scss */
   .page .recherche {
     padding-top: 12vw;
   }
-  /* line 64, ../sass/responsive.scss */
+  /* line 65, ../sass/responsive.scss */
   .page main {
     padding: 8vw 0 8vw 0;
   }
@@ -467,11 +490,11 @@ input, textarea, select {
 @media screen and (min-width: 1200px) {
   /* HEADER */
   /* CONTENT */
-  /* line 80, ../sass/responsive.scss */
+  /* line 81, ../sass/responsive.scss */
   .page .recherche {
     padding-top: 12vw;
   }
-  /* line 83, ../sass/responsive.scss */
+  /* line 84, ../sass/responsive.scss */
   .page main {
     padding: 4vw 0 1vw 0;
   }

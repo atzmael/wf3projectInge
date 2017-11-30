@@ -1,7 +1,6 @@
 /* style page connexion */
 
 .carou{
-
     font-family: OCR A Std, monospace;
     font-size:4em;
     color: #25858C;
@@ -26,19 +25,17 @@
     font-family:Andale Mono, monospace;
     color:black;
     font-size: 5em;
-
 }
 
 input{
     border: white;
-    margin-left: 0vw;
     padding: 5px;
     width: 100%;
-
 }
-/* ecart formulaire- liens */
-fieldset{
-    margin-bottom: 2vw;
+
+textarea {
+    resize: both;
+    width: 100%;
 }
 
 /*les labels */

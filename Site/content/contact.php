@@ -29,24 +29,20 @@ if(isset($_SESSION['id']))
             </div>
             <form method="POST" class="col-md-6" action="reponse_contact.php">
 
-                <fieldset>
 
-                    <legend>Balance ton message</legend>
+                <legend>Balance ton message</legend>
 
-                    <fieldset>
 
-                        <label for="pseudo">Pseudo</label>
-                        <p><input type="text" name="pseudo" id="pseudo" value='<?= $result['pseudo']; ?>'></p>
-                        <label for="email">Email</label>
-                        <p><input type="text" name="email" id="email" value='<?= $result['email']; ?>'></p>
-                        <label for="titre">Titre du Message</label>
-                        <p><input type="text" name="titre" id="titre"></p>
-                        <label for="message">Message</label>
-                        <p><textarea name="message" rows= "5" id="message" placeholder="Je veux faire un don"></textarea></p>
+                <label for="pseudo">Pseudo</label>
+                <p><input type="text" name="pseudo" id="pseudo" value='<?= $result['pseudo']; ?>'></p>
+                <label for="email">Email</label>
+                <p><input type="text" name="email" id="email" value='<?= $result['email']; ?>'></p>
+                <label for="titre">Titre du Message</label>
+                <p><input type="text" name="titre" id="titre"></p>
+                <label for="message">Message</label>
+                <p><textarea name="message" rows= "5" id="message" placeholder="Je veux faire un don"></textarea></p>
 
-                        <button type="submit" id="valid" class="btnTheme">Envoyer<span class="btnUnder"></span></button>
-
-                    </fieldset>
+                <button type="submit" id="valid" class="btnTheme">Envoyer<span class="btnUnder"></span></button>
 
             </form>
         </div>
