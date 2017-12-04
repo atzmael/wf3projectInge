@@ -8,12 +8,18 @@ require_once('../config/inc_bdd.php');
 $id = strip_tags($_GET['id']);
 
 if(isset($id)){
+	$db -> query('SET SESSION group_concat_max_len = 10000000');
 
-    $query = $db -> prepare("SELECT article.title, article.description, article.content, article.release_date, article.vote, user.pseudo, user.id_util FROM article JOIN user ON article._id_util = user.id_util WHERE id_article = ?");
-    $query -> bindValue(1, $_GET['id'], PDO::PARAM_INT);
+    $query = $db -> prepare("SELECT article.title, article.description, article.release_date, article.vote, user.pseudo, user.id_util, GROUP_CONCAT(content_article.content SEPARATOR '|||')AS content FROM article 
+    						JOIN user ON article._id_util = user.id_util 
+    						JOIN content_article ON content_article._id_article = article.id_article
+    						WHERE id_article = ? GROUP BY article.id_article");
+    $query -> bindValue(1, $id, PDO::PARAM_INT);
     $query -> execute();
 
     $result = $query -> fetch();
+
+    $contenu = explode('|||', $result['content']);
 
 }else{
     header("Location: 404.php");
@@ -30,7 +36,12 @@ include_once('../content/header.php');
 
                 echo '<h2>Titre : '.$result['title'].'</h2>';
                 echo '<p>Description : '.$result['description'].'</p>';
-                echo '<p><pre><code id="contentcopy">'.($result['content']).'</code></pre></p>';
+                foreach ($contenu as $value) {
+
+                	 echo '<p><pre><code id="contentcopy">'.$value.'</code></pre></p>';
+              
+                }
+               
                 echo '<p><button id="copyCode">Copie ton code</button>'."  "."<select id='select'>
                                                                     <option value='0'>Ton vote</option>
                                                                     <option value='1'>&#9733;</option> 
@@ -55,12 +66,14 @@ include_once('../content/header.php');
                 }
                 echo '</p>';
 
-                if($_SESSION['id'] == $result['id_util'])
+                if(isset($_SESSION['id']))
                 {
-                    echo '<p><a href="'.directory().'content/modif_code.php?id='.$id.'">Modifier</a></p>';
-                    echo '<p><a href="'.directory().'content/sup_code.php?id='.$id.'">Supprimer</a></p>';
-                }
-                
+	                if($_SESSION['id'] == $result['id_util'])
+	                {
+	                    echo '<p><a href="'.directory().'content/modif_code.php?id='.$id.'">Modifier</a></p>';
+	                    echo '<p><a href="'.directory().'content/sup_code.php?id='.$id.'">Supprimer</a></p>';
+	                }
+	            }  
                 ?>
                 
             </div>

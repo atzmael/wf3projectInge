@@ -11,7 +11,7 @@ Error: Undefined mixin 'centrer'.
 6:         border: $lightgrey 1px solid;
 7:         h3 {
 8:             a {
-9:                 color: $deepblue;
+9:                 color: $primarycolor;
 
 Backtrace:
 C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index_lang.scss:4:in `centrer'
@@ -80,4 +80,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'centrer'.\A         on line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index_lang.scss, in `centrer'\A         from line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index_lang.scss\A \A 1: .code {\A 2:     padding: 1vw;\A 3:     div {\A 4:         @include centrer(relative);\A 5:         padding: 2vw;\A 6:         border: $lightgrey 1px solid;\A 7:         h3 {\A 8:             a {\A 9:                 color: $deepblue;"; }
+  content: "Error: Undefined mixin 'centrer'.\A         on line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index_lang.scss, in `centrer'\A         from line 4 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index_lang.scss\A \A 1: .code {\A 2:     padding: 1vw;\A 3:     div {\A 4:         @include centrer(relative);\A 5:         padding: 2vw;\A 6:         border: $lightgrey 1px solid;\A 7:         h3 {\A 8:             a {\A 9:                 color: $primarycolor;"; }

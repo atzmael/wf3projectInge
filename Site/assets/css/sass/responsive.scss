@@ -1,69 +1,90 @@
 
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-    /*
-HEADER
- */
 
+@media screen and (min-width: 560px) {
+    /* HEADER */
 
+    /* CONTENT */
 
-    /*
-    CONTENT
-    */
+    .page {
+        .recherche {
+            padding-top: 12vw;
+        }
+        main {
+            padding-top: 13vw;
+            padding-bottom: 25vw;
+        }
+    }
 
-    /*
-    FOOTER
-     */
+    /* FOOTER */
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-    /*
-HEADER
- */
+
+@media screen and (min-width: 768px) {
+    /* HEADER */
+
+    .navbar {
+        padding-top:0;
+        padding-bottom:0;
+    }
+    .dropdown-toggle::after {
+        content: none;
+    }
+
+    .nav-link {
+        padding: 1rem 1rem!important;
+    }
 
 
+    /* CONTENT */
 
-    /*
-    CONTENT
-    */
+    .page {
 
-    /*
-    FOOTER
-     */
+        .recherche {
+            padding-top: 12vw;
+        }
+        main {
+            padding: 10vw 0 7vw 0;
+        }
+    }
+
+    /* FOOTER */
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    /*
-HEADER
- */
+
+@media screen and (min-width: 990px) {
+    /* HEADER */
 
 
+    /* CONTENT */
 
-    /*
-    CONTENT
-    */
+    .page {
+        .recherche {
+            padding-top: 12vw;
+        }
+        main {
+            padding: 8vw 0 8vw 0;
+        }
+    }
 
-    /*
-    FOOTER
-     */
+    /* FOOTER */
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-    /*
-HEADER
- */
+
+@media screen and (min-width: 1200px) {
+    /* HEADER */
 
 
+    /* CONTENT */
 
-    /*
-    CONTENT
-    */
+    .page {
+        .recherche {
+            padding-top: 12vw;
+        }
+        main {
+            padding: 4vw 0 1vw 0;
+        }
+    }
 
-    /*
-    FOOTER
-     */
+    /* FOOTER */
 }

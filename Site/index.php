@@ -41,7 +41,7 @@ include_once('content/header.php');
 <main class="container">
     <div class="row">
         <div class="section1 col-12 text-center">
-            <h2>Trouves le code de tes rêves !</h2>
+            <h2>Trouve le code de tes rêves !</h2>
             <button id="btnSearch">Rechercher</button>
             <div class="row">
                 <div class="langages col-12 col-md-4">
@@ -121,6 +121,7 @@ include_once('content/header.php');
 
                 ?>
             </div>
+            <a href="<?php echo directory() ?>content/allcode.php" class="linkBtn">voir plus</a>
         </div>
     </div>
 </main>

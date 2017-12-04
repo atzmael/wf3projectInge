@@ -3,14 +3,14 @@
 /**********/
 
 footer {
-    background: $darkgrey;
+    background: $darkcolor;
     position:absolute;
     bottom: 0;
     .row {
         div {
             margin: 1vw 0;
             a{
-                @include link($color_link,$color_linkH);
+                @include link($primarycolor2,$lightcolor2);
             }
         }
     }

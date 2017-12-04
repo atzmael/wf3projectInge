@@ -1,44 +1,73 @@
-@media (min-width: 576px) {
-    /*
-HEADER
- */
-  /*
-  CONTENT
-  */
-  /*
-  FOOTER
-   */
+@media screen and (min-width: 560px) {
+  /* HEADER */
+  /* CONTENT */
+  /* line 10, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 12vw;
+  }
+  /* line 13, ../sass/responsive.scss */
+  .page main {
+    padding-top: 13vw;
+    padding-bottom: 25vw;
+  }
+
+  /* FOOTER */
 }
-@media (min-width: 768px) {
-    /*
-HEADER
- */
-  /*
-  CONTENT
-  */
-  /*
-  FOOTER
-   */
+@media screen and (min-width: 768px) {
+  /* HEADER */
+  /* line 26, ../sass/responsive.scss */
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* line 30, ../sass/responsive.scss */
+  .dropdown-toggle::after {
+    content: none;
+  }
+
+  /* line 34, ../sass/responsive.scss */
+  .nav-link {
+    padding: 1rem 1rem !important;
+  }
+
+  /* CONTENT */
+  /* line 43, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 12vw;
+  }
+  /* line 46, ../sass/responsive.scss */
+  .page main {
+    padding: 10vw 0 7vw 0;
+  }
+
+  /* FOOTER */
 }
-@media (min-width: 992px) {
-    /*
-HEADER
- */
-  /*
-  CONTENT
-  */
-  /*
-  FOOTER
-   */
+@media screen and (min-width: 990px) {
+  /* HEADER */
+  /* CONTENT */
+  /* line 62, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 12vw;
+  }
+  /* line 65, ../sass/responsive.scss */
+  .page main {
+    padding: 8vw 0 8vw 0;
+  }
+
+  /* FOOTER */
 }
-@media (min-width: 1200px) {
-    /*
-HEADER
- */
-  /*
-  CONTENT
-  */
-  /*
-  FOOTER
-   */
+@media screen and (min-width: 1200px) {
+  /* HEADER */
+  /* CONTENT */
+  /* line 81, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 12vw;
+  }
+  /* line 84, ../sass/responsive.scss */
+  .page main {
+    padding: 4vw 0 1vw 0;
+  }
+
+  /* FOOTER */
 }
