@@ -1,36 +1,110 @@
-.asideBtn {
-    i {
-        color: $primarycolor;
-        cursor: pointer;
-        font-size: 1.6em;
-    }
-}
+/* PROFIL UTILISATEUR */
 
-.menuUser {
-    position: absolute;
-    left: -500px;
-    box-shadow: 1px 1px 5px #000;
-    z-index: 999;
-    background: $darkgrey;
-    padding: 4vw;
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
-            a {
-                @include link($color_link,$color_linkH);
+
+/* MES CODES */
+
+.mycode {
+    .row {
+        background: #fff;
+        a{
+            width: 100%;
+            .code {
+                padding: 1vw;
+                margin: 0;
+                box-shadow: 0 0 5px $darkgrey;
+                transition: .2s;
+                &:hover {
+                    box-shadow: 0 0 10px #919192;
+                }
+                div {
+                    @include centrer(relative);
+                    padding: 2vw;
+                    h3 {
+                        a {
+                            @include link($primarycolor2, $primarycolor2);
+                        }
+                    }
+                }
+            }
+            &:hover {
+                text-decoration: none;
             }
         }
     }
 }
 
-main > .userContent {
-    a {
-        @include link(#000,#000);
+
+/* INSERTION CODE */
+
+.insertCode {
+    #all_content {
+        margin-bottom: 2vw;
+        textarea {
+            resize: vertical;
+            width: 100%;
+        }
+        i {
+            position: relative;
+            top:40%;
+            left:40%;
+            transform: translateY(-30%) translateX(-30%);
+            padding: 1vw;
+            cursor:pointer;
+            box-sizing: border-box;
+            color: red;
+            background: transparent;
+            z-index:0;
+            transition: .5s;
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: red;
+                top: 0;
+                left: 0;
+                position: absolute;
+                border-radius: 50%;
+                z-index: -2;
+                transition: .5s;
+
+            }
+            &::after {
+                content: "";
+                width: 95%;
+                height: 95%;
+                background: #fff;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                position: absolute;
+                border-radius: 50%;
+                z-index: -1;
+                transition: .5s;
+            }
+
+            &:hover {
+                color: #fff;
+                &::after {
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
     }
-    margin: 2vw 0;
-    button {
-        @include button();
+    #ajout_content, #insert_code {
+        margin-bottom: 1vw;
     }
+}
+
+/* REINI MDP */
+
+.reini-mdp {
+    form {
+        input {
+            &:focus {
+                box-shadow: 0 0 10px $darkgrey;
+            }
+        }
+    }
+
 }

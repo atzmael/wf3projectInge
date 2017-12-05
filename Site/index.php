@@ -25,9 +25,10 @@ include_once('content/header.php');
 
 ?>
 <div class="recherche text-center">
-    <div class="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
-    <div class="searchField">
-        <input type="text" id="search" placeholder="Rechercher">
+    <div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>
+    <div class="input-group searchField">
+        <input type="text" class="form-control" placeholder="Rechercher" id="search" aria-label="recherche">
+        <span class="input-group-addon"><i class="fa fa-arrow-right fa-2x"></i></span>
     </div>
     <div id="options">
         <label for="optVote">Les mieux notés<input type="checkbox" id="optVote" value="DESC"></label>
@@ -43,8 +44,8 @@ include_once('content/header.php');
         <div class="section1 col-12 text-center">
             <h2>Trouve le code de tes rêves !</h2>
             <button id="btnSearch">Rechercher</button>
-            <div class="row">
-                <div class="langages col-12 col-md-4">
+            <div class="row justify-content-center">
+                <div class="langages col-md-4 mh-100">
                     <div>
                         <h3><a href="<?php echo directory() ?>content/index_html.php">HTML</a></h3>
                         <p class="nbCode"><?php echo $html['codes_parus'] ?> codes parus</p>
@@ -55,7 +56,7 @@ include_once('content/header.php');
                         ?>
                     </div>
                 </div>
-                <div class="langages col-12 col-md-4">
+                <div class="langages col-md-4 mh-100">
                     <div>
                         <h3><a href="<?php echo directory() ?>content/index_css.php">CSS</a></h3>
                         <p class="nbCode"><?php echo $css['codes_parus'] ?> codes parus</p>
@@ -66,7 +67,7 @@ include_once('content/header.php');
                         ?>
                     </div>
                 </div>
-                <div class="langages col-12 col-md-4">
+                <div class="langages col-md-4 mh-100">
                     <div>
                         <h3><a href="<?php echo directory() ?>content/index_js.php">JAVASCRIPT</a></h3>
                         <p class="nbCode"><?php echo $js['codes_parus'] ?> codes parus</p>
@@ -77,9 +78,7 @@ include_once('content/header.php');
                         ?>
                     </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="langages col-12 col-md-5">
+                <div class="langages col-md-4 mh-100">
                     <div>
                         <h3><a href="<?php echo directory() ?>content/index_php.php">PHP</a></h3>
                         <p class="nbCode"><?php echo $php['codes_parus'] ?> codes parus</p>
@@ -90,7 +89,7 @@ include_once('content/header.php');
                         ?>
                     </div>
                 </div>
-                <div class="langages col-12 col-md-5">
+                <div class="langages col-md-4 mh-100">
                     <div>
                         <h3><a href="<?php echo directory() ?>content/index_mysql.php">MySQL</a></h3>
                         <p class="nbCode"><?php echo $mysql['codes_parus'] ?> codes parus</p>

@@ -14,9 +14,6 @@ if(isset($_SESSION['id'])){
     <meta charset="UTF-8">
     <title>Balance ton code</title>
 
-    
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/bootstrap.css">
@@ -24,7 +21,6 @@ if(isset($_SESSION['id'])){
     <link rel="stylesheet" href="<?php echo directory() ?>assets/css/stylesheets/style.css" media="screen">
     <link rel="stylesheet" type="text/css" href="CSS/style_connexion.css">
     <link rel="stylesheet" type="text/css" href="CSS/style_inscription.css">
-    
 
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/jquery.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
@@ -32,6 +28,18 @@ if(isset($_SESSION['id'])){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/function.js"></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 
 </head>
 <body>
@@ -80,13 +88,13 @@ if(isset($_SESSION['id'])){
                             <?php
                                 if($result_user['rank'] == 1)
                                 {
-                                   
+
                                     ?>
                                     <a class="dropdown-item" href="<?php echo directory() ?>content/admin.php" >Administration</a>
                                     <?php
                                 }
                             ?>
-                            
+
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="<?php echo directory() ?>content/deconnexion.php">Deconnexion</a>
 

@@ -84,6 +84,4 @@ function directory(){
     return $dir = '/wf3projectInge/Site/';
 }
 
-
-
 ?>

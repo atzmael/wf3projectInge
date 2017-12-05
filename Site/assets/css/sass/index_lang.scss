@@ -1,22 +1,20 @@
-.code {
-    padding: 1vw;
-    div {
-        @include centrer(relative);
-        padding: 2vw;
-        border: $lightgrey 1px solid;
-        h3 {
-            a {
-                color: $primarycolor;
-                &:hover {
-                    color: $primarycolor;
-                }
+.index-lang {
+    .row {
+        background: #fff;
+        .code {
+            padding: 1vw;
+            box-shadow: 0 0 5px $darkgrey;
+            transition: .2s;
+            &:hover {
+                box-shadow: 0 0 20px #919192;
             }
-        }
-        p {
-            a {
-                color: $color_font;
-                &:hover {
-                    color: $color_font;
+            div {
+                @include centrer(relative);
+                padding: 2vw;
+                h3 {
+                    a {
+                        @include link($primarycolor2, $primarycolor2);
+                    }
                 }
             }
         }

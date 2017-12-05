@@ -15,19 +15,19 @@
 
 	?>
 
-	<main class="container">
+	<main class="container index-lang">
 
 		<div class="row">
-
-		<?php 
+            <h1 class="col-12 text-center">Codes html</h1>
+		<?php
 
 		foreach($result as $value) {
-                    echo '<div class="code col-md-4">
+                    echo '<div class="code col-md-4 mh-100">
                             <div>
                                 <h3><a href="'.directory() .'content/article.php?id='.$value['id_article'].'">'.$value['title'].'</a></h3>
                                 <p>Posté il y a '.$value['release_date'].' par '.$value['pseudo'].'</p>
                             </div>
-                          </div>'; 
+                          </div>';
         }
 
         ?>

@@ -21,16 +21,7 @@ include_once('../content/header.php');
 
 ?>
 
-<main class="container">
-    <span class="asideBtn"><i class="fa fa-plus" aria-hidden="true"></i></span>
-    <aside class="menuUser">
-        <ul>
-            <li><a href="<?php echo directory() ?>content/user.php">Mon profil</a></li>
-            <li><a href="<?php echo directory() ?>content/mycode.php">Mon Code</a></li>
-            <li><a href="<?php echo directory() ?>content/modif_profil.php">Modifier mon profil</a></li>
-            <li><a href="<?php echo directory() ?>content/modif_email.php">Changer mon email</a></li>
-        </ul>
-    </aside>
+<main class="container user">
     <div class="userContent">
         <p>Bienvenue <?php echo $result['pseudo'].' ('.$result['firstname'].' '.$result['lastname'].')'; ?></p>
         <p>Date d'inscription : <?php echo $result['registration']; ?></p>

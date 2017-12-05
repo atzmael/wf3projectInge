@@ -44,9 +44,10 @@ if(isset($_SESSION['id']))
             </div>
 
             <label for="code">Code</label>
-            <div id="all_content">
-
-                <textarea name="content1" id="content1" rows="6"></textarea>
+            <div id="all_content" class="row">
+                <div class="col-11">
+                    <textarea name="content1" class="content" id="content1"></textarea>
+                </div>
             </div>
 
 
@@ -54,10 +55,6 @@ if(isset($_SESSION['id']))
             <input type="hidden" value="1" id="nb_ajout_content" name="nb_ajout_content">
 
             <button id="insert_code" type="submit">Soumets ton code!!!</button>
-
-            <div id="succes">
-            </div>
-
 
         </form>
 

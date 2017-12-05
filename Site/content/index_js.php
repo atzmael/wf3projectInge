@@ -15,10 +15,10 @@
 
 	?>
 
-	<main class="container">
+	<main class="container index-lang">
 
 		<div class="row">
-
+            <h1 class="col-12 text-center">Codes Javascript</h1>
 		<?php 
 
 		foreach($result as $value) {

@@ -1,6 +1,4 @@
 
-
-
 @media screen and (min-width: 560px) {
     /* HEADER */
 
@@ -9,6 +7,9 @@
     .page {
         .recherche {
             padding-top: 12vw;
+                .close {
+                    right: 4vw;
+                }
         }
         main {
             padding-top: 13vw;
@@ -41,7 +42,7 @@
     .page {
 
         .recherche {
-            padding-top: 12vw;
+            padding-top: 10vw;
         }
         main {
             padding: 10vw 0 7vw 0;
@@ -60,7 +61,7 @@
 
     .page {
         .recherche {
-            padding-top: 12vw;
+            padding-top: 8vw;
         }
         main {
             padding: 8vw 0 8vw 0;
@@ -79,10 +80,16 @@
 
     .page {
         .recherche {
-            padding-top: 12vw;
+            padding-top: 4vw;
+            .searchField {
+                padding: 0 20vw;
+            }
+            .close {
+                font-size: 2em;
+            }
         }
         main {
-            padding: 4vw 0 1vw 0;
+            padding: 4vw 0 4vw 0;
         }
     }
 

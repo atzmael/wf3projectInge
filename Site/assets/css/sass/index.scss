@@ -14,18 +14,30 @@
     .close {
         position: relative;
         z-index: 999;
-        right: 5vw;
+        right: 2vw;
         color: #fff;
         cursor: pointer;
     }
     .searchField {
+        margin-top: 3vw;
+        position: relative;
+        padding: 0 4vw;
+
         input {
             background: none;
             border: none;
             font-size: 2.5em;
             width: 80%;
             color: #fff;
-            padding: 0 2vw;
+        }
+        span {
+            background: none;
+            color: $lightcolor2;
+        }
+        &::before {
+            font-size: 2em;
+            position: absolute;
+            right: 0;
         }
     }
 
@@ -69,11 +81,11 @@ main {
                 }
             }
             .langages, .code {
-                padding: 1vw;
+                border: $darkgrey 1px solid;
+                margin: 1vw 0;
                 div {
                     @include centrer(relative);
-                    padding: 2vw;
-                    border: $lightgrey 1px solid;
+                    padding: 1vw;
                     h3 {
                         a {
                             color: $primarycolor;
@@ -90,6 +102,9 @@ main {
                             }
                         }
                     }
+                }
+                &:hover {
+                    box-shadow: 0 0 10px $darkgrey;
                 }
             }
         }
