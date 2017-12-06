@@ -3,7 +3,7 @@
 .carou{
     font-family: OCR A Std, monospace;
     font-size:4em;
-    color: #25858C;
+    color: #ffa740 ;
     margin-bottom: 5vw;
 }
 
@@ -14,7 +14,7 @@
 
 /* case connexion */
 .connexion .section1{
-    background-color:#25858C ! important ;
+    background-color:#2263ad ! important ;
     border-radius: 20vw;
     border: none;
 }
@@ -23,44 +23,48 @@
 .section1 legend{
     text-align: center;
     font-family:Andale Mono, monospace;
-    color:black;
+    color:#ed7700;
     font-size: 5em;
 }
 
 /*les labels */
-.label1{
-    color: black;
-    margin-left: -42vw;
-    padding-left: 15vw;
-    font-size: 1em;
+
+.connexion .label1{
+   display: inline-block;
+  margin-bottom: .5rem;
+  color: #E1E2E1;
 }
-.label2{
-    color :black;
+.connexion .label2{
+    color :#5f90df  ! important;
     margin-left: -45vw;
     padding-left: 15vw;
     margin-top: 17px;
     font-size: 1em;
 }
-
+input{
+    width: 50%;
+}
 /* bouton valider */
-.bouton{
+.connexion .bouton{
     color: white;
-    background-color:#2E3535;
-    margin-left: 0;
-    border: unset;
+    background-color:#ed7700!important;
+    border: none;
     padding: 20px;
     margin-bottom: 10px;
+    margin-top: 15px;
+
+
 }
-.bouton:hover {
-    background-color: #3c4444;
+.connexion .bouton:hover , .liens :hover {
+    background-color: #ffa740 ;
 }
 
 /*liens mot de passe oublié et inscription utilisateur*/
-.liens a {
+.connexion .liens a {
     font-size: 1em;
     margin-top: 10vw;
     padding: 5vw;
 
-    color: #0056b3;
+    color: #ed7700;
 
 }

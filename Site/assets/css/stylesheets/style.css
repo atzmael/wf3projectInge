@@ -24,10 +24,24 @@ body button:hover {
 }
 
 /* line 15, ../sass/style.scss */
+
+.connexion h1{
+    text-align: center;
+    font-family:Andale Mono, monospace;
+    color:#ed7700;
+    font-size: 5em !important;
+}
+
 h1 {
   color: #2263ad;
   font-size: 2em;
   margin: 2vw 0;
+}
+.connexion h1{
+    text-align: center;
+    font-family:Andale Mono, monospace;
+    color:#ed7700;
+    font-size: 5em !important;
 }
 
 /* line 20, ../sass/style.scss */

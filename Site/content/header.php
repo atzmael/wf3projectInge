@@ -29,6 +29,8 @@ if(isset($_SESSION['id'])){
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo directory() ?>assets/js/function.js"></script>
     <script type="text/javascript" src="./js/scripts_form.js"></script>
+     <script type="text/javascript" src="./js/verif_connexion.js"></script>
+
 
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -42,7 +44,7 @@ if(isset($_SESSION['id'])){
         })();
     </script>
 
-</head>
+</head>   
 <body>
 <div id="loader" aria-hidden="true">
     <img src="<?php echo directory(); ?>assets/img/loader.gif" alt="Image de chargement de la page" aria-hidden="true">

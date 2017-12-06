@@ -148,7 +148,7 @@ function mdp(){
 	var mdp2 = $("#pass2").val();
 	if(mdp1 != mdp2){
 		$("#erreurPass").css("color", "red")
-		$("#erreurPass").html("les mdps ne sont pas identiques")
+		$("#erreurPass").html("les mots de passe ne sont pas identiques")
 		$("#pass2").css("border","1px solid red");
 		passOk = false;
 	}else{

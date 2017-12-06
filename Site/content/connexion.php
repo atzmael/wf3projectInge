@@ -49,12 +49,15 @@ include_once('../content/header.php');
 
                     <legend>>connexion_</legend>
 
-                    <p><label class="label1" for="email">Entrez votre email:</label></p>
-                    <input type="text" name="email" id="email">
+                      <p><label for="mail">Votre adresse e-mail : </label></p>
+                    <p class="email"><input name="email"  type="email"  id="email" /></p>
+                    <p id="erreurEmail"></p>
 
 
-                    <p><label class="label2" for="mot_de_passe">Mot de passe:</label></p>
-                    <input type="password" name="mot_de_passe" id="mot_de_passe">
+               <p> <label for="pass">Votre mot de passe : </label></p>
+                <p><input type="password" name="pass" id="pass"></p>
+                <p id="erreurPass2"></p>
+
 			</fieldset>
 
 
