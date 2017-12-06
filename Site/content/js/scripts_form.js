@@ -1,19 +1,7 @@
-/*document.getElementById("pseudo").value;
-$("#pseudo").val();
-
-window.onload = function(){
-
-};
-$(function(){
-
-});
-
-document.getElementById("pseudo").addEventListener("blur", checkPseudo);
-$("#pseudo").on("blur", checkPseudo);
-*/
 
 
-var nomOK = prenomOk = professionOk = villeOk = paysOk = pseudoOk = emailOk = passOk = null;
+
+var nomOK = prenomOk = professionOk = villeOk = paysOk = pseudoOk = emailOk = passOk = passOk2 = null;
 
 
 
@@ -22,6 +10,7 @@ var nomOK = prenomOk = professionOk = villeOk = paysOk = pseudoOk = emailOk = pa
 function checkNom(){
 	var nom = $("#nom").val();
 	if(nom.length <= 0){
+		$("#erreurNom").css("color", "red")
 		$("#erreurNom").html("Vous devez entrer un  nom!");
 		$("#nom").css("border","1px solid red");
 		nomOk = false;
@@ -30,11 +19,12 @@ function checkNom(){
 		$("#nom").css("border-color","green");
 		nomOk = true;
 	}
-	//checkForm();
+	
 }
 function checkPrenom(){
 	var prenom = $("#prenom").val();
 	if(prenom.length <= 0){
+		$("#erreurPrenom").css("color", "red")
 		$("#erreurPrenom").html("Vous devez entrer un  prenom!");
 		$("#prenom").css("border","1px solid red");
 		prenomOk = false;
@@ -43,12 +33,13 @@ function checkPrenom(){
 		$("#prenom").css("border","blue");
 		prenomOk = true;
 	}
-	//checkForm();
+	
 }
 
 function checkProfession(){
 	var profession = $("#profession").val();
 	if(profession.length <= 0){
+		$("#erreurProfession").css("color", "red")
 		$("#erreurProfession").html("Vous devez entrer une profession!");
 		$("#profession").css("border","1px solid red");
 		professionOk = false;
@@ -57,13 +48,14 @@ function checkProfession(){
 		$("#profession").css("border","blue");
 		professionOk = true;
 	}
-	//checkForm();
+	
 }
 
 
 function checkVille(){
 	var ville = $("#ville").val();
 	if(ville.length <= 0){
+		$("#erreurVille").css("color", "red")
 		$("#erreurVille").html("Vous devez entrer une ville!");
 		$("#ville").css("border","1px solid red");
 		villeOk = false;
@@ -72,12 +64,13 @@ function checkVille(){
 		$("#ville").css("border","blue");
 		villeOk = true;
 	}
-	checkForm();
+	
 }
 
 function checkPays(){
 	var pays = $("#pays").val();
 	if(pays.length <= 0){
+		$("#erreurPays").css("color", "red")
 		$("#erreurPays").html("Vous devez entrer un pays!");
 		$("#pays").css("border","1px solid red");
 		paysOk = false;
@@ -86,7 +79,7 @@ function checkPays(){
 		$("#pays").css("border","blue");
 		paysOk = true;
 	}
-	checkForm();
+	
 
 }
 
@@ -96,6 +89,7 @@ function checkPays(){
 function checkPseudo(){
 	var pseudo = $("#pseudo").val();
 	if(pseudo.length <= 5){
+		$("#erreurPseudo").css("color", "red")
 		$("#erreurPseudo").html("Vous devez entrer un pseudo de plus de 5 caractères!");
 		$("#pseudo").css("border","1px solid red");
 		pseudoOk = false;
@@ -104,101 +98,70 @@ function checkPseudo(){
 		$("#pseudo").css("border","green");
 		pseudoOk = true;
 	}
-	checkForm();
+	
 }
 
+//Vérification du mail s'il n'est pas vide on vérifie le . et @
+function checkEmail()
+{
+	var reg = new RegExp('^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
 
-
-function check_mail() {
-				var msg = "";
-			 
-			//Vérification du mail s'il n'est pas vide on vérifie le . et @
-			 
-		if (document.getElementById("email").value != "" && document.getElementById("email").value.length < 5){
-					
-					indexAroba = document.getElementById("email").value.indexOf('@');
-					indexPoint = document.getElementById("email").value.indexOf('.');
-					
-					if ((indexAroba < 0) || (indexPoint < 0))		{
-			 
-					/*dans le cas ou pas de . ni d'@ modification couleur arrière plan du champ mail et un message 
-					d'alerte*/
-			 
-						document.getElementById("email").style.backgroundColor = "#f34949";
-						msg += "Le mail est incorrect\n";
-						
-						/*var divs = document.getElementsByTagName('onblur');
-						for(var i=0; i<divs.length; i++){
-							if(divs[i].className == "feedback-input"){
-								divs[i].style.border = "#000 solid 4px;";
-							}
-						}*/						
-					}
-					else {
-						document.getElementById("email").style.backgroundColor = "#39cf85";
-						msg = "";
-					}
-				}
-				else {
-						document.getElementById("email").style.backgroundColor = "#f34949";
-						msg += "Le mail est incorrect\n";
-				}
-				//Si aucun message d'alerte a été initialisé on retourne TRUE
-				if (msg == "") return(true);
-			 
-				//Si un message d'alerte a été initialisé on lance l'alerte
-				else	{
-					document.getElementById("email-error").style.display = 'block';
-					return(false);
-				}
-			}
-
-
-
-/*function checkEmail(){
-	var email = document.forms["form1"].elements["mail"].value ;
-	if ((email.indexOf('@') != -1) && (email.indexOf('.') != -1))
-		  alert('');
-	else
-	      alerte('Cette adresse email est incorrecte !')	
-
-	$("#email").val();
-if(email){
-		$("#erreurEmail").html("Vous devez entrer deux emails identiques");
-		$("#email").css("border","1px solid red");
-		emailOk = false;
-	}else{
+	if(reg.test($("#email").val()))
+	{
 		$("#erreurEmail").html("");
-		emailOk = true;
+		$("#email").css("border","1px solid grey");
+		
+		return(true);
+
 	}
-	checkForm(); */
+	else
+	{
+		$("#erreurEmail").css("color", "red")
+		$("#erreurEmail").html("Vous devez entrer un email correct!");
+		$("#email").css("border","1px solid red");
+
+	}
 }
 
-function checkPass(){
-	var pass1 = $("#pass1").val();
-	var pass2 = $("#pass2").val();
-	if(pass1 != pass2){
-		$("#erreurPass").html("Vous devez entrer deux mots de passe identiques");
+
+
+ function checkPass2(){
+ 	var pass1 = $("#pass1").val();
+ 	var pass2 = $("#pass2").val();
+
+ 	if (pass1 == "" ){
+ 		$("#erreurPass").css("color", "red")
+ 		$("#erreurPass").html("Vous devez entrer un mot de passe!");
+ 		$("#pass1").css("border","1px solid red");
+ 		passOk2 = false ;
+
+ 	}else{
+ 		$("#erreurPass").html("");
+ 		$("#pass1").css("border","1px solid grey");
+ 		passOk2 = true;
+ 	}
+ 	checkMdp();
+}
+
+function mdp(){
+	var mdp1 = $("#pass1").val();
+	var mdp2 = $("#pass2").val();
+	if(mdp1 != mdp2){
+		$("#erreurPass").css("color", "red")
+		$("#erreurPass").html("les mdps ne sont pas identiques")
+		$("#pass2").css("border","1px solid red");
 		passOk = false;
 	}else{
 		$("#erreurPass").html("");
+		$("#pass2").css("border","1px solid grey");
 		passOk = true;
 	}
-	checkForm();
 }
 
-/*function checkForm(){
-	if ( nomOk ==true && prenomOk==true && professionOk == true && villeOk==true && paysOk==true&&
-		pseudoOk == true && passOk == true && emailOk == true) {
-		//$("#bouton").css("display","inline");
-		$("#bouton").show();
-	}else{
-		//$("#bouton").css("display","none");
-		$("#bouton").hide();
-	}
-}*/
-
-
+function checkMdp(){
+	if(passOk == true)
+		$("#erreurPass").html("");
+}
 
 
 $(function(){
@@ -209,7 +172,8 @@ $(function(){
 	$("#pays").on("blur", checkPays);
 	$("#pseudo").on("blur", checkPseudo);
 	$("#email").on("blur", checkEmail);
-	$("#pass2").on("blur", checkPass);
+	$("#pass1").on("blur", checkPass2);
+	$("#pass2").on("blur", mdp);
 
 
 });

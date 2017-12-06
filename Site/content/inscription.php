@@ -31,9 +31,10 @@ include_once('../content/header.php');
 
     <!-- formulaire informations personnelles --> 
 
-             <fieldset class="form1">
+          <fieldset class="form1">
 
-                <legend>Coordonnées</legend>
+              <legend>Coordonnées</legend>
+
                 <label for="nom">Votre Nom</label>
                 <p><input type="text" name="nom" id="nom"></p>
                 <p id="erreurNom"></p>
@@ -55,7 +56,7 @@ include_once('../content/header.php');
                 <p><input type="text" name="pays" id="pays"></p>
                 <p id="erreurPays"></p>
 
-            </fieldset>
+          </fieldset>
 
 
  <!-- formulaire info connexion -->
@@ -63,7 +64,7 @@ include_once('../content/header.php');
 
             <fieldset class="form2">
 
-                <legend>Identifiant de connexion</legend>
+              <legend>Identifiant de connexion</legend>
 
                    <p><label for="pseudo">Votre pseudo</label></p>
                     <p><input type="text" name="pseudo" id="pseudo"></p>
@@ -71,19 +72,16 @@ include_once('../content/header.php');
 
             
                      
-                     <p> 
-                          <label for="mail"><span> Votre adresse e-mail :</span></label>
-                    <p class="email">
-                            <span id="email-error" class="erreur">Le mail est incorrect</span>
-                            <input name="email" onblur="check_mail()" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />                         
-                        </p>
+                     <p><label for="mail">Votre adresse e-mail : </label></p>
+                    <p class="email"><input name="email"  type="email"  id="email" /></p>
+                    <p id="erreurEmail"></p>
 
 
-               <p> <label for="mdp1">Votre mot de passe </label></p>
-                <p><input type="password" name="mdp1" id="mdp1"></p>
+               <p> <label for="pass1">Votre mot de passe </label></p>
+                <p><input type="password" name="pass1" id="pass1"></p>
 
-                <p><label for="mdp2">Confirmer votre mot de passe</label></p>
-                <p><input type="password" name="mdp2" id="mdp2"></p>
+                <p><label for="pass2">Confirmer votre mot de passe</label></p>
+                <p><input type="password" name="pass2" id="pass2" required="required"></p> 
                 <p id="erreurPass"></p>
 
             </fieldset>
