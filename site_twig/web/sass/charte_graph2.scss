@@ -1,0 +1,88 @@
+/* COULEURS */
+
+/*
+$lightcolor: #5f90df;
+$primarycolor: #2263ad; // COULEUR TITRES
+$darkcolor: #003a7d; // COULEUR FOND HEADER / FOOTER
+
+$lightcolor2: #ffa740; // COULEUR LIENS & BOUTON AU SURVOL
+$primarycolor2: #ed7700; // COULEUR FOND BOUTON, LIENS
+$darkcolor2: #b44900;
+
+$lightgrey: #F5F5F6; // COULEUR DE FOND
+$darkgrey: #E1E2E1;
+
+$color_font: #000;
+$color_link: $lightcolor2;
+$color_linkH: $lightcolor;
+
+$genericColor: #fff;
+$color_text: #000;
+ */
+
+
+/* ELEMENTS DU SITE */
+
+* {
+    font-size:1em;
+}
+
+body{
+    font-size:16px;font-family:sans-serif;padding:0;margin:0;
+}
+
+nav, footer {
+    height:70px;background:$darkcolor;width:100%;
+}
+
+
+h1{
+    font-size:2em;
+    color: $primarycolor2;
+}
+h2{
+    font-size:1.8em;
+    color: $primarycolor;
+}
+h3{
+    font-size:1.6em;
+}
+
+section{
+    padding: 20px;
+    display: flex;
+}
+
+article {
+    box-shadow: .5px .5px 2px #000;
+    padding: 20px;
+    margin: 10px;
+    background: #fff;
+    width: 20vw;
+}
+
+a{
+    color:$primarycolor2;padding:20px;
+    &:hover{color:$lightcolor2;}
+}
+
+.neutrelight{
+    background: $lightgrey;
+}
+.neutredark{
+    background: $darkgrey;
+}
+.primary{
+    background:$primarycolor;
+    color: #000;
+}
+
+
+button{
+    background:$primarycolor2;padding:20px;border:none;color:$genericColor;;cursor:pointer;
+    transition: .3s;
+    &:hover,&:focus {
+        box-shadow: inset 100px 0 0 0 $lightcolor2;
+    }
+}
+

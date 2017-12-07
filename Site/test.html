@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+
+</head>
+<body>
+
+<input type="">
+<button class="delete-content" id="content1">Bouton</button>
+<button class="delete-content">Bouton</button>
+<button class="delete-content">Bouton</button>
+
+
+</body>
+<script>
+    $(function(){
+        $('.delete-content').on('click', deleteContent);
+
+        function deleteContent(e){
+            e.preventDefault();
+            alert('ok');
+        }
+    })
+</script>
+</html>

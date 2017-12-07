@@ -1,0 +1,22 @@
+.index-lang {
+    .row {
+        background: #fff;
+        .code {
+            padding: 1vw;
+            box-shadow: 0 0 5px $darkgrey;
+            transition: .2s;
+            &:hover {
+                box-shadow: 0 0 20px #919192;
+            }
+            div {
+                @include centrer(relative);
+                padding: 2vw;
+                h3 {
+                    a {
+                        @include link($primarycolor2, $primarycolor2);
+                    }
+                }
+            }
+        }
+    }
+}

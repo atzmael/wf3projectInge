@@ -6,36 +6,98 @@
 
 body {
     color: $color_font;
+    button {
+        @include button();
+    }
+    font-size: 16px;
 }
 
 h1 {
-    color: $deepblue;
+    color: $primarycolor;
+    font-size: 2em;
+    margin: 2vw 0
 }
 h2 {
-    color: $deepblue;
+    color: $primarycolor;
+    font-size: 1.8em;
 }
 h3 {
-    color: $deepblue;
+    color: $primarycolor;
+    font-size: 1.6em;
+}
+a {
+    @include link($primarycolor2, $lightcolor2);
+    font-size: 1em;
+}
+
+p {
+    font-size: 1.5em;
 }
 
 #loader {
     @include centrer(absolute);
 }
 
+main {
+    padding: 25vw 0 35vw 0;
+    box-sizing: border-box;
+}
+
+.fa-star, .fa-star-o {
+    color: $primarycolor;
+}
+
+input, textarea, select {
+    font-size: .9em;
+    margin: 1vw 0;
+    border: none;
+}
+input {
+    width: 100%;
+    padding: 1vw;
+}
+
+.linkBtn {
+    @include button();
+    @include link(#fff, #fff);
+    margin: .5vw;
+    padding: .5vw;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+/* TEST */
+
 /***********/
 /* CONTENT */
 /***********/
 
 .page {
-    padding-top: 20vw;
+    background: $lightgrey;
+    min-height: 100vh;
+    position:relative;
 
     @import 'header';
 
     /* import des fichiers pour le contenu */
     @import 'index';
+    @import 'user';
+    @import 'index_lang';
+    @import 'insert_code';
+    @import 'faq';
+    @import 'recherche';
 
     @import 'footer';
 
 }
 
 /** SMALL CHANGE **/
+
+.link {
+    @include link($primarycolor2, $lightcolor2);
+    text-decoration: underline;
+}
+
+@import 'responsive';

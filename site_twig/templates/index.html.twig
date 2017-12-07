@@ -1,0 +1,56 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+    <div class="recherche text-center">
+        <div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>
+        <div class="input-group searchField">
+            <input type="text" class="form-control" placeholder="Rechercher" id="search" aria-label="recherche">
+            <span class="input-group-addon"><i class="fa fa-arrow-right fa-2x"></i></span>
+        </div>
+        <div id="options">
+            <label for="optVote">Les mieux notés<input type="checkbox" id="optVote" value="DESC"></label>
+            <select name="optDate" id="optDate">
+                <option value="DESC">Du plus récent</option>
+                <option value="ASC">Du moins récent</option>
+            </select>
+        </div>
+        <div id="response"></div>
+    </div>
+    <main class="container">
+        <div class="row">
+            <div class="section1 col-12 text-center">
+                <h2>Trouve le code de tes rêves !</h2>
+                <button id="btnSearch">Rechercher</button>
+                <div class="row justify-content-center">
+                    {% for ligne in index %}
+                    <div class="langages col-md-4 mh-100">
+                        <div>
+                            <h3><a href="{{ path('codes', {'langName': ligne.language_name}) }}">{{ ligne.language_name|upper }}</a></h3>
+                            <p class="nbCode">{{ ligne.nb }} codes parus</p>
+                        <p>derniers code ajouté : <a href="{{ path('article', {'id': ligne.lastIdArticle}) }}">{{ ligne.lastArticle }}</a></p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="section2 col-12 text-center">
+                <h2>Tous nos codes</h2>
+                <div class="row">
+                    {% for ligne in article %}
+                        <div class="code col-md-4">
+                            <div>
+                                <h3><a href="{{ path('article', {'id': ligne.id_article})  }}">{{ ligne.title }}</a></h3>
+                                <p>Posté le {{ ligne.release_date|date('d/m/Y') }} par {{ ligne.pseudo }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+                <a href="" class="linkBtn">voir tout</a>
+            </div>
+        </div>
+    </main>
+
+
+{% endblock %}

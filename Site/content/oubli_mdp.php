@@ -1,32 +1,32 @@
 <?php
 
-	// oubli_mdp.php
+session_start();
 
-	require_once('inc_bdd.php');
-	require_once('librairie.php');
+include_once('../config/librairie.php');
+require_once('../config/inc_bdd.php');
+
+include_once('../content/header.php');
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>OUBLI DE MOT DE PASSE</title>
-</head>
-<body>
+<main class="container reini-mdp">
+    <form method="POST" action="reponse_oubli_mdp.php">
 
-	<form method="POST" action="reponse_oubli_mdp.php">
+        <fieldset>
 
-		<fieldset>
+            <legend>Email à reinitialiser</legend>
 
-			<legend>Email à reinitialiser</legend>
-			<label for="email">Email:</label>
-			<input type="text" name="email" id="email">
+            <input type="text" name="email" placeholder="votre email" id="email">
 
-		<input type="submit" value="Envoyer">
+            <button>Réinitialiser</button>
 
-		</fieldset>
+        </fieldset>
 
-	</form>
+    </form>
+</main>
 
-</body>
-</html>
+<?php
+
+include_once('../content/footer.php');
+
+?>

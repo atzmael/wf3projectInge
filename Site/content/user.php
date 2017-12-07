@@ -7,7 +7,7 @@ require_once('../config/inc_bdd.php');
 
 if(isset($_SESSION['id'])){
 
-    $user = $db -> query('SELECT pseudo, firstname, lastname, email, city, country, registration, function, nb_article, nb_comment FROM user WHERE id_util ='.$_SESSION['id']);
+    $user = $db -> query('SELECT * FROM user WHERE id_util ='.$_SESSION['id']);
 
     $user -> execute();
 
@@ -21,14 +21,18 @@ include_once('../content/header.php');
 
 ?>
 
-<main class="container">
-    <div>
-        <p>Bienvenu <?php echo $result['pseudo']; ?> !</p>
+<main class="container user">
+    <div class="userContent">
+        <p>Bienvenue <?php echo $result['pseudo'].' ('.$result['firstname'].' '.$result['lastname'].')'; ?></p>
+        <p>Date d'inscription : <?php echo $result['registration']; ?></p>
+        <p>Mail : <?php echo $result['email']; ?></p>
+        <p>Pays : <?php echo $result['country']; ?></p>
+        <p>Ville : <?php echo $result['city']; ?></p>
     </div>
 </main>
 
 <?php
 
-include_once('../content/footer.php')
+include_once('../content/footer.php');
 
 ?>

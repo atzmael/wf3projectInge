@@ -7,8 +7,8 @@
 
 		define('HOST', 'localhost'); // en prod mettre ip serveur
 		define('DB', 'balance_ton_code'); //le nom de la BDD
-		define('USER', 'root'); // si en prod, penser a le changer 
-		define('PASS', ''); //si en prod penser a le changer 
+		define('USER', 'root'); // si en prod, penser a le changer
+		define('PASS', ''); //si en prod penser a le changer
 
 				
 

@@ -1,28 +1,35 @@
 /*
-Error: Undefined variable: "$lightgrey".
-        on line 54 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss
+Error: Undefined variable: "$lightcolor2".
+        on line 35 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss
 
-49:     }
-50: }
-51: main {
-52:     .section1, .section2 {
-53:         background: #fff;
-54:         border: $lightgrey 1px solid;
-55:         box-shadow: 5px 5px 10px #000;
-56:         margin: 0;
-57:         h2 {
-58:             padding-top: 2vw;
-59:         }
+30:             width: 80%;
+31:             color: #fff;
+32:         }
+33:         span {
+34:             background: none;
+35:             color: $lightcolor2;
+36:         }
+37:         &::before {
+38:             font-size: 2em;
+39:             position: absolute;
+40:             right: 0;
 
 Backtrace:
-C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss:54
+C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss:35
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/list_literal.rb:63:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/list_literal.rb:63:in `_perform'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
@@ -82,4 +89,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$lightgrey\".\A         on line 54 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss\A \A 49:     }\A 50: }\A 51: main {\A 52:     .section1, .section2 {\A 53:         background: #fff;\A 54:         border: $lightgrey 1px solid;\A 55:         box-shadow: 5px 5px 10px #000;\A 56:         margin: 0;\A 57:         h2 {\A 58:             padding-top: 2vw;\A 59:         }"; }
+  content: "Error: Undefined variable: \"$lightcolor2\".\A         on line 35 of C:/xampp/htdocs/wf3projectInge/Site/assets/css/sass/index.scss\A \A 30:             width: 80%;\A 31:             color: #fff;\A 32:         }\A 33:         span {\A 34:             background: none;\A 35:             color: $lightcolor2;\A 36:         }\A 37:         &::before {\A 38:             font-size: 2em;\A 39:             position: absolute;\A 40:             right: 0;"; }

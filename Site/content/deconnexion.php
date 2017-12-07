@@ -5,12 +5,14 @@ session_start();
 include_once('../config/librairie.php');
 require_once('../config/inc_bdd.php');
 
-include_once('../content/header.php');
+//
 
 if(isset($_SESSION['id']))
 {
     session_unset();
-    echo "<p> Vous êtes maintenant déconnecté</p>";
+    header("Location: ../index.php");
+    
+    
 }
 else
 {
@@ -18,8 +20,9 @@ else
 }
 
 session_destroy();
-
+include_once('../content/header.php');
 ?>
+	
 
     <main class="container">
         <p><a href="<?php echo directory() ?>index.php">Retour à l'accueil</a></p>
