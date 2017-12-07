@@ -29,6 +29,7 @@ function checkEmail()
  	var pass = $("#pass").val();
  	
  	if (pass == ""){
+ 		$("#erreurPass2").css("color", "red");
  		$("#erreurPass2").html("Vous devez entrer un mot de passe!");
  		$("#pass").css("border","1px solid red");
  
