@@ -1,0 +1,74 @@
+/********************/
+/* VARIABLE & MIXIN */
+/********************/
+
+/* Variable */
+$lightcolor: #5f90df;
+$primarycolor: #2263ad; // COULEUR TITRES
+$darkcolor: #003a7d; // COULEUR FOND HEADER / FOOTER
+
+$lightcolor2: #ffa740; // COULEUR LIENS & BOUTON AU SURVOL
+$primarycolor2: #ed7700; // COULEUR FOND BOUTON, LIENS
+$darkcolor2: #b44900;
+
+$lightgrey: #F5F5F6; // COULEUR DE FOND
+$darkgrey: #E1E2E1;
+
+$color_font: #000;
+$color_link: $primarycolor2;
+$color_linkH: $lightcolor2;
+
+$genericColor: #fff;
+$color_text: #000;
+
+@mixin centrer($position){
+    position: $position;
+    transform: translateY(-50%) translateX(-50%);
+    top: 50%;
+    left: 50%;
+}
+
+@mixin link($color1,$color2){
+    color: $color1!important;
+    &:hover {
+        color: $color2!important;
+        text-decoration: underline;
+
+    }
+}
+
+@mixin animLink1($color1, $color2) {
+    text-decoration: none;
+    position: relative;
+    color: $color1;
+    &:hover, &:focus {
+        color: $color2;
+        &::after {
+            width: 100%;
+        }
+    }
+    &::after {
+        height: 2px;
+        width: 0;
+        background: $color2;
+        opacity: 1;
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform-origin: center;
+        transition: width 0.5s;
+    }
+}
+
+@mixin button(){
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    background:$primarycolor2;
+    border:none;
+    transition: .8s;
+    &:hover{
+        box-shadow: inset 250px 0 0 0 $lightcolor2;
+    }
+}

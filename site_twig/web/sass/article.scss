@@ -1,0 +1,20 @@
+.article {
+    h1,h2,h3 {
+    }
+    .dateIt {
+        margin: auto;
+        font-style: italic;
+    }
+    input[type=radio] {
+        width: 10%;
+    }
+
+    .notes {
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
+
+    .row:last-child {
+        margin-top: 1vw;
+    }
+}

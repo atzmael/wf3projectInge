@@ -1,0 +1,72 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+    <main class="container article">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h2>Titre : {{ article.title }}</h2>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="dateIt">Publié le {{ article.release_date }} par {{ article.pseudo }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Description : {{ article.description }}</p>
+                    </div>
+
+                    {% for ligne in content %}
+                        <div class="col-12">
+                            <p><pre><code id="contentcopy">{{ ligne }}</code></pre></p>
+                        </div>
+                    {% endfor %}
+
+                    <div class="col-md-4 mr-auto">
+                        <label for="voteInput">Votre vote :</label>
+                        <input type="radio" name="vote" id="voteInput" value="1" checked>
+                        <input type="radio" name="vote" id="voteInput" value="2">
+                        <input type="radio" name="vote" id="voteInput" value="3">
+                        <input type="radio" name="vote" id="voteInput" value="4">
+                        <input type="radio" name="vote" id="voteInput" value="5">
+                    </div>
+
+                    <div class="col-12 notes">
+                        <p>
+                            Note :
+                            {% if article.vote.moy %}
+                                {% for i in 1..article.vote.moy %}
+                                    <i class="fa fa-star fa-2x"></i>
+                                {% endfor %}
+                            {% endif %}
+                            {% if article.vote.reste %}
+                                {% for i in 1..article.vote.reste %}
+                                    <i class="fa fa-star-o fa-2x"></i>
+                                {% endfor %}
+                            {% endif %}
+                            ({{ article.vote.vote }} votes)
+                        </p>
+                    </div>
+
+                    {% if session %}
+                        {% if (session.rank == 1) or (session.id_util == article.id_util) %}
+                            <div class="col-12">
+                                <p><a class="linkBtn" href="'.directory().'content/modif_code.php?id='.$id.'">Modifier</a>
+                                <a class="linkBtn" href="'.directory().'content/sup_code.php?id='.$id.'">Supprimer</a></p>
+                            </div>
+                            {% endif %}
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3>Commentaires</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+{% endblock %}

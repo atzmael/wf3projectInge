@@ -1,0 +1,46 @@
+/**********/
+/* HEADER */
+/**********/
+
+
+nav {
+    background: $darkcolor;
+    .logo {
+        width: 50%;
+    }
+    ul {
+        .nav-item {
+            .nav-link {
+                padding: 0.5rem 1rem;
+                width: 100%;
+                @include link($color_link, $color_linkH);
+                background: $darkcolor;
+                &:hover {
+                    background: $primarycolor;
+                }
+            }
+        }
+        .dropdown {
+            .dropdown-menu {
+                padding: 0;
+                background: $darkcolor;
+                .dropdown-item {
+                    color: $primarycolor2!important;
+                    &:hover {
+                        background: $primarycolor;
+                        color: $lightcolor2;
+                    }
+                }
+                .dropdown-divider {
+                    margin: 0;
+                    border: 1px solid $lightcolor;
+                }
+            }
+        }
+        li {
+            a {
+                @include link($color_link, $color_linkH);
+            }
+        }
+    }
+}

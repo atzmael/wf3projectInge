@@ -1,0 +1,18 @@
+/* line 4, ../sass/article.scss */
+.article .dateIt {
+  margin: auto;
+  font-style: italic;
+}
+/* line 8, ../sass/article.scss */
+.article input[type=radio] {
+  width: 10%;
+}
+/* line 12, ../sass/article.scss */
+.article .notes {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+/* line 17, ../sass/article.scss */
+.article .row:last-child {
+  margin-top: 1vw;
+}

@@ -120,7 +120,7 @@ input {
 /***********/
 /* CONTENT */
 /***********/
-/* line 77, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 .page {
   background: #F5F5F6;
   min-height: 100vh;
@@ -261,7 +261,7 @@ input {
 .page main .section1, .page main .section2 {
   background: #fff;
   border: #F5F5F6 1px solid;
-  box-shadow: 1px 1px 2px #000;
+  box-shadow: 0 0 10px #919192;
   margin: 0;
 }
 /* line 70, ../sass/index.scss */
@@ -442,19 +442,20 @@ input {
 }
 /* line 2, ../sass/index_lang.scss */
 .page .index-lang .row {
+  box-shadow: 0 0 20px #919192;
   background: #fff;
 }
-/* line 4, ../sass/index_lang.scss */
+/* line 5, ../sass/index_lang.scss */
 .page .index-lang .row .code {
   padding: 1vw;
   box-shadow: 0 0 5px #E1E2E1;
   transition: .2s;
 }
-/* line 8, ../sass/index_lang.scss */
+/* line 9, ../sass/index_lang.scss */
 .page .index-lang .row .code:hover {
   box-shadow: 0 0 20px #919192;
 }
-/* line 11, ../sass/index_lang.scss */
+/* line 12, ../sass/index_lang.scss */
 .page .index-lang .row .code div {
   position: relative;
   transform: translateY(-50%) translateX(-50%);
@@ -462,7 +463,7 @@ input {
   left: 50%;
   padding: 2vw;
 }
-/* line 15, ../sass/index_lang.scss */
+/* line 16, ../sass/index_lang.scss */
 .page .index-lang .row .code div h3 a {
   color: #ed7700 !important;
 }
@@ -544,6 +545,24 @@ input {
 .page .rechercher .searchField #response a:hover {
   color: #ffa740 !important;
   text-decoration: underline;
+}
+/* line 4, ../sass/article.scss */
+.page .article .dateIt {
+  margin: auto;
+  font-style: italic;
+}
+/* line 8, ../sass/article.scss */
+.page .article input[type=radio] {
+  width: 10%;
+}
+/* line 12, ../sass/article.scss */
+.page .article .notes {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+/* line 17, ../sass/article.scss */
+.page .article .row:last-child {
+  margin-top: 1vw;
 }
 /* line 5, ../sass/footer.scss */
 .page footer {
