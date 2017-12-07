@@ -1,0 +1,85 @@
+@media screen and (min-width: 560px) {
+  /* HEADER */
+  /* CONTENT */
+  /* line 8, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 12vw;
+  }
+  /* line 10, ../sass/responsive.scss */
+  .page .recherche .close {
+    right: 4vw;
+  }
+  /* line 14, ../sass/responsive.scss */
+  .page main {
+    padding-top: 13vw;
+    padding-bottom: 25vw;
+  }
+
+  /* FOOTER */
+}
+@media screen and (min-width: 768px) {
+  /* HEADER */
+  /* line 27, ../sass/responsive.scss */
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* line 31, ../sass/responsive.scss */
+  .dropdown-toggle::after {
+    content: none;
+  }
+
+  /* line 35, ../sass/responsive.scss */
+  .nav-link {
+    padding: 1rem 1rem !important;
+  }
+
+  /* CONTENT */
+  /* line 44, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 10vw;
+  }
+  /* line 47, ../sass/responsive.scss */
+  .page main {
+    padding: 10vw 0 7vw 0;
+  }
+
+  /* FOOTER */
+}
+@media screen and (min-width: 990px) {
+  /* HEADER */
+  /* CONTENT */
+  /* line 63, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 8vw;
+  }
+  /* line 66, ../sass/responsive.scss */
+  .page main {
+    padding: 8vw 0 8vw 0;
+  }
+
+  /* FOOTER */
+}
+@media screen and (min-width: 1200px) {
+  /* HEADER */
+  /* CONTENT */
+  /* line 82, ../sass/responsive.scss */
+  .page .recherche {
+    padding-top: 4vw;
+  }
+  /* line 84, ../sass/responsive.scss */
+  .page .recherche .searchField {
+    padding: 0 20vw;
+  }
+  /* line 87, ../sass/responsive.scss */
+  .page .recherche .close {
+    font-size: 2em;
+  }
+  /* line 91, ../sass/responsive.scss */
+  .page main {
+    padding: 4vw 0 4vw 0;
+  }
+
+  /* FOOTER */
+}

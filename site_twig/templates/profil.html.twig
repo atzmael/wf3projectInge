@@ -1,0 +1,17 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+    <main class="container profil">
+        <div class="row">
+            <div class="col-12 userContent">
+                    <p>Bienvenue {{ user.pseudo }} ({{ user.firstname }} {{ user.lastname }})</p>
+                    <p>Date d'inscription : {{ user.registration|date('d/m/Y') }}</p>
+                    <p>Mail : {{ user.email }}</p>
+                    <p>Pays : {{ user.country }}</p>
+                    <p>Ville : {{ user.city }}</p>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

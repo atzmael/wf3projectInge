@@ -1,0 +1,46 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+    <main class="container insertCode">
+        <form action="{{ path('article_insert') }}" method="POST">
+
+            <div>
+                <select id="id_lang" name="id_lang">
+                    <option value="">Nom de code</option>
+                    {% for ligne in article %}
+                        echo "<option value='{{ ligne.id_lang }}'>{{ ligne.language_name }}</option>
+
+                    {% endfor %}
+                </select>
+
+            </div>
+
+            <div>
+                <label for="title">Titre</label>
+                <input type="text" id="title" name="title">
+            </div>
+
+            <div>
+                <label for="description">description</label>
+                <input type="text" id="description" name="description">
+            </div>
+
+            <label for="code">Code</label>
+            <div id="all_content" class="row">
+                <div class="col-11">
+                    <textarea name="content1" class="content" id="content1"></textarea>
+                </div>
+            </div>
+
+
+            <button id="ajout_content">Ajouter une zone de contenu</button>
+            <input type="hidden" value="1" id="nb_ajout_content" name="nb_ajout_content">
+
+            <button id="insert_code" type="submit">Soumets ton code!!!</button>
+
+        </form>
+
+    </main>
+
+{% endblock %}

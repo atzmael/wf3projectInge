@@ -1,0 +1,52 @@
+.rechercher {
+    color: #000;
+    padding-top: 20vw;
+    width: 100%;
+    box-sizing: border-box;
+    .searchField {
+        div {
+            margin-top: 3vw;
+            position: relative;
+            padding: 0 4vw;
+
+            #search2 {
+                font-size: 2em;
+                width: 80%;
+                color: $lightcolor2;
+                margin: 0;
+                &::placeholder {
+                    color: $lightcolor2;
+                }
+                &:focus {
+                    border-color: $lightcolor2;
+                }
+            }
+            span {
+                background: none;
+                color: $lightcolor2;
+            }
+            &::before {
+                font-size: 2em;
+                position: absolute;
+                right: 0;
+            }
+        }
+
+        #moreOptions {
+            cursor: pointer;
+            padding: 1vw;
+            display: inline-block;
+            margin-top: 1vw;
+        }
+        #options {
+
+        }
+        #response {
+            color: $lightcolor2;
+            font-size: 1.5em;
+            a {
+                @include link($lightcolor2, $lightcolor2);
+            }
+        }
+    }
+}

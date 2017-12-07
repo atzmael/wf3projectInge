@@ -1,0 +1,66 @@
+/* style page connexion */
+
+.carou{
+    font-family: OCR A Std, monospace;
+    font-size:4em;
+    color: #25858C;
+    margin-bottom: 5vw;
+}
+
+.connexion {
+    text-align: center;
+}
+
+
+/* case connexion */
+.connexion .section1{
+    background-color:#25858C ! important ;
+    border-radius: 20vw;
+    border: none;
+}
+
+
+.section1 legend{
+    text-align: center;
+    font-family:Andale Mono, monospace;
+    color:black;
+    font-size: 5em;
+}
+
+/*les labels */
+.label1{
+    color: black;
+    margin-left: -42vw;
+    padding-left: 15vw;
+    font-size: 1em;
+}
+.label2{
+    color :black;
+    margin-left: -45vw;
+    padding-left: 15vw;
+    margin-top: 17px;
+    font-size: 1em;
+}
+
+/* bouton valider */
+.bouton{
+    color: white;
+    background-color:#2E3535;
+    margin-left: 0;
+    border: unset;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.bouton:hover {
+    background-color: #3c4444;
+}
+
+/*liens mot de passe oublié et inscription utilisateur*/
+.liens a {
+    font-size: 1em;
+    margin-top: 10vw;
+    padding: 5vw;
+
+    color: #0056b3;
+
+}

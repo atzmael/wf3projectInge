@@ -34,13 +34,14 @@
 
 </head>
 <body>
+
 <div id="loader" aria-hidden="true">
-    <img src="<?php echo directory(); ?>assets/img/loader.gif" alt="Image de chargement de la page" aria-hidden="true">
+    <img src="{{ asset('img/loader.gif') }}" alt="Image de chargement de la page" aria-hidden="true">
 </div>
 
 <div class="page pb-md-2">
     <nav class="navbar navbar-expand-md fixed-top navbar-dark text-center">
-        <a href="<?php echo directory() ?>" class="align-self-center linkLogo smoothScroll"><img src="{{ asset('img/logo.png') }}" alt="Logo"></a>
+        <a href="{{ path('homepage') }}" class="align-self-center linkLogo smoothScroll"><img src="{{ asset('img/logo.png') }}" alt="Logo"></a>
         <div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,58 +50,46 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>index.php">ACCUEIL</a>
+                    <a class="nav-link nl smoothScroll" href="{{ path('homepage') }}">ACCUEIL</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_html.php">HTML</a>
+                    <a class="nav-link nl smoothScroll" href="{{ path('codes', {'langName': 'html'}) }}">HTML</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_css.php">CSS</a>
+                    <a class="nav-link nl smoothScroll" href="{{ path('codes', {'langName': 'css'}) }}">CSS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_js.php">JAVASCRIPT</a>
+                    <a class="nav-link nl smoothScroll" href="{{ path('codes', {'langName': 'javascript'}) }}">JAVASCRIPT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_php.php">PHP</a>
+                    <a class="nav-link nl smoothScroll" href="{{ path('codes', {'langName': 'php'}) }}">PHP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/index_mysql.php">SQL</a>
+                    <a class="nav-link nl smoothScroll" href="{{ path('codes', {'langName': 'mysql'}) }}">SQL</a>
                 </li>
-                <?php
-                if(isset($_SESSION['id'])){
-                    ?>
+                <!-- Si connecté -->
+                {% if session %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"> Profil</i></a>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="<?php echo directory() ?>content/insert_code.php">Ajouter un code</a>
+                        <a class="dropdown-item" href="{{ path('newarticle') }}">Ajouter un code</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo directory() ?>content/user.php">Mon profil</a>
+                        <a class="dropdown-item" href="{{ path('profil') }}">Mon profil</a>
                         <a class="dropdown-item" href="<?php echo directory() ?>content/mycode.php">Mes codes</a>
-                        <?php
-                                if($result_user['rank'] == 1)
-                                {
-                                   
-                                    ?>
+                        {% if session.rank == 1 %}
                         <a class="dropdown-item" href="<?php echo directory() ?>content/admin.php" >Administration</a>
-                        <?php
-                                }
-                            ?>
-
+                        {% endif %}
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo directory() ?>content/deconnexion.php">Deconnexion</a>
+                        <a class="dropdown-item" href="{{ path('logout') }}">Deconnexion</a>
 
                     </div>
                 </li>
-                <?php
-                }else {
-                    ?>
+                {% else %}
+                <!-- SI PAS CONNECTE -->
                 <li class="nav-item">
-                    <a class="nav-link nl smoothScroll" href="<?php echo directory() ?>content/connexion.php">CONNEXION</a>
+                    <a class="nav-link nl smoothScroll" href="{{ path('login') }}">CONNEXION</a>
                 </li>
-                <?php
-                }
-                ?>
-
+                {% endif %}
             </ul>
         </div>
     </nav>

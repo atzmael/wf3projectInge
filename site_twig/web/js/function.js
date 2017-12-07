@@ -9,14 +9,13 @@ $(function(){
     $('#optVote').on('change', recherche);
     $('#optDate').on('change', recherche);
     $('#copyCode').on('click', copyToClipboard);
-    $('#insert_code').on('click', insertCode);
 
     $('#btnSearch').on('click',function(){$('.recherche').show();});
     $('.close').on('click',function(){$('.recherche').hide();});
     $('#ajout_content').on('click', ajout_content);
 });
 
-function insertCode(e){
+/*function insertCode(e){
     e.preventDefault();
     var id_lang = encodeURIComponent($("#id_lang").val());
     var title = encodeURIComponent($("#title").val());
@@ -46,7 +45,7 @@ function insertCode(e){
 
     nb_ajout_content = 1;
 
-}
+}*/
 
 
 function copyToClipboard() {
