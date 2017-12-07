@@ -15,7 +15,6 @@
 /* case connexion */
 .connexion .section1{
     background-color:#2263ad ! important ;
-    border-radius: 20vw;
     border: none;
 }
 
@@ -31,18 +30,16 @@
 
 .connexion .label1{
    display: inline-block;
-  margin-bottom: .5rem;
-  color: #E1E2E1;
+  margin-bottom: 1.3em;
+  color: #ed7700;
+  margin-left: -27vw;
+  padding-top: 15px;
 }
 .connexion .label2{
-    color :#5f90df  ! important;
-    margin-left: -45vw;
+    color :#ed7700  ! important;
+    margin-left: -42vw;
     padding-left: 15vw;
     margin-top: 17px;
-    font-size: 1em;
-}
-input{
-    width: 50%;
 }
 /* bouton valider */
 .connexion .bouton{
@@ -64,7 +61,9 @@ input{
     font-size: 1em;
     margin-top: 10vw;
     padding: 5vw;
-
     color: #ed7700;
 
+}
+.connexion input {
+    width: 60%;
 }
