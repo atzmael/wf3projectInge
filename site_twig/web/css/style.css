@@ -18,7 +18,7 @@ body button {
   border: none;
   transition: .8s;
 }
-/* line 71, ../sass/variable.scss */
+/* line 70, ../sass/variable.scss */
 body button:hover {
   box-shadow: inset 250px 0 0 0 #ffa740;
 }
@@ -44,21 +44,22 @@ h3 {
 
 /* line 28, ../sass/style.scss */
 a {
-  color: #ed7700 !important;
+  color: #ed7700;
   font-size: 1em;
 }
 /* line 33, ../sass/variable.scss */
 a:hover {
-  color: #ffa740 !important;
+  color: #ffa740;
   text-decoration: underline;
 }
 
 /* line 33, ../sass/style.scss */
 p {
+  margin-top: 1rem;
   font-size: 1em;
 }
 
-/* line 37, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 #loader {
   position: absolute;
   transform: translateY(-50%) translateX(-50%);
@@ -66,31 +67,31 @@ p {
   left: 50%;
 }
 
-/* line 41, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 main {
   padding: 25vw 0 35vw 0;
   box-sizing: border-box;
 }
 
-/* line 46, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 .fa-star, .fa-star-o {
   color: #2263ad;
 }
 
-/* line 50, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 input, textarea, select {
   font-size: .9em;
   margin: 1vw 0;
   border: none;
 }
 
-/* line 55, ../sass/style.scss */
-input {
+/* line 56, ../sass/style.scss */
+input, textarea {
   width: 100%;
   padding: 1vw;
 }
 
-/* line 60, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 .linkBtn {
   color: #fff;
   cursor: pointer;
@@ -98,20 +99,20 @@ input {
   background: #ed7700;
   border: none;
   transition: .8s;
-  color: #fff !important;
+  color: #fff;
   margin: .5vw;
   padding: .5vw;
 }
-/* line 71, ../sass/variable.scss */
+/* line 70, ../sass/variable.scss */
 .linkBtn:hover {
   box-shadow: inset 250px 0 0 0 #ffa740;
 }
 /* line 33, ../sass/variable.scss */
 .linkBtn:hover {
-  color: #fff !important;
+  color: #fff;
   text-decoration: underline;
 }
-/* line 65, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .linkBtn:hover {
   text-decoration: none;
 }
@@ -120,7 +121,7 @@ input {
 /***********/
 /* CONTENT */
 /***********/
-/* line 76, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 .page {
   background: #F5F5F6;
   min-height: 100vh;
@@ -154,7 +155,7 @@ input {
 }
 /* line 33, ../sass/variable.scss */
 .page nav ul .nav-item .nav-link:hover {
-  color: #ffa740 !important;
+  color: #ffa740;
   text-decoration: underline;
 }
 /* line 18, ../sass/header.scss */
@@ -182,107 +183,77 @@ input {
 }
 /* line 41, ../sass/header.scss */
 .page nav ul li a {
-  color: #ed7700 !important;
+  color: #ed7700;
 }
 /* line 33, ../sass/variable.scss */
 .page nav ul li a:hover {
-  color: #ffa740 !important;
+  color: #ffa740;
   text-decoration: underline;
 }
-/* line 1, ../sass/index.scss */
-.page .recherche {
-  color: #fff;
-  display: none;
-  padding-top: 20vw;
-  position: absolute;
-  z-index: 990;
-  overflow-y: scroll;
-  background: rgba(0, 0, 0, 0.9);
-  width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
+/* line 2, ../sass/index.scss */
+.page .recherche-page .row {
+  background: #fff;
+  box-shadow: 0 0 10px #919192;
+  min-height: 70vh;
 }
-/* line 14, ../sass/index.scss */
-.page .recherche .close {
-  position: relative;
-  z-index: 999;
-  right: 2vw;
-  color: #fff;
-  cursor: pointer;
-}
-/* line 21, ../sass/index.scss */
-.page .recherche .searchField {
-  margin-top: 3vw;
-  position: relative;
-  padding: 0 4vw;
-}
-/* line 26, ../sass/index.scss */
-.page .recherche .searchField input {
+/* line 6, ../sass/index.scss */
+.page .recherche-page .row input {
   background: none;
-  border: none;
   font-size: 2.5em;
-  width: 80%;
-  color: #fff;
+  border-radius: 0;
+  border: 1px solid #919192;
 }
-/* line 33, ../sass/index.scss */
-.page .recherche .searchField span {
-  background: none;
-  color: #ffa740;
+/* line 11, ../sass/index.scss */
+.page .recherche-page .row input:focus {
+  box-shadow: 0 0 5px #919192;
 }
-/* line 37, ../sass/index.scss */
-.page .recherche .searchField::before {
-  font-size: 2em;
-  position: absolute;
-  right: 0;
-}
-/* line 44, ../sass/index.scss */
-.page .recherche #moreOptions {
+/* line 15, ../sass/index.scss */
+.page .recherche-page .row #moreOptions {
   cursor: pointer;
   padding: 1vw;
   display: inline-block;
   margin-top: 1vw;
 }
-/* line 53, ../sass/index.scss */
-.page .recherche #response {
-  color: #fff;
+/* line 24, ../sass/index.scss */
+.page .recherche-page .row #response {
+  color: #000;
   font-size: 1.5em;
 }
-/* line 56, ../sass/index.scss */
-.page .recherche #response a {
-  color: #fff;
+/* line 27, ../sass/index.scss */
+.page .recherche-page .row #response a {
+  color: #ed7700;
 }
-/* line 58, ../sass/index.scss */
-.page .recherche #response a:hover {
-  color: #fff;
+/* line 33, ../sass/variable.scss */
+.page .recherche-page .row #response a:hover {
+  color: #ed7700;
+  text-decoration: underline;
 }
-/* line 65, ../sass/index.scss */
+/* line 34, ../sass/index.scss */
 .page main .section1, .page main .section2 {
   background: #fff;
   border: #F5F5F6 1px solid;
   box-shadow: 0 0 10px #919192;
   margin: 0;
 }
-/* line 70, ../sass/index.scss */
+/* line 39, ../sass/index.scss */
 .page main .section1 h2, .page main .section2 h2 {
   margin-top: 1vw;
 }
-/* line 77, ../sass/index.scss */
+/* line 46, ../sass/index.scss */
 .page main .section1 .row .langages div h3 a, .page main .section2 .row .langages div h3 a {
   text-decoration: none;
   position: relative;
   color: #ffa740;
 }
-/* line 44, ../sass/variable.scss */
+/* line 43, ../sass/variable.scss */
 .page main .section1 .row .langages div h3 a:hover, .page main .section1 .row .langages div h3 a:focus, .page main .section2 .row .langages div h3 a:hover, .page main .section2 .row .langages div h3 a:focus {
   color: #ffa740;
 }
-/* line 46, ../sass/variable.scss */
+/* line 45, ../sass/variable.scss */
 .page main .section1 .row .langages div h3 a:hover::after, .page main .section1 .row .langages div h3 a:focus::after, .page main .section2 .row .langages div h3 a:hover::after, .page main .section2 .row .langages div h3 a:focus::after {
   width: 100%;
 }
-/* line 50, ../sass/variable.scss */
+/* line 49, ../sass/variable.scss */
 .page main .section1 .row .langages div h3 a::after, .page main .section2 .row .langages div h3 a::after {
   height: 2px;
   width: 0;
@@ -295,12 +266,12 @@ input {
   transform-origin: center;
   transition: width 0.5s;
 }
-/* line 83, ../sass/index.scss */
+/* line 52, ../sass/index.scss */
 .page main .section1 .row .langages, .page main .section1 .row .code, .page main .section2 .row .langages, .page main .section2 .row .code {
   border: #E1E2E1 1px solid;
   margin: 1vw 0;
 }
-/* line 86, ../sass/index.scss */
+/* line 55, ../sass/index.scss */
 .page main .section1 .row .langages div, .page main .section1 .row .code div, .page main .section2 .row .langages div, .page main .section2 .row .code div {
   position: relative;
   transform: translateY(-50%) translateX(-50%);
@@ -308,27 +279,31 @@ input {
   left: 50%;
   padding: 1vw;
 }
-/* line 90, ../sass/index.scss */
+/* line 59, ../sass/index.scss */
 .page main .section1 .row .langages div h3 a, .page main .section1 .row .code div h3 a, .page main .section2 .row .langages div h3 a, .page main .section2 .row .code div h3 a {
   color: #2263ad;
 }
-/* line 92, ../sass/index.scss */
+/* line 61, ../sass/index.scss */
 .page main .section1 .row .langages div h3 a:hover, .page main .section1 .row .code div h3 a:hover, .page main .section2 .row .langages div h3 a:hover, .page main .section2 .row .code div h3 a:hover {
   color: #2263ad;
 }
-/* line 98, ../sass/index.scss */
+/* line 67, ../sass/index.scss */
 .page main .section1 .row .langages div p a, .page main .section1 .row .code div p a, .page main .section2 .row .langages div p a, .page main .section2 .row .code div p a {
   color: #000;
 }
-/* line 100, ../sass/index.scss */
+/* line 69, ../sass/index.scss */
 .page main .section1 .row .langages div p a:hover, .page main .section1 .row .code div p a:hover, .page main .section2 .row .langages div p a:hover, .page main .section2 .row .code div p a:hover {
   color: #000;
 }
-/* line 106, ../sass/index.scss */
+/* line 75, ../sass/index.scss */
 .page main .section1 .row .langages:hover, .page main .section1 .row .code:hover, .page main .section2 .row .langages:hover, .page main .section2 .row .code:hover {
   box-shadow: 0 0 10px #E1E2E1;
 }
-/* line 112, ../sass/index.scss */
+/* line 82, ../sass/index.scss */
+.page main .section1 p:first-child {
+  margin-top: 2vw;
+}
+/* line 86, ../sass/index.scss */
 .page main .section2 {
   margin: 2vw auto;
   padding-bottom: 1vw;
@@ -362,11 +337,11 @@ input {
 }
 /* line 23, ../sass/user.scss */
 .page .mycode .row a .code div h3 a {
-  color: #ed7700 !important;
+  color: #ed7700;
 }
 /* line 33, ../sass/variable.scss */
 .page .mycode .row a .code div h3 a:hover {
-  color: #ed7700 !important;
+  color: #ed7700;
   text-decoration: underline;
 }
 /* line 29, ../sass/user.scss */
@@ -465,11 +440,11 @@ input {
 }
 /* line 16, ../sass/index_lang.scss */
 .page .index-lang .row .code div h3 a {
-  color: #ed7700 !important;
+  color: #ed7700;
 }
 /* line 33, ../sass/variable.scss */
 .page .index-lang .row .code div h3 a:hover {
-  color: #ed7700 !important;
+  color: #ed7700;
   text-decoration: underline;
 }
 /* line 3, ../sass/faq.scss */
@@ -539,11 +514,11 @@ input {
 }
 /* line 47, ../sass/recherche.scss */
 .page .rechercher .searchField #response a {
-  color: #ffa740 !important;
+  color: #ffa740;
 }
 /* line 33, ../sass/variable.scss */
 .page .rechercher .searchField #response a:hover {
-  color: #ffa740 !important;
+  color: #ffa740;
   text-decoration: underline;
 }
 /* line 4, ../sass/article.scss */
@@ -564,14 +539,38 @@ input {
 .page .article .row:last-child {
   margin-top: 1vw;
 }
-/* line 2, ../sass/admin.scss */
-.page .admin .adminContent p {
+/* line 3, ../sass/admin.scss */
+.page .admin .adminContent a {
+  text-decoration: none;
+}
+/* line 5, ../sass/admin.scss */
+.page .admin .adminContent a:hover {
+  color: #ed7700;
+}
+/* line 8, ../sass/admin.scss */
+.page .admin .adminContent a:hover p .slink {
+  text-decoration: underline;
+}
+/* line 13, ../sass/admin.scss */
+.page .admin .adminContent a p {
   padding: 1vw;
   background: #fff;
 }
-/* line 5, ../sass/admin.scss */
-.page .admin .adminContent p:hover {
+/* line 16, ../sass/admin.scss */
+.page .admin .adminContent a p:hover {
   box-shadow: 0 0 10px #919192;
+}
+/* line 19, ../sass/admin.scss */
+.page .admin .adminContent a p span {
+  color: #000;
+}
+/* line 22, ../sass/admin.scss */
+.page .admin .adminContent a p .slink {
+  color: #ed7700;
+}
+/* line 30, ../sass/admin.scss */
+.page .admin .col-3 p a {
+  margin-right: 2vw;
 }
 /* line 5, ../sass/footer.scss */
 .page footer {
@@ -585,23 +584,23 @@ input {
 }
 /* line 12, ../sass/footer.scss */
 .page footer .row div a {
-  color: #ed7700 !important;
+  color: #ed7700;
 }
 /* line 33, ../sass/variable.scss */
 .page footer .row div a:hover {
-  color: #ffa740 !important;
+  color: #ffa740;
   text-decoration: underline;
 }
 
 /** SMALL CHANGE **/
-/* line 99, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 .link {
-  color: #ed7700 !important;
+  color: #ed7700;
   text-decoration: underline;
 }
 /* line 33, ../sass/variable.scss */
 .link:hover {
-  color: #ffa740 !important;
+  color: #ffa740;
   text-decoration: underline;
 }
 

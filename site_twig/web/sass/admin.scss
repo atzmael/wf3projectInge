@@ -1,9 +1,35 @@
 .admin {
-    .adminContent p {
-        padding:1vw;
-        background: #fff;
-        &:hover {
-            box-shadow: 0 0 10px #919192;
+    .adminContent {
+        a {
+            text-decoration: none;
+            &:hover {
+                color: $primarycolor2;
+                p {
+                    .slink {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            p {
+                padding: 1vw;
+                background: #fff;
+                &:hover {
+                    box-shadow: 0 0 10px #919192;
+                }
+                span {
+                    color: #000;
+                }
+                .slink {
+                    color: $primarycolor2;
+                }
+            }
+        }
+    }
+    .col-3 {
+        p {
+            a {
+                margin-right: 2vw;
+            }
         }
     }
 }

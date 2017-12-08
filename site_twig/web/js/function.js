@@ -73,66 +73,32 @@ function recherche(){
     }else {
         $('#optDate').prop("disabled", false);
     }
+    if(recherche_util != ""){
+        $.ajax({
+            url: "recherche" ,  // on donne l url du fichier de traitement
+            type: 'POST', //requete de type post
+            data: 'saisi='+recherche_util+'&optVote='+optVote+'&optDate='+optDate // on envoi les données
 
-    $.ajax({
-        url: "content/search.php" ,  // on donne l url du fichier de traitement
-        type: 'POST', //requete de type post
-        data: 'saisi='+recherche_util+'&optVote='+optVote+'&optDate='+optDate // on envoi les données
+        }).done(function(reponse){
+            var message = "";
+            console.log(reponse);
+            if(reponse != ""){
 
-    }).done(function(reponse){
-        var message = "";
-        console.log(reponse);
-        if(reponse != ""){
+                var retour = JSON.parse(reponse);
+                $.each(retour,function(key, value){
 
-            var retour = JSON.parse(reponse);
-            $.each(retour,function(key, value){
+                    message += '<p><a href="'+directory()+'content/article.php?id='+value.id_article+'">'+value.title+'</a></p>';
+                });
 
-                message += '<p><a href="'+directory()+'content/article.php?id='+value.id_article+'">'+value.title+'</a></p>';
-            });
+                $('#response').html(message);
+            }
 
-            $('#response').html(message);
-        }
-
-    }).fail(function(error){
-        $('#response').html(error.statusText);
-    });
-}
-
-function recherche2(){
-
-    var recherche_util = encodeURIComponent($('#search2').val()); // on securise les données et on les stock en memoire
-    var optVote = "";
-    var optDate = $('#optDate').val();
-
-    if($('#optVote').prop('checked')){
-        $('#optDate').prop("disabled", true);
-        optVote = "DESC";
+        }).fail(function(error){
+            $('#response').html(error.statusText);
+        });
     }else {
-        $('#optDate').prop("disabled", false);
+        $('#response').html("");
     }
-
-    $.ajax({
-        url: "search.php" ,  // on donne l url du fichier de traitement
-        type: 'POST', //requete de type post
-        data: 'saisi='+recherche_util+'&optVote='+optVote+'&optDate='+optDate // on envoi les données
-
-    }).done(function(reponse){
-        var message = "";
-        console.log(reponse);
-        if(reponse != ""){
-
-            var retour = JSON.parse(reponse);
-            $.each(retour,function(key, value){
-
-                message += '<p><a href="'+directory()+'content/article.php?id='+value.id_article+'">'+value.title+'</a></p>';
-            });
-
-            $('#response').html(message);
-        }
-
-    }).fail(function(error){
-        $('#response').html(error.statusText);
-    });
 }
 
 function ajout_content(e){

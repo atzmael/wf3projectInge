@@ -29,11 +29,10 @@ $color_text: #000;
 }
 
 @mixin link($color1,$color2){
-    color: $color1!important;
+    color: $color1;
     &:hover {
-        color: $color2!important;
+        color: $color2;
         text-decoration: underline;
-
     }
 }
 

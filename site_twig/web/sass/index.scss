@@ -1,62 +1,31 @@
-.recherche {
-    color: #fff;
-    display:none;
-    padding-top: 20vw;
-    position: absolute;
-    z-index: 990;
-    overflow-y: scroll;
-    background: rgba(0,0,0,.9);
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    top:0;
-    left: 0;
-    .close {
-        position: relative;
-        z-index: 999;
-        right: 2vw;
-        color: #fff;
-        cursor: pointer;
-    }
-    .searchField {
-        margin-top: 3vw;
-        position: relative;
-        padding: 0 4vw;
-
+.recherche-page {
+    .row {
+        background: #fff;
+        box-shadow: 0 0 10px #919192;
+        min-height: 70vh;
         input {
             background: none;
-            border: none;
             font-size: 2.5em;
-            width: 80%;
-            color: #fff;
+            border-radius: 0;
+            border: 1px solid #919192;
+            &:focus {
+                box-shadow: 0 0 5px #919192;
+            }
         }
-        span {
-            background: none;
-            color: $lightcolor2;
+        #moreOptions {
+            cursor: pointer;
+            padding: 1vw;
+            display: inline-block;
+            margin-top: 1vw;
         }
-        &::before {
-            font-size: 2em;
-            position: absolute;
-            right: 0;
-        }
-    }
+        #options {
 
-    #moreOptions {
-        cursor: pointer;
-        padding: 1vw;
-        display: inline-block;
-        margin-top: 1vw;
-    }
-    #options {
-
-    }
-    #response {
-        color: #fff;
-        font-size: 1.5em;
-        a {
-            color: #fff;
-            &:hover {
-                color: #fff;
+        }
+        #response {
+            color: #000;
+            font-size: 1.5em;
+            a {
+                @include link($primarycolor2, $primarycolor2);
             }
         }
     }
@@ -107,6 +76,11 @@ main {
                     box-shadow: 0 0 10px $darkgrey;
                 }
             }
+        }
+    }
+    .section1 {
+        p:first-child {
+            margin-top: 2vw;
         }
     }
     .section2 {

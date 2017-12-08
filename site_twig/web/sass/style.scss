@@ -31,6 +31,7 @@ a {
 }
 
 p {
+    margin-top: 1rem;
     font-size: 1em;
 }
 
@@ -52,7 +53,7 @@ input, textarea, select {
     margin: 1vw 0;
     border: none;
 }
-input {
+input, textarea {
     width: 100%;
     padding: 1vw;
 }

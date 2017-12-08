@@ -1,0 +1,23 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+
+    <main class="container recherche-page">
+        <div class="row">
+            <div class="col-12 text-center">
+                <input type="text" class="form-control" placeholder="Rechercher" id="search" aria-label="recherche" autocomplete="off">
+                <div id="options">
+                    <label for="optVote">Les mieux notés<input type="checkbox" id="optVote" value="DESC"></label>
+                    <select name="optDate" id="optDate">
+                        <option value="DESC">Du plus récent</option>
+                        <option value="ASC">Du moins récent</option>
+                    </select>
+                </div>
+                <div id="response"></div>
+            </div>
+        </div>
+    </main>
+
+
+{% endblock %}

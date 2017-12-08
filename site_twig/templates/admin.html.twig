@@ -6,8 +6,11 @@
         <h1>Espace administration</h1>
         <div class="row">
             {% for ligne in content %}
-                <div class="col-12 adminContent">
-                    <a href="{{ path('modif_code', {'id': ligne.id_article}) }}"><p>{{ ligne.title }} publié le {{ ligne.release_date }} par {{ ligne.pseudo }}</p></a>
+                <div class="col-9 adminContent">
+                    <a href="{{ path('article', {'id': ligne.id_article}) }}"><p><span class="slink">{{ ligne.title }}</span> <span>publié le</span> {{ ligne.release_date }} <span>par</span> {{ ligne.pseudo }}</p></a>
+                </div>
+                <div class="col-3 align-self-center">
+                    <p><a href="{{ path('modif_code', {'id': ligne.id_article}) }}"><i class="fa fa-pencil fa-2x"></i></a><a href=""><i class="fa fa-times fa-2x"></i></a></p>
                 </div>
             {% endfor %}
         </div>

@@ -2,26 +2,11 @@
 
 {% block content %}
 
-    <div class="recherche text-center">
-        <div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>
-        <div class="input-group searchField">
-            <input type="text" class="form-control" placeholder="Rechercher" id="search" aria-label="recherche">
-            <span class="input-group-addon"><i class="fa fa-arrow-right fa-2x"></i></span>
-        </div>
-        <div id="options">
-            <label for="optVote">Les mieux notés<input type="checkbox" id="optVote" value="DESC"></label>
-            <select name="optDate" id="optDate">
-                <option value="DESC">Du plus récent</option>
-                <option value="ASC">Du moins récent</option>
-            </select>
-        </div>
-        <div id="response"></div>
-    </div>
     <main class="container">
         <div class="row">
             <div class="section1 col-12 text-center">
                 <h2>Trouve le code de tes rêves !</h2>
-                <button id="btnSearch">Rechercher</button>
+                <p><a href="{{ path('recherche') }}" class="linkBtn">Rechercher</a></p>
                 <div class="row justify-content-center">
                     {% for ligne in index %}
                     <div class="langages col-md-4 mh-100">
