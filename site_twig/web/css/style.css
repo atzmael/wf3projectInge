@@ -564,6 +564,15 @@ input {
 .page .article .row:last-child {
   margin-top: 1vw;
 }
+/* line 2, ../sass/admin.scss */
+.page .admin .adminContent p {
+  padding: 1vw;
+  background: #fff;
+}
+/* line 5, ../sass/admin.scss */
+.page .admin .adminContent p:hover {
+  box-shadow: 0 0 10px #919192;
+}
 /* line 5, ../sass/footer.scss */
 .page footer {
   background: #003a7d;
@@ -585,7 +594,7 @@ input {
 }
 
 /** SMALL CHANGE **/
-/* line 98, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .link {
   color: #ed7700 !important;
   text-decoration: underline;

@@ -1,0 +1,34 @@
+{% extends "layout_nosidebar.html.twig" %}
+
+{% block content %}
+
+
+    <main class="container reini-mdp">
+        <div class="row">
+            <div class="col-12">
+                <form method="POST" action="{{ path('mdp_redefini', {'id': key.id, 'token': key.token}) }}">
+
+                    <fieldset>
+
+                        <legend>Mot de passe</legend>
+
+                        <label for="mdp1">Mot de passe</label>
+                        <p><input type="password" name="mdp1" id="mdp1"></p>
+
+                        <label for="mdp2">Confirmer votre mot de passe</label>
+                        <p><input type="password" name="mdp2" id="mdp2"></p>
+
+                    </fieldset>
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button>Valider</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

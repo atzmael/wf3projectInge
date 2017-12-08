@@ -1,0 +1,9 @@
+.admin {
+    .adminContent p {
+        padding:1vw;
+        background: #fff;
+        &:hover {
+            box-shadow: 0 0 10px #919192;
+        }
+    }
+}

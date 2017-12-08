@@ -65,3 +65,19 @@ $app->post('/newarticle', function () use ($app){
     ->bind('article_insert')
 ;
 
+// UPDATE article
+
+$app->get('/modif_code/{id}', function ($id) use ($app){
+
+    $user = $app['session']->get('user');
+
+    $model = new articleModels();
+    $article = $model->afficheArticle($app, $id);
+    $contenu = explode('|||', $article['content']);
+
+    return $app['twig']->render('modif_code.html.twig', array('article' => $article, 'contenu' => $contenu, 'session' => $user));
+})
+    ->bind('modif_code')
+;
+
+// Creer la route post modif code

@@ -24,7 +24,7 @@ class articleModels {
 
 		$app['db'] -> query('SET SESSION group_concat_max_len = 10000000');
 
-		$sql = "SELECT article.title, article.description, article.release_date, article.vote, user.pseudo, user.id_util, GROUP_CONCAT(content_article.content SEPARATOR '|||') AS content FROM article 
+		$sql = "SELECT article.id_article, article.title, article.description, article.release_date, article.vote, user.pseudo, user.id_util, GROUP_CONCAT(content_article.content SEPARATOR '|||') AS content FROM article 
     						JOIN user ON article._id_util = user.id_util 
     						JOIN content_article ON content_article._id_article = article.id_article
     						WHERE id_article = :id GROUP BY article.id_article";
@@ -36,6 +36,7 @@ class articleModels {
 
     // A insérer dans le controleur $contenu = explode('|||', $result['content']);
 	}
+
 
 	//Multi Index language
 	public function getIndex($app, $langName){
@@ -63,10 +64,10 @@ class articleModels {
 	public function insertArticle($app, $session, $post){
 		$sql = 'INSERT INTO article (title, description, _id_util, _id_lang, release_date) VALUES (:title, :description, :id_util, :id_lang, NOW())';
 		$query = $app['db']->prepare($sql);
-		$query -> bindvalue(':title', htmlentities($post['title']), PDO::PARAM_STR);
+		$query -> bindvalue(':title', strip_tags($post['title']), PDO::PARAM_STR);
 		$query -> bindvalue(':description', strip_tags($post['description']), PDO::PARAM_STR);
-		$query -> bindvalue(':id_util', htmlentities($session['id_util']), PDO::PARAM_INT);
-		$query -> bindvalue(':id_lang', htmlentities($post['id_lang']), PDO::PARAM_INT);
+		$query -> bindvalue(':id_util', $session['id_util'], PDO::PARAM_INT);
+		$query -> bindvalue(':id_lang', $post['id_lang'], PDO::PARAM_INT);
 		$query -> execute();
 
 		return true;
@@ -86,25 +87,45 @@ class articleModels {
 		$sql = 'INSERT INTO content_article(content, _id_article) VALUES (:content, :id_article)';
 		$query = $app['db']->prepare($sql);
 		$query -> bindvalue(':content', htmlentities($content), PDO::PARAM_STR);
-		$query -> bindvalue(':id_article', htmlentities($id_article), PDO::PARAM_STR);
+		$query -> bindvalue(':id_article', $id_article, PDO::PARAM_INT);
 		$query->execute();
 
 		return true;
 	}
 	
-	public function getSearch($app, $recherche_util){
-		$sql = "SELECT id_article, title FROM article WHERE title LIKE :search ORDER BY id_article DESC LIMIT 10";
-		$query = $app['db']->prepare($sql);
-	    $query -> bindValue(':search', '%'.$recherche_util.'%', PDO::PARAM_STR);
+	public function getSearch($app, $recherche_util, $vote, $date){
+		
+    	$sql = "SELECT id_article, title FROM article WHERE title LIKE :toto ORDER BY";
+
+    	if(!empty($vote))
+    	{
+        	$sql.= " vote ".$vote;
+    	}
+    	else 
+    	{
+        	if(!empty($date))
+        	{
+            	$sql.= " id_article ".$date;
+        	}
+	        else 
+	        {
+	            $sql.= " title ASC";
+	        }
+	    }
+
+	    $sql.= " LIMIT 10";
+
+	    $query = $app['db']-> prepare($sql);
+	    $query -> bindValue(':toto', '%'.$recherche_util.'%', PDO::PARAM_STR);
 	    $query -> execute();
 
-	  	return $query -> fetchAll();
+	    return $query -> fetchAll();
 	}
 
-	public function triVote($app, $vote, $date){
-		$sql = 'SELECT article.title, article.description, article.content, article.release_date, article.vote, user.pseudo from article JOIN user ON article._id_util = user.id_util order by article.vote '.$vote.', id_article '.$date.' LIMIT 10';
+	// public function triVote($app, $vote, $date){
+	// 	$sql = 'SELECT article.title, article.description, article.content, article.release_date, article.vote, user.pseudo from article JOIN user ON article._id_util = user.id_util order by article.vote '.$vote.', id_article '.$date.' LIMIT 10';
 
-		return $app['db']->fetch($sql);
-	}
+	// 	return $app['db']->fetch($sql);
+	// }
 
 }

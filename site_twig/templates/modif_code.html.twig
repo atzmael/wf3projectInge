@@ -1,0 +1,55 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+    <main class="container article">
+        <div class="row">
+            <div class="col-12">
+                <form action="{{ path('modif_code', {'id': article.id_article}) }}" method="POST">
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text" name="title" id="title" value="{{ article.title }}">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="description" id="description" value="{{ article.description }}">
+                        </div>
+
+                        {% for ligne in contenu %}
+                            <div class="col-12">
+                                <textarea name="{{ ligne.id }}">{{ ligne.content }}</textarea>
+                            </div>
+                        {% endfor %}
+
+                        <div class="col-md-4 mr-auto">
+                            <label for="voteInput">Votre vote :</label>
+                            <input type="radio" name="vote" id="voteInput" value="1" checked>
+                            <input type="radio" name="vote" id="voteInput" value="2">
+                            <input type="radio" name="vote" id="voteInput" value="3">
+                            <input type="radio" name="vote" id="voteInput" value="4">
+                            <input type="radio" name="vote" id="voteInput" value="5">
+                        </div>
+
+                        <div class="col-12 notes">
+                            <p>
+                                Note :
+                                {% if article.vote.moy %}
+                                    {% for i in 1..article.vote.moy %}
+                                        <i class="fa fa-star fa-2x"></i>
+                                    {% endfor %}
+                                {% endif %}
+                                {% if article.vote.reste %}
+                                    {% for i in 1..article.vote.reste %}
+                                        <i class="fa fa-star-o fa-2x"></i>
+                                    {% endfor %}
+                                {% endif %}
+                                ({{ article.vote.vote }} votes)
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+{% endblock %}

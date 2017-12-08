@@ -1,0 +1,23 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+    <main class="container profil">
+        <div class="row">
+            <h1>Modifier votre profil</h1>
+            <div class="col-12 userContent">
+                <form action="{{ path('modif_profil') }}" method="POST">
+                    <label for="pseudo">Pseudo</label>
+                    <input type="text" name="pseudo" id="pseudo" value="{{ profil.pseudo }}">
+                    <label for="country">Pays</label>
+                    <input type="text" name="country" id="country" value="{{ profil.country }}">
+                    <label for="city">Ville</label>
+                    <input type="text" name="city" id="city" value="{{ profil.city }}">
+
+                    <button>Valider</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

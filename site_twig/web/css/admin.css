@@ -1,0 +1,9 @@
+/* line 2, ../sass/admin.scss */
+.admin .adminContent p {
+  padding: 1vw;
+  background: #fff;
+}
+/* line 5, ../sass/admin.scss */
+.admin .adminContent p:hover {
+  box-shadow: 0 0 10px #919192;
+}

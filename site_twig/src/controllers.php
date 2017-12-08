@@ -13,6 +13,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 require __DIR__.'/../src/articleController.php';
 require __DIR__.'/../src/userController.php';
 require __DIR__.'/../src/adminController.php';
+require __DIR__.'/../src/searchController.php';
 //Request::setTrustedProxies(array('127.0.0.1'));
 
 //HOMEPAGE

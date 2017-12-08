@@ -51,9 +51,9 @@
                     </div>
 
                     {% if session %}
-                        {% if (session.rank == 1) or (session.id_util == article.id_util) %}
+                        {% if (session.rank == 1) or (session.id_util == article._id_util) %}
                             <div class="col-12">
-                                <p><a class="linkBtn" href="'.directory().'content/modif_code.php?id='.$id.'">Modifier</a>
+                                <p><a class="linkBtn" href="{{ path('modif_code', {'id': article.id_article}) }}">Modifier</a>
                                 <a class="linkBtn" href="'.directory().'content/sup_code.php?id='.$id.'">Supprimer</a></p>
                             </div>
                             {% endif %}

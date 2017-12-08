@@ -1,0 +1,26 @@
+{% extends "layout_nosidebar.html.twig" %}
+
+{% block content %}
+
+
+    <main class="container reini-mdp">
+        <div class="row">
+            <div class="col-12">
+                <form method="POST" action="{{ path('link_generate') }}">
+
+                    <fieldset>
+
+                        <legend>Email à reinitialiser</legend>
+
+                        <input type="text" name="email" placeholder="votre email" id="email">
+
+                        <button>Réinitialiser</button>
+
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
