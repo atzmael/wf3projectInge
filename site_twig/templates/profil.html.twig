@@ -3,15 +3,50 @@
 {% block content %}
 
     <main class="container profil">
-        <div class="row">
+        <section class="row">
             <div class="col-12 userContent">
-                    <p>Bienvenue {{ user.pseudo }} ({{ user.firstname }} {{ user.lastname }})</p>
-                    <p>Date d'inscription : {{ user.registration|date('d/m/Y') }}</p>
-                    <p>Mail : {{ user.email }}</p>
-                    <p>Pays : {{ user.country }}</p>
-                    <p>Ville : {{ user.city }}</p>
+                    <h1><span class="bienvenue"> Bienvenue </span> {{ user.pseudo }}</h1>
+            </div> 
+
+        </section>
+        
+        <section class="row ">   
+            
+            <div class="col-12 perso">       
+
+                    
+
+                    <h2> >Informations utilisateur _</h2>
+
+                        <p>Nom : <span>{{ user.firstname }} </span></p>
+                        <p>Prénom : <span>{{ user.lastname }} </span></p>
+                        <p>Mail : <span>{{ user.email }} </span></p>
+                        <p>Pays : <span>{{ user.country }} </span></p>
+                        <p>Ville : <span>{{ user.city }} </span></p>
+                        <p>Date d'inscription : <span>{{ user.regis0tration|date('d/m/Y') }} </span></p>
+                        
             </div>
-        </div>
+
+         </section>
+        
+         <section class="row mt-4">
+       
+            <div class="col-12 text-center">
+
+
+              
+                
+                <p><a href="" class="linkBtn"> Changer adresse mail</a></p>
+
+
+                <p><a href="{{ path('modif_profil') }}" class="linkBtn"> Changer profil</a></p>
+                
+            </div>
+
+          
+
+        </section>
+
     </main>
 
 {% endblock %}
