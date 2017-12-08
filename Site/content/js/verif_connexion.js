@@ -14,7 +14,7 @@ function checkEmail()
 		return(true);
 
 	}
-	else
+	else   
 	{
 		$("#erreurEmail").css("color", "red");
 		$("#erreurEmail").html("Vous devez entrer un email correct!");
